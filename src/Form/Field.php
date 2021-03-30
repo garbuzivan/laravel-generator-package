@@ -31,15 +31,18 @@ class Field
      * @param string $class
      * @return bool|mixed
      */
-    public function findFieldClass(string $class)
+    public function findFieldClass(string $method)
     {
-        if (is_null($class)) {
+        if (is_null($method)) {
             return false;
         }
-        if (isset($this->fieldAlias[$class])) {
-            $class = $this->fieldAlias[$class];
+        if (isset($this->fieldAlias[$method])) {
+            $class = $this->fieldAlias[$method];
         }
-        if (class_exists($class)) {
+        if (isset($this->availableFields[$method])) {
+            $class = $this->availableFields[$method];
+        }
+        if (isset($class) && class_exists($class)) {
             return $class;
         }
         return false;
@@ -57,7 +60,7 @@ class Field
     public function __call(string $method, array $arguments = []): FieldInterface
     {
         if ($className = $this->findFieldClass($method)) {
-            return app($method, $arguments);
+            return app($className, $arguments);
         }
         throw new FieldDoesNotExistsException();
     }

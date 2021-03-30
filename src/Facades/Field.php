@@ -11,6 +11,6 @@ class Field extends \Illuminate\Support\Facades\Facade
      */
     protected static function getFacadeAccessor(): string
     {
-        return \GarbuzIvan\LaravelGeneratorPackage\Field::class;
+        return \GarbuzIvan\LaravelGeneratorPackage\Form\Field::class;
     }
 }
