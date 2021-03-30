@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage;
 
+use GarbuzIvan\LaravelGeneratorPackage\Form\Field;
+
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     /**
@@ -31,7 +33,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->app::bind(Field::class, function()
         {
-            return new \GarbuzIvan\LaravelGeneratorPackage\Field;
+            return new Field;
         });
     }
 
