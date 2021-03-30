@@ -1,7 +1,6 @@
 {
     "name": "garbuzivan/laravel-generator-package",
     "description": "Generator the composer package for Laravel",
-    "license": "GPL",
     "type": "library",
     "authors": [
         {
