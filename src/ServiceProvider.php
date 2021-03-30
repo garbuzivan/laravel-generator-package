@@ -31,8 +31,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this->app::bind(Field::class, function()
-        {
+        $this->app::bind(Field::class, function () {
             return new Field;
         });
     }
