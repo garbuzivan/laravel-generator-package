@@ -29,10 +29,9 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this->app::bind(Field::class, function()
-        {
-            return new \GarbuzIvan\LaravelGeneratorPackage\Field;
-        });
+//        $this->app->singleton(Config::class, function ($app) {
+//            return new Config;
+//        });
     }
 
     /**
