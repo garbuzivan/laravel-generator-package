@@ -141,4 +141,24 @@ class FieldTest extends TestCase
         $function = $field->viewGrid();
         $this->assertTrue($function('title', $form));
     }
+
+    /**
+     * Test set\get fillable field
+     */
+    public function testFillable()
+    {
+        $field = Field::text('title', 'test')
+            ->fillable(false);
+        $this->assertFalse($field->getFillable());
+    }
+
+    /**
+     * Test set\get fillable field
+     */
+    public function testHidden()
+    {
+        $field = Field::text('title', 'test')
+            ->hidden(true);
+        $this->assertTrue($field->getHidden());
+    }
 }

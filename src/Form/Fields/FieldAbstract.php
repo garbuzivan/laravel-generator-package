@@ -18,6 +18,7 @@ abstract class FieldAbstract implements FieldInterface
     protected string $column;
     protected string $label = '';
     protected ?string $placeholder = null;
+    protected $default = null;
 
     /**
      * @var Filter
@@ -28,6 +29,8 @@ abstract class FieldAbstract implements FieldInterface
      * @var bool
      */
     protected bool $index = false;
+    protected bool $fillable = true;
+    protected bool $hidden = false;
 
     /**
      * @var array|null
@@ -165,6 +168,42 @@ abstract class FieldAbstract implements FieldInterface
     }
 
     /**
+     * @param bool $required
+     * @return $this
+     */
+    public function required(bool $required = true): FieldInterface
+    {
+        $this->filter->required($required);
+        return $this;
+    }
+
+    /**
+     * @param int|null $light
+     * @return $this
+     */
+    public function max(?int $light = null): FieldInterface
+    {
+        $this->filter->max($light);
+        return $this;
+    }
+
+    /**
+     * @param int|null $light
+     * @return $this
+     */
+    public function min(?int $light = null): FieldInterface
+    {
+        $this->filter->min($light);
+        return $this;
+    }
+
+    public function default($value): FieldInterface
+    {
+        $this->default = $value;
+        return $this;
+    }
+
+    /**
      * @param string|null $table
      * @param string|null $field
      * @param bool $hasMany
@@ -195,6 +234,26 @@ abstract class FieldAbstract implements FieldInterface
     public function index(bool $index = true): FieldInterface
     {
         $this->index = $index;
+        return $this;
+    }
+
+    /**
+     * @param bool $fillable
+     * @return FieldInterface
+     */
+    public function fillable(bool $fillable = true): FieldInterface
+    {
+        $this->fillable = $fillable;
+        return $this;
+    }
+
+    /**
+     * @param bool $hidden
+     * @return FieldInterface
+     */
+    public function hidden(bool $hidden = true): FieldInterface
+    {
+        $this->hidden = $hidden;
         return $this;
     }
 
@@ -268,6 +327,54 @@ abstract class FieldAbstract implements FieldInterface
     public function getPlaceholder(): ?string
     {
         return $this->placeholder;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getValueDefault(): mixed
+    {
+        return $this->default;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getFillable(): bool
+    {
+        return $this->fillable;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getHidden(): bool
+    {
+        return $this->fillable;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getRequired(): bool
+    {
+        return $this->filter->getRequired();
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getMax(): ?int
+    {
+        return $this->filter->getMax();
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getMin(): ?int
+    {
+        return $this->filter->getMin();
     }
 
     /**

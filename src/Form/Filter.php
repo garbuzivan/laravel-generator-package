@@ -9,7 +9,8 @@ class Filter
     /**
      * @var bool
      */
-    protected bool $nullable = false;
+    protected bool $required = true;
+    protected bool $nullable = true;
     protected bool $unique = false;
 
     /**
@@ -21,6 +22,8 @@ class Filter
      * @var int
      */
     protected int $light = 255;
+    protected ?int $max = null;
+    protected ?int $min = null;
 
     /**
      * @var string|null
@@ -36,11 +39,11 @@ class Filter
     }
 
     /**
-     *
+     * @param bool $nullable
      */
-    public function nullable(): void
+    public function nullable(bool $nullable = true): void
     {
-        $this->nullable = true;
+        $this->nullable = $nullable;
     }
 
     /**
@@ -82,6 +85,36 @@ class Filter
     }
 
     /**
+     * @param bool $required
+     * @return $this
+     */
+    public function required(bool $required = true): self
+    {
+        $this->required = $required;
+        return $this;
+    }
+
+    /**
+     * @param int|null $light
+     * @return $this
+     */
+    public function max(?int $light = null): self
+    {
+        $this->max = $light;
+        return $this;
+    }
+
+    /**
+     * @param int|null $light
+     * @return $this
+     */
+    public function min(?int $light = null): self
+    {
+        $this->min = $light;
+        return $this;
+    }
+
+    /**
      * @return string
      */
     public function getType(): string
@@ -103,5 +136,29 @@ class Filter
     public function getMask(): ?string
     {
         return $this->mask;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getRequired(): bool
+    {
+        return $this->required;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getMax(): ?int
+    {
+        return $this->max;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getMin(): ?int
+    {
+        return $this->min;
     }
 }
