@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Facades;
 
+use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField;
+
+/**
+ * @method TextField           text($column, $label = '')
+ */
 class Field extends \Illuminate\Support\Facades\Facade
 {
     /**
