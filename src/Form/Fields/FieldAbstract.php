@@ -2,10 +2,13 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Form;
+namespace GarbuzIvan\LaravelGeneratorPackage\Form\Fields;
 
+use Closure;
 use Exception;
 use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
+use GarbuzIvan\LaravelGeneratorPackage\Form\Filter;
+use GarbuzIvan\LaravelGeneratorPackage\Form\Form;
 
 abstract class FieldAbstract implements FieldInterface
 {
@@ -14,7 +17,7 @@ abstract class FieldAbstract implements FieldInterface
      */
     protected string $column;
     protected string $label = '';
-    protected string $placeholder = '';
+    protected ?string $placeholder = null;
 
     /**
      * @var Filter
@@ -101,7 +104,7 @@ abstract class FieldAbstract implements FieldInterface
     /**
      * @param string|null $table
      * @param string|null $field
-     * @param bool $many
+     * @param bool $hasMany
      * @return FieldInterface
      * @throws Exception
      */
@@ -113,8 +116,8 @@ abstract class FieldAbstract implements FieldInterface
         if (
             is_null($table)
             || is_null($field)
-            || \mb_strlen($table) == 0
-            || \mb_strlen($field) == 0
+            || mb_strlen($table) == 0
+            || mb_strlen($field) == 0
         ) {
             $this->references = null;
         }
@@ -129,6 +132,7 @@ abstract class FieldAbstract implements FieldInterface
     public function index(bool $index = true): FieldInterface
     {
         $this->index = $index;
+        return $this;
     }
 
     /**
@@ -209,5 +213,41 @@ abstract class FieldAbstract implements FieldInterface
     public function isIndex(): bool
     {
         return $this->index;
+    }
+
+    /**
+     * Method called before saving data
+     * @return Closure
+     */
+    public function saving(): Closure
+    {
+        return function(Form $data)
+        {
+            return $data;
+        };
+    }
+
+    /**
+     * Method called after saving data
+     * @return Closure
+     */
+    public function saved(): Closure
+    {
+        return function(Form $data)
+        {
+            return $data;
+        };
+    }
+
+    /**
+     * The method called to convert data from the database for display
+     * @return Closure
+     */
+    public function view(): Closure
+    {
+        return function(Form $data)
+        {
+            return $data;
+        };
     }
 }

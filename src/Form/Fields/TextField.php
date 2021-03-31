@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace GarbuzIvan\LaravelGeneratorPackage\Form\Fields;
 
 use Exception;
-use GarbuzIvan\LaravelGeneratorPackage\Form\FieldAbstract;
 
 class TextField extends FieldAbstract
 {
