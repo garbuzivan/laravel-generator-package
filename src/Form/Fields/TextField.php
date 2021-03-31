@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Form\Fields;
 
-use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
+use GarbuzIvan\LaravelGeneratorPackage\Form\FieldAbstract;
 
-class TextField implements FieldInterface
+class TextField extends FieldAbstract
 {
 
 }

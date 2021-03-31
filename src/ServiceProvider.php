@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage;
 
+use Exception;
+use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
+use GarbuzIvan\LaravelGeneratorPackage\Exceptions\FieldDoesNotExistsException;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Field;
+use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -28,12 +32,24 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      * Register the application services.
      *
      * @return void
+     * @throws FieldDoesNotExistsException
+     * @throws Exception
      */
     public function register()
     {
         $this->app->bind(Field::class, function () {
             return new Field;
         });
+        $fields = app(Field::class)->getFields();
+        foreach ($fields as $field) {
+            if (!$this->isFieldInterface($field)) {
+                throw new FieldDoesNotExistsException();
+            }
+            $this->app->bind($field, function ($app, $arguments) {
+                return new TextField($arguments);
+            });
+        }
+
     }
 
     /**
@@ -55,5 +71,15 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         } else {
             return base_path('config/' . $configFile);
         }
+    }
+
+    /**
+     * @param string $class
+     * @return bool
+     */
+    public function isFieldInterface(string $class): bool
+    {
+        $implements = class_implements($class);
+        return isset($implements[FieldInterface::class]);
     }
 }

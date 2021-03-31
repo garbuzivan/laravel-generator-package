@@ -14,7 +14,7 @@ class Field
      *
      * @var array
      */
-    public array $availableFields = [
+    protected array $availableFields = [
         'text' => Fields\TextField::class,
     ];
 
@@ -23,12 +23,12 @@ class Field
      *
      * @var array
      */
-    public array $fieldAlias = [];
+    protected array $fieldAlias = [];
 
     /**
      * Find field class.
      *
-     * @param string $class
+     * @param string $method
      * @return bool|mixed
      */
     public function findFieldClass(string $method)
@@ -52,16 +52,23 @@ class Field
      * Generate a Field object and add to form builder if Field exists.
      *
      * @param string $method
-     * @param array $arguments
-     *
+     * @param $args
      * @return FieldInterface
      * @throws FieldDoesNotExistsException
      */
-    public function __call(string $method, array $arguments = []): FieldInterface
+    public function __call(string $method, $args): FieldInterface
     {
         if ($className = $this->findFieldClass($method)) {
-            return app($className, $arguments);
+            return app($className, $args);
         }
         throw new FieldDoesNotExistsException();
+    }
+
+    /**
+     * @return array|string[]
+     */
+    public function getFields(): array
+    {
+        return $this->availableFields;
     }
 }
