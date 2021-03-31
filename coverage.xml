@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1617215710">
-  <project timestamp="1617215710">
+<coverage generated="1617216689">
+  <project timestamp="1617216689">
     <package name="GarbuzIvan\LaravelGeneratorPackage\Commands">
       <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Commands/MakeCommand.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Commands\MakeCommand" namespace="GarbuzIvan\LaravelGeneratorPackage\Commands">

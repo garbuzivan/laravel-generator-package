@@ -18,6 +18,8 @@ build:
 filter:
   excluded_paths:
     - 'tests/*'
+    - 'config/*'
+    - 'templates/*'
 tools:
   php_code_coverage: true
 checks:
