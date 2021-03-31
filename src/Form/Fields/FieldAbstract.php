@@ -29,7 +29,18 @@ abstract class FieldAbstract implements FieldInterface
      */
     protected bool $index = false;
 
+    /**
+     * @var array|null
+     */
     protected ?array $references = null;
+
+    /**
+     * @var Closure
+     */
+    protected Closure $saving;
+    protected Closure $saved;
+    protected Closure $view;
+    protected Closure $viewGrid;
 
     /**
      * FieldAbstract constructor.
@@ -49,6 +60,14 @@ abstract class FieldAbstract implements FieldInterface
             $this->setLabel($arguments[1]);
         }
         $this->filter = new Filter();
+        // default save Closure
+        $this->saved = $this->saving = function (Form $data) {
+            return $data;
+        };
+        // default view Closure
+        $this->view = $this->viewGrid = function (string $column, Form $data) {
+            return $data->$column;
+        };
     }
 
     /**
@@ -98,6 +117,50 @@ abstract class FieldAbstract implements FieldInterface
     public function setPlaceholder(?string $placeholder = null): FieldInterface
     {
         $this->placeholder = $placeholder;
+        return $this;
+    }
+
+    /**
+     * Method called before saving data
+     * @param Closure $closure
+     * @return FieldInterface
+     */
+    public function setSaving(Closure $closure): FieldInterface
+    {
+        $this->saving = $closure;
+        return $this;
+    }
+
+    /**
+     * Method called after saving data
+     * @param Closure $closure
+     * @return FieldInterface
+     */
+    public function setSaved(Closure $closure): FieldInterface
+    {
+        $this->saved = $closure;
+        return $this;
+    }
+
+    /**
+     * The method called to convert data from the database for display
+     * @param Closure $closure
+     * @return FieldInterface
+     */
+    public function setView(Closure $closure): FieldInterface
+    {
+        $this->view = $closure;
+        return $this;
+    }
+
+    /**
+     * The method called to convert data from the database for display in grid
+     * @param Closure $closure
+     * @return FieldInterface
+     */
+    public function setViewGrid(Closure $closure): FieldInterface
+    {
+        $this->viewGrid = $closure;
         return $this;
     }
 
@@ -221,10 +284,7 @@ abstract class FieldAbstract implements FieldInterface
      */
     public function saving(): Closure
     {
-        return function(Form $data)
-        {
-            return $data;
-        };
+        return $this->saving;
     }
 
     /**
@@ -233,10 +293,7 @@ abstract class FieldAbstract implements FieldInterface
      */
     public function saved(): Closure
     {
-        return function(Form $data)
-        {
-            return $data;
-        };
+        return $this->saved;
     }
 
     /**
@@ -245,9 +302,16 @@ abstract class FieldAbstract implements FieldInterface
      */
     public function view(): Closure
     {
-        return function(Form $data)
-        {
-            return $data;
-        };
+        return $this->view;
     }
+
+    /**
+     * The method called to convert data from the database for display in grid
+     * @return Closure
+     */
+    public function viewGrid(): Closure
+    {
+        return $this->viewGrid;
+    }
+
 }
