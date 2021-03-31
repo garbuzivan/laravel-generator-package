@@ -10,7 +10,8 @@
     ],
     "require-dev": {
         "phpunit/phpunit": "^8.5",
-        "mockery/mockery": ">=1.3"
+        "mockery/mockery": ">=1.3",
+        "illuminated/testing-tools": "^8.1"
     },
     "require": {
         "php": "^7.3"

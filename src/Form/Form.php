@@ -6,15 +6,7 @@ namespace GarbuzIvan\LaravelGeneratorPackage\Form;
 
 use Illuminate\Support\Collection;
 
-class Form
+class Form extends Collection
 {
-    protected Collection $data;
 
-    public function __construct($data = null)
-    {
-        if ($data instanceof Collection) {
-            $this->data = $data;
-        }
-        $this->data = collect($data);
-    }
 }
