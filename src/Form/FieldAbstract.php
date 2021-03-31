@@ -49,7 +49,7 @@ abstract class FieldAbstract implements FieldInterface
     /**
      * @return FieldInterface
      */
-    public function getLabel(): FieldInterface
+    public function getLabel(): string
     {
         return $this->label;
     }
