@@ -64,11 +64,11 @@ abstract class FieldAbstract implements FieldInterface
         }
         $this->filter = new Filter();
         // default save Closure
-        $this->saved = $this->saving = function (Form $data) {
+        $this->saved = $this->saving = function(Form $data) {
             return $data;
         };
         // default view Closure
-        $this->view = $this->viewGrid = function (string $column, Form $data) {
+        $this->view = $this->viewGrid = function(string $column, Form $data) {
             return $data->$column;
         };
     }

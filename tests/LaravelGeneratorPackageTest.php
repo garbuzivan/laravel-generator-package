@@ -2,11 +2,9 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Test;
+namespace GarbuzIvan\LaravelGeneratorPackage\Tests;
 
-use PHPUnit\Framework\TestCase;
-
-class LaravelGeneratorPackageTest extends TestCase
+class LaravelGeneratorPackageTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
 {
     public function testExample()
     {

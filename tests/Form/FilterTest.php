@@ -2,12 +2,11 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Test\Form;
+namespace GarbuzIvan\LaravelGeneratorPackage\Tests\Form;
 
 use GarbuzIvan\LaravelGeneratorPackage\Form\Filter;
-use Tests\TestCase;
 
-class FilterTest extends TestCase
+class FilterTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
 {
     /**
      * Test create filter

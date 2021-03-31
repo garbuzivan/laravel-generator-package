@@ -37,7 +37,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(Field::class, function () {
+        $this->app->bind(Field::class, function() {
             return new Field;
         });
         $fields = app(Field::class)->getFields();
@@ -45,7 +45,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             if (!$this->isFieldInterface($field)) {
                 throw new FieldDoesNotExistsException();
             }
-            $this->app->bind($field, function ($app, $arguments) {
+            $this->app->bind($field, function($app, $arguments) {
                 return new TextField($arguments);
             });
         }
