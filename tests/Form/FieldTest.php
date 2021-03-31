@@ -10,20 +10,28 @@ use Tests\TestCase;
 
 class FieldTest extends TestCase
 {
+    /**
+     * Test create field
+     */
     public function testFieldInit()
     {
         $field = Field::text('title', 'Title');
-        var_dump($field->getLabel(), 'Title');
         $this->assertTrue($field->getColumn() == 'title');
         $this->assertTrue($field->getLabel() == 'Title');
     }
 
+    /**
+     * Test Exception Type Column
+     */
     public function testFieldInitExceptionTypeColumn()
     {
         $this->expectException(Exception::class);
         Field::text(123, 'Title');
     }
 
+    /**
+     * Test Exception Mask Column
+     */
     public function testFieldInitExceptionMaskColumn()
     {
         $this->expectException(Exception::class);
