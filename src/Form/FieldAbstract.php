@@ -53,4 +53,12 @@ abstract class FieldAbstract implements FieldInterface
     {
         return $this;
     }
+
+    /**
+     * @return FieldInterface
+     */
+    public function getColumn(): string
+    {
+        return $this->column;
+    }
 }
