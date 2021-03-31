@@ -7,7 +7,7 @@ return [
     [
         "name" => "Name package",
         "description" => "Description package",
-        "vendor" => "ivangarbuz",
+        "vendor" => "garbuzivan",
         "package" => "test",
         "generator" => [
             "api" => true,
@@ -18,7 +18,26 @@ return [
         ],
         "fields" => [
             [
-                "name" => Field::text("Title"),
+                Field::text('title', 'Title'),
+            ],
+            [
+                Field::text('keywords', 'Keywords'),
+                Field::text('description', 'description'),
+            ],
+            [
+                Field::text('text', 'Text'),
+            ],
+        ],
+        "filters" => [
+            [
+                'title',
+            ],
+            [
+                'keywords',
+                'description',
+            ],
+            [
+                'text',
             ],
         ]
     ]
