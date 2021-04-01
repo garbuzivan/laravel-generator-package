@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Form;
 
+use GarbuzIvan\LaravelGeneratorPackage\Configuration;
+
 class Filter
 {
+    protected Configuration $config;
+
     /**
      * @var bool
      */
@@ -32,10 +36,11 @@ class Filter
 
     /**
      * Filter constructor.
+     * @param Configuration $config
      */
-    public function __construct()
+    public function __construct(Configuration $config)
     {
-
+        $this->config = $config;
     }
 
     /**

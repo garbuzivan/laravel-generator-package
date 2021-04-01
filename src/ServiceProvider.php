@@ -6,9 +6,8 @@ namespace GarbuzIvan\LaravelGeneratorPackage;
 
 use Exception;
 use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
-use GarbuzIvan\LaravelGeneratorPackage\Exceptions\FieldDoesNotExistsException;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Field;
-use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField;
+use GarbuzIvan\LaravelGeneratorPackage\Form\Form;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -32,24 +31,19 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      * Register the application services.
      *
      * @return void
-     * @throws FieldDoesNotExistsException
      * @throws Exception
      */
     public function register()
     {
-        $this->app->bind(Field::class, function() {
-            return new Field;
+        $this->app->singleton(Configuration::class, function($app) {
+            return new Configuration;
         });
-        $fields = app(Field::class)->getFields();
-        foreach ($fields as $field) {
-            if (!$this->isFieldInterface($field)) {
-                throw new FieldDoesNotExistsException();
-            }
-            $this->app->bind($field, function($app, $arguments) {
-                return new TextField($arguments);
-            });
-        }
-
+        $this->app->bind(Field::class, function($app) {
+            return new Field(app(Configuration::class));
+        });
+        $this->app->bind(Form::class, function($app) {
+            return new Form(app(Configuration::class));
+        });
     }
 
     /**

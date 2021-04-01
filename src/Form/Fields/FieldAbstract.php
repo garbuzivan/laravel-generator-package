@@ -46,11 +46,11 @@ abstract class FieldAbstract implements FieldInterface
     protected Closure $viewGrid;
 
     /**
-     * FieldAbstract constructor.
+     * FieldAbstract init.
      * @param array $arguments
      * @throws Exception
      */
-    public function __construct(array $arguments)
+    public function init(array $arguments): FieldInterface
     {
         if (!isset($arguments[0]) || !is_string($arguments[0])) {
             throw new Exception('The first argument of the field initialization must be a string');
@@ -62,7 +62,7 @@ abstract class FieldAbstract implements FieldInterface
         if (isset($arguments[1]) && is_string($arguments[1])) {
             $this->setLabel($arguments[1]);
         }
-        $this->filter = new Filter();
+        $this->filter = app(Filter::class);
         // default save Closure
         $this->saved = $this->saving = function(Form $data) {
             return $data;
@@ -71,6 +71,7 @@ abstract class FieldAbstract implements FieldInterface
         $this->view = $this->viewGrid = function(string $column, Form $data) {
             return $data->$column;
         };
+        return $this;
     }
 
     /**

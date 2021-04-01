@@ -4,9 +4,18 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Form;
 
-use Illuminate\Support\Collection;
+use GarbuzIvan\LaravelGeneratorPackage\Configuration;
 
-class Form extends Collection
+class Form
 {
+    protected Configuration $config;
 
+    /**
+     * Form constructor.
+     * @param Configuration $config
+     */
+    public function __construct(Configuration $config)
+    {
+        $this->config = $config;
+    }
 }

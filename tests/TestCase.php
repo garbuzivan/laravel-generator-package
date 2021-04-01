@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Tests;
 
+use GarbuzIvan\LaravelGeneratorPackage\Configuration;
 use GarbuzIvan\LaravelGeneratorPackage\ServiceProvider;
 use Illuminate\Foundation\Application;
 
@@ -15,7 +16,6 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     public function setUp(): void
     {
         parent::setUp();
-        // additional setup
     }
 
     /**

@@ -4,26 +4,22 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Form;
 
+use GarbuzIvan\LaravelGeneratorPackage\Configuration;
 use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
 use GarbuzIvan\LaravelGeneratorPackage\Exceptions\FieldDoesNotExistsException;
 
 class Field
 {
-    /**
-     * Available fields.
-     *
-     * @var array
-     */
-    protected array $availableFields = [
-        'text' => Fields\TextField::class,
-    ];
+    protected Configuration $config;
 
     /**
-     * Form field alias.
-     *
-     * @var array
+     * Form constructor.
+     * @param Configuration $config
      */
-    protected array $fieldAlias = [];
+    public function __construct(Configuration $config)
+    {
+        $this->config = $config;
+    }
 
     /**
      * Find field class.
@@ -36,11 +32,9 @@ class Field
         if (is_null($method)) {
             return false;
         }
-        if (isset($this->fieldAlias[$method])) {
-            $class = $this->fieldAlias[$method];
-        }
-        if (isset($this->availableFields[$method])) {
-            $class = $this->availableFields[$method];
+        $fields = $this->config->getFields();
+        if (isset($fields[$method])) {
+            $class = $fields[$method];
         }
         if (isset($class) && class_exists($class)) {
             return $class;
@@ -56,19 +50,11 @@ class Field
      * @return FieldInterface
      * @throws FieldDoesNotExistsException
      */
-    public function __call(string $method, $args): FieldInterface
+    public function __call(string $method, array $args): FieldInterface
     {
         if ($className = $this->findFieldClass($method)) {
-            return app($className, $args);
+            return app($className)->init($args);
         }
         throw new FieldDoesNotExistsException();
-    }
-
-    /**
-     * @return array|string[]
-     */
-    public function getFields(): array
-    {
-        return $this->availableFields;
     }
 }

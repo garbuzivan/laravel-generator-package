@@ -13,7 +13,7 @@ class FilterTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
      */
     public function testFilterInit()
     {
-        $filter = new Filter();
+        $filter = app(Filter::class);
         $this->assertTrue($filter->setType('int')->getType() == 'int');
     }
 
@@ -22,7 +22,7 @@ class FilterTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
      */
     public function tesRequired()
     {
-        $filter = new Filter();
+        $filter = app(Filter::class);
         $this->assertFalse($filter->required(false)->getRequired());
     }
 
@@ -31,7 +31,7 @@ class FilterTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
      */
     public function tesMax()
     {
-        $filter = new Filter();
+        $filter = app(Filter::class);
         $this->assertTrue($filter->max(123)->getMax() == 123);
     }
 
@@ -40,7 +40,7 @@ class FilterTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
      */
     public function tesMin()
     {
-        $filter = new Filter();
+        $filter = app(Filter::class);
         $this->assertTrue($filter->min(321)->getMin() == 321);
     }
 }

@@ -90,7 +90,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
      */
     public function testSaving()
     {
-        $form = new Form();
+        $form = app(Form::class);
         $field = Field::text('title', 'test')
             ->setSaving(function (Form $form) {
                 return true;
@@ -104,7 +104,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
      */
     public function testSaved()
     {
-        $form = new Form();
+        $form = app(Form::class);
         $field = Field::text('title', 'test')
             ->setSaved(function (Form $form) {
                 return true;
@@ -118,7 +118,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
      */
     public function testView()
     {
-        $form = new Form();
+        $form = app(Form::class);
         $field = Field::text('title', 'test')
             ->setView(function (string $column, Form $form) {
                 return true;
@@ -132,7 +132,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
      */
     public function testViewGrid()
     {
-        $form = new Form();
+        $form = app(Form::class);
         $field = Field::text('title', 'test')
             ->setViewGrid(function (string $column, Form $form) {
                 return true;
