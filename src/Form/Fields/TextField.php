@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Form\Fields;
 
-use Closure;
 use Exception;
 use GarbuzIvan\LaravelGeneratorPackage\Configuration;
 use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
-use Illuminate\Support\Facades\App;
 
 class TextField extends FieldAbstract
 {

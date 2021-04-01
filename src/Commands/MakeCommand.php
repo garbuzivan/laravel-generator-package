@@ -5,15 +5,10 @@ declare(strict_types=1);
 namespace GarbuzIvan\LaravelGeneratorPackage\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Composer;
 
 class MakeCommand extends Command
 {
-    /**
-     * The command Data.
-     *
-     * @var CommandData
-     */
-    public $commandData;
     /**
      * The console command name.
      *
@@ -30,7 +25,7 @@ class MakeCommand extends Command
     /**
      * @var Composer
      */
-    public $composer;
+    public Composer $composer;
 
     /**
      * Create a new command instance.

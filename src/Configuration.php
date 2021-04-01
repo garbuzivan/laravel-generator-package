@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage;
 
-use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField;
 
 class Configuration
@@ -63,11 +62,12 @@ class Configuration
     }
 
     /**
-     * @param FieldInterface $field
+     * @param string $name
+     * @param string $field
      */
-    public function setField(FieldInterface $field): void
+    public function setField(string $name, string $field): void
     {
-        $this->fields[] = $field;
+        $this->fields[$name] = $field;
     }
 
     /**
