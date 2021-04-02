@@ -17,11 +17,11 @@ return [
             'vendor' => 'garbuzivan',
             'package' => 'test',
             'generator' => [
-                'api' => true,
-                'laravel-admin' => true,
-                'routes' => true,
                 'tests' => true,
                 'factories' => true,
+                'api' => true,
+                'api-frontend' => true,
+                'laravel-admin' => true,
             ],
             'fields' => [
                 'title' => [

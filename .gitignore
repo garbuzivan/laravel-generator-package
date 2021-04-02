@@ -1,4 +1,5 @@
+.phpunit.result.cache
 docker-compose.yml
 vendor
-.phpunit.result.cache
 composer.lock
+coverage.xml
