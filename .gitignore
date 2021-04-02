@@ -2,4 +2,3 @@
 docker-compose.yml
 vendor
 composer.lock
-coverage.xml
