@@ -205,26 +205,27 @@ abstract class FieldAbstract implements FieldInterface
     }
 
     /**
-     * @param string|null $table
-     * @param string|null $field
+     * @param string $table
+     * @param string $field
      * @param bool $hasMany
      * @return FieldInterface
      * @throws Exception
      */
-    public function references(?string $table = null, ?string $field = null, bool $hasMany = true): FieldInterface
+    public function references(string $table, string $field, bool $hasMany = true): FieldInterface
     {
-        if ((!is_string($table) && !is_null($table)) || (!is_string($field) && !is_null($field))) {
-            throw new Exception('References should be a string or null');
-        }
-        if (
-            is_null($table)
-            || is_null($field)
-            || mb_strlen($table) == 0
-            || mb_strlen($field) == 0
-        ) {
-            $this->references = null;
+        if (mb_strlen(trim($table)) == 0 || mb_strlen(trim($field)) == 0) {
+            throw new Exception('References should be a string and not null');
         }
         $this->references = ['table' => $table, 'field' => $field, 'hasmany' => $hasMany];
+        return $this;
+    }
+
+    /**
+     * @return FieldInterface
+     */
+    public function referencesDisabled(): FieldInterface
+    {
+        $this->references = null;
         return $this;
     }
 
