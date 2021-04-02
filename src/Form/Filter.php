@@ -46,17 +46,19 @@ class Filter
     /**
      * @param bool $nullable
      */
-    public function nullable(bool $nullable = true): void
+    public function nullable(bool $nullable = true): self
     {
         $this->nullable = $nullable;
+        return $this;
     }
 
     /**
      * @param bool $unique
      */
-    public function unique(bool $unique = true): void
+    public function unique(bool $unique = true): self
     {
         $this->unique = $unique;
+        return $this;
     }
 
     /**

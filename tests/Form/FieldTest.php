@@ -182,7 +182,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     /**
      * Test required
      */
-    public function tesRequired()
+    public function testRequired()
     {
         $this->assertFalse(Field::text('title', 'test')->required(false)->getRequired());
     }
@@ -190,7 +190,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     /**
      * Test max
      */
-    public function tesMax()
+    public function testMax()
     {
         $this->assertTrue(Field::text('title', 'test')->max(123)->getMax() == 123);
     }
@@ -198,7 +198,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     /**
      * Test min
      */
-    public function tesMin()
+    public function testMin()
     {
         $this->assertTrue(Field::text('title', 'test')->min(321)->getMin() == 321);
     }

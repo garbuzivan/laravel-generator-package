@@ -34,7 +34,7 @@ class FilterTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     /**
      * Test required
      */
-    public function tesRequired()
+    public function testRequired()
     {
         $this->assertFalse($this->filter->required(false)->getRequired());
     }
@@ -42,7 +42,7 @@ class FilterTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     /**
      * Test required
      */
-    public function tesMax()
+    public function testMax()
     {
         $this->assertTrue($this->filter->max(123)->getMax() == 123);
     }
@@ -50,7 +50,7 @@ class FilterTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     /**
      * Test required
      */
-    public function tesMin()
+    public function testMin()
     {
         $this->assertTrue($this->filter->min(321)->getMin() == 321);
     }
@@ -58,7 +58,7 @@ class FilterTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     /**
      * Test nullable
      */
-    public function tesNullable()
+    public function testNullable()
     {
         $this->assertTrue($this->filter->nullable()->getNullable());
     }
@@ -66,7 +66,7 @@ class FilterTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     /**
      * Test unique
      */
-    public function tesUnique()
+    public function testUnique()
     {
         $this->assertTrue($this->filter->unique()->getUnique());
     }
