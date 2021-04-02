@@ -52,11 +52,11 @@ class Filter
     }
 
     /**
-     *
+     * @param bool $unique
      */
-    public function unique(): void
+    public function unique(bool $unique = true): void
     {
-        $this->unique = true;
+        $this->unique = $unique;
     }
 
     /**
@@ -165,5 +165,21 @@ class Filter
     public function getMin(): ?int
     {
         return $this->min;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getNullable(): bool
+    {
+        return $this->nullable;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getUnique(): bool
+    {
+        return $this->unique;
     }
 }

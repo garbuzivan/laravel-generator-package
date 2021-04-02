@@ -66,14 +66,4 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             return base_path('config/' . $configFile);
         }
     }
-
-    /**
-     * @param string $class
-     * @return bool
-     */
-    public function isFieldInterface(string $class): bool
-    {
-        $implements = class_implements($class);
-        return isset($implements[FieldInterface::class]);
-    }
 }

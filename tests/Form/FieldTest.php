@@ -5,8 +5,11 @@ declare(strict_types=1);
 namespace GarbuzIvan\LaravelGeneratorPackage\Tests\Form;
 
 use Exception;
+use GarbuzIvan\LaravelGeneratorPackage\Configuration;
 use GarbuzIvan\LaravelGeneratorPackage\Facades\Field;
+use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Form;
+use Illuminate\Support\Str;
 
 class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
 {
@@ -92,7 +95,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     {
         $form = app(Form::class);
         $field = Field::text('title', 'test')
-            ->setSaving(function (Form $form) {
+            ->setSaving(function(Form $form) {
                 return true;
             });
         $function = $field->saving();
@@ -106,7 +109,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     {
         $form = app(Form::class);
         $field = Field::text('title', 'test')
-            ->setSaved(function (Form $form) {
+            ->setSaved(function(Form $form) {
                 return true;
             });
         $function = $field->saved();
@@ -120,7 +123,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     {
         $form = app(Form::class);
         $field = Field::text('title', 'test')
-            ->setView(function (string $column, Form $form) {
+            ->setView(function(string $column, Form $form) {
                 return true;
             });
         $function = $field->view();
@@ -134,7 +137,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     {
         $form = app(Form::class);
         $field = Field::text('title', 'test')
-            ->setViewGrid(function (string $column, Form $form) {
+            ->setViewGrid(function(string $column, Form $form) {
                 return true;
             });
         $function = $field->viewGrid();
@@ -159,5 +162,59 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
         $field = Field::text('title', 'test')
             ->hidden(true);
         $this->assertTrue($field->getHidden());
+    }
+
+    /**
+     * Test set\get fillable field
+     */
+    public function testFindFieldClass()
+    {
+        $field = app(\GarbuzIvan\LaravelGeneratorPackage\Form\Field::class);
+        $config = app(Configuration::class);
+        $config->setField('test', TextField::class);
+        $fieldName = array_key_first($config->getFields());
+        $this->assertTrue(is_string($field->findFieldClass($fieldName)));
+        $this->assertFalse($field->findFieldClass(Str::random()));
+    }
+
+
+    /**
+     * Test required
+     */
+    public function tesRequired()
+    {
+        $this->assertFalse(Field::text('title', 'test')->required(false)->getRequired());
+    }
+
+    /**
+     * Test max
+     */
+    public function tesMax()
+    {
+        $this->assertTrue(Field::text('title', 'test')->max(123)->getMax() == 123);
+    }
+
+    /**
+     * Test min
+     */
+    public function tesMin()
+    {
+        $this->assertTrue(Field::text('title', 'test')->min(321)->getMin() == 321);
+    }
+
+    /**
+     * Test index
+     */
+    public function testIndex()
+    {
+        $this->assertTrue(Field::text('title', 'test')->index()->isIndex());
+    }
+
+    /**
+     * Test index
+     */
+    public function testDefault()
+    {
+        $this->assertTrue(Field::text('title', 'test')->default('testpack')->getDefault() == 'testpack');
     }
 }

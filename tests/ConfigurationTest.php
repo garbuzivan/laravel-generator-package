@@ -24,4 +24,11 @@ class ConfigurationTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCa
         $fields = $config->getFields();
         $this->assertTrue(isset($fields['test']));
     }
+
+    public function testGetGenerator()
+    {
+        $config = app(Configuration::class);
+        $generator = $config->getGenerator();
+        $this->assertTrue(is_array($generator) && count($generator) == 0);
+    }
 }

@@ -332,9 +332,9 @@ abstract class FieldAbstract implements FieldInterface
     }
 
     /**
-     * @return string|null
+     * @return mixed
      */
-    public function getValueDefault(): mixed
+    public function getDefault()
     {
         return $this->default;
     }
