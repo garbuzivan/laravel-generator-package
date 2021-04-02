@@ -31,4 +31,14 @@ class ConfigurationTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCa
         $generator = $config->getGenerator();
         $this->assertTrue(is_array($generator) && count($generator) == 0);
     }
+
+    /**
+     *
+     */
+    public function testLoad()
+    {
+        $config = app(Configuration::class);
+        $config = $config->load();
+        $this->assertTrue($config instanceof Configuration);
+    }
 }
