@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Tests\Form;
 
+use GarbuzIvan\LaravelGeneratorPackage\Configuration;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Filter;
 
 class FilterTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
 {
     protected Filter $filter;
+    protected Configuration $config;
 
     /**
      * setUp
@@ -16,7 +18,8 @@ class FilterTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     public function setUp(): void
     {
         parent::setUp();
-        $this->filter = app(Filter::class);
+        $this->config = app(Configuration::class);
+        $this->filter = new Filter($this->config);
     }
 
     /**

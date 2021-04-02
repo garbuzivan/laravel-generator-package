@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1617355660">
-  <project timestamp="1617355660">
+<coverage generated="1617356340">
+  <project timestamp="1617356340">
     <package name="GarbuzIvan\LaravelGeneratorPackage\Commands">
       <file name="packages/garbuzivan/laravel-generator-package/src/Commands/MakeCommand.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Commands\MakeCommand" namespace="GarbuzIvan\LaravelGeneratorPackage\Commands">
@@ -174,7 +174,7 @@
     <package name="GarbuzIvan\LaravelGeneratorPackage\Form\Fields">
       <file name="packages/garbuzivan/laravel-generator-package/src/Form/Fields/FieldAbstract.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Fields\FieldAbstract" namespace="GarbuzIvan\LaravelGeneratorPackage\Form\Fields">
-          <metrics complexity="56" methods="39" coveredmethods="30" conditionals="0" coveredconditionals="0" statements="69" coveredstatements="55" elements="108" coveredelements="85"/>
+          <metrics complexity="56" methods="39" coveredmethods="31" conditionals="0" coveredconditionals="0" statements="69" coveredstatements="57" elements="108" coveredelements="88"/>
         </class>
         <line num="53" type="method" name="init" visibility="public" complexity="6" crap="6.22" count="17"/>
         <line num="55" type="stmt" count="17"/>
@@ -232,9 +232,9 @@
         <line num="217" type="stmt" count="0"/>
         <line num="219" type="stmt" count="1"/>
         <line num="220" type="stmt" count="1"/>
-        <line num="226" type="method" name="referencesDisabled" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="228" type="stmt" count="0"/>
-        <line num="229" type="stmt" count="0"/>
+        <line num="226" type="method" name="referencesDisabled" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="228" type="stmt" count="1"/>
+        <line num="229" type="stmt" count="1"/>
         <line num="236" type="method" name="index" visibility="public" complexity="1" crap="1" count="1"/>
         <line num="238" type="stmt" count="1"/>
         <line num="239" type="stmt" count="1"/>
@@ -284,7 +284,7 @@
         <line num="414" type="stmt" count="1"/>
         <line num="421" type="method" name="viewGrid" visibility="public" complexity="1" crap="1" count="1"/>
         <line num="423" type="stmt" count="1"/>
-        <metrics loc="426" ncloc="309" classes="1" methods="39" coveredmethods="30" conditionals="0" coveredconditionals="0" statements="69" coveredstatements="55" elements="108" coveredelements="85"/>
+        <metrics loc="426" ncloc="309" classes="1" methods="39" coveredmethods="31" conditionals="0" coveredconditionals="0" statements="69" coveredstatements="57" elements="108" coveredelements="88"/>
       </file>
       <file name="packages/garbuzivan/laravel-generator-package/src/Form/Fields/TextField.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField" namespace="GarbuzIvan\LaravelGeneratorPackage\Form\Fields">
@@ -301,6 +301,6 @@
         <metrics loc="36" ncloc="29" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
       </file>
     </package>
-    <metrics files="11" loc="974" ncloc="723" classes="9" methods="75" coveredmethods="53" conditionals="0" coveredconditionals="0" statements="150" coveredstatements="117" elements="225" coveredelements="170"/>
+    <metrics files="11" loc="974" ncloc="723" classes="9" methods="75" coveredmethods="54" conditionals="0" coveredconditionals="0" statements="150" coveredstatements="119" elements="225" coveredelements="173"/>
   </project>
 </coverage>

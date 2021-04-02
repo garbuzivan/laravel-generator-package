@@ -86,6 +86,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
         $this->assertTrue($field->getReferencesTable() == 'table_name');
         $this->assertTrue($field->getReferencesField() == 'field_name');
         $this->assertTrue($field->getReferencesMany() == false);
+        $this->assertTrue($field->referencesDisabled()->getReferencesField() == null);
     }
 
     /**
