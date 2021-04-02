@@ -25,13 +25,10 @@ class Field
      * Find field class.
      *
      * @param string $method
-     * @return bool|mixed
+     * @return bool|string
      */
     public function findFieldClass(string $method)
     {
-        if (is_null($method)) {
-            return false;
-        }
         $fields = $this->config->getFields();
         if (isset($fields[$method])) {
             $class = $fields[$method];
