@@ -6,6 +6,7 @@ namespace GarbuzIvan\LaravelGeneratorPackage\Tests\Form;
 
 use Exception;
 use GarbuzIvan\LaravelGeneratorPackage\Configuration;
+use GarbuzIvan\LaravelGeneratorPackage\Exceptions\FieldDoesNotExistsException;
 use GarbuzIvan\LaravelGeneratorPackage\Facades\Field;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Form;
@@ -78,7 +79,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     }
 
     /**
-     * Test set\get placeholder field
+     * Test set\get References field
      */
     public function testReferences()
     {
@@ -87,6 +88,24 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
         $this->assertTrue($field->getReferencesField() == 'field_name');
         $this->assertTrue($field->getReferencesMany() == false);
         $this->assertTrue($field->referencesDisabled()->getReferencesField() == null);
+    }
+
+    /**
+     * Test References Exception field
+     */
+    public function testReferencesException()
+    {
+        $this->expectException(Exception::class);
+        $field = Field::text('title', 'Title')->references(' ', ' ');
+    }
+
+    /**
+     * Test Field Does Not Exists Exception
+     */
+    public function testFieldDoesNotExistsException()
+    {
+        $this->expectException(FieldDoesNotExistsException::class);
+        $field = Field::tralalaololo('title', 'Title');
     }
 
     /**
