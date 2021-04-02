@@ -35,13 +35,13 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(Configuration::class, function($app) {
+        $this->app->singleton(Configuration::class, function() {
             return new Configuration;
         });
-        $this->app->bind(Field::class, function($app) {
+        $this->app->bind(Field::class, function() {
             return new Field(app(Configuration::class));
         });
-        $this->app->bind(Form::class, function($app) {
+        $this->app->bind(Form::class, function() {
             return new Form(app(Configuration::class));
         });
     }

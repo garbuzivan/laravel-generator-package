@@ -33,19 +33,15 @@ return [
                     'hidden' => false,
                     'references' => null,
                     'filter' => [
-                        'required' => true,
-                        'nullable' => true,
-                        'unique' => false,
                         'type' => "string",
                         'light' => 255,
+                        'nullable' => true,
+                        'unique' => false,
+                        'required' => true,
                         'max' => null,
                         'min' => null,
                         'mask' => null,
-                    ],
-                    'saving' => null,
-                    'saved' => null,
-                    'view' => null,
-                    'viewGrid' => null,
+                    ]
                 ]
             ],
             'form' => [

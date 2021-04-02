@@ -53,6 +53,7 @@ class Field
     public function __call(string $method, array $args): FieldInterface
     {
         if ($className = $this->findFieldClass($method)) {
+            /** @scrutinizer ignore-call */
             return app($className)->init($args);
         }
         throw new FieldDoesNotExistsException();
