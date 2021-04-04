@@ -38,3 +38,16 @@
 
 <pre>php artisan vendor:publish --force --provider="GarbuzIvan\LaravelGeneratorPackage\ServiceProvider" --tag="config"</pre>
 
+## Сборка пакетов из конфига
+
+<strong>Все пакеты</strong>
+<pre>php artisan lgp:make</pre>
+
+<strong>Пакеты с конкретными vendor</strong>
+<pre>php artisan lgp:make vendor_name</pre>
+
+<strong>Конкретный пакет</strong>
+<pre>php artisan lgp:make vendor_name/package_name</pre>
+
+
+
