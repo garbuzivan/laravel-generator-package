@@ -198,6 +198,21 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
         $this->assertFalse($field->findFieldClass(Str::random()));
     }
 
+    /**
+     * Test set\get Nullable field
+     */
+    public function testNullable()
+    {
+        $this->assertFalse(Field::text('title', 'test')->nullable(false)->getNullable());
+    }
+
+    /**
+     * Test set\get Nullable field
+     */
+    public function testUnique()
+    {
+        $this->assertFalse(Field::text('title', 'test')->unique(false)->getUnique());
+    }
 
     /**
      * Test required

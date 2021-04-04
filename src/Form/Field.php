@@ -74,6 +74,9 @@ class Field
             throw new Exception('Field ' . $column . ':' . $config['field'] . ' not found and not available for use');
         }
         $field = app($className)->init([$column, $config['label']]);
+        if (isset($config['label'])) {
+            $field->setLabel($config['label']);
+        }
         if (isset($config['placeholder'])) {
             $field->setPlaceholder($config['placeholder']);
         }

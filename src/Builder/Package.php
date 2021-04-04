@@ -76,7 +76,7 @@ class Package
      */
     public function setDescription(): self
     {
-        $this->name = $this->packageArr['description'] ?? $this->description;
+        $this->description = $this->packageArr['description'] ?? $this->description;
         return $this;
     }
 

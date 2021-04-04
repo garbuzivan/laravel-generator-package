@@ -30,4 +30,84 @@ class PackageTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     {
         $this->assertTrue(is_string($this->package->getPackageName()));
     }
+
+    /**
+     * Test get Name
+     */
+    public function testName()
+    {
+        $this->assertTrue($this->package->getName() == 'Name package');
+    }
+
+    /**
+     * Test get\set Descripton
+     */
+    public function testDescripton()
+    {
+        $this->assertTrue($this->package->getDescripton() == 'Description package');
+    }
+
+    /**
+     * Test get getGeneratorTests
+     */
+    public function testGetGeneratorTests()
+    {
+        $this->assertTrue(is_bool($this->package->getGeneratorTests()));
+    }
+
+    /**
+     * Test get getGeneratorSeed
+     */
+    public function testGetGeneratorSeed()
+    {
+        $this->assertTrue(is_bool($this->package->getGeneratorSeed()));
+    }
+
+    /**
+     * Test get getGeneratorApi
+     */
+    public function testGetGeneratorApi()
+    {
+        $this->assertTrue(is_bool($this->package->getGeneratorApi()));
+    }
+
+    /**
+     * Test get getGeneratorApiFrontend
+     */
+    public function testGetGeneratorApiFrontend()
+    {
+        $this->assertTrue(is_bool($this->package->getGeneratorApiFrontend()));
+    }
+
+    /**
+     * Test get getGeneratorLaravelAdmin
+     */
+    public function testGetGeneratorLaravelAdmin()
+    {
+        $this->assertTrue(is_bool($this->package->getGeneratorLaravelAdmin()));
+    }
+
+    /**
+     * Test get getFields
+     */
+    public function testGetFields()
+    {
+        $this->assertTrue(is_array($this->package->getFields()));
+    }
+
+    /**
+     * Test get getForm
+     */
+    public function testGetForm()
+    {
+        $this->assertTrue(is_array($this->package->getForm()));
+    }
+
+    /**
+     * Test get getFilter
+     */
+    public function testGetFilter()
+    {
+        $this->assertTrue(is_array($this->package->getFilter()));
+    }
 }

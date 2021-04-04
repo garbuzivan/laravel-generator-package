@@ -38,7 +38,7 @@ class Builder
         $configGenerator = $this->config->getGenerator();
         foreach ($configGenerator as $package) {
             $package = app(Package::class)->init($package);
-            if ($this->isIgnore($package->getPackageVendor(), $package->getPackageName())) {
+            if ($this->isIgnore(/** @scrutinizer ignore-type */ $package->getPackageVendor(), /** @scrutinizer ignore-type */ $package->getPackageName())) {
                 continue;
             }
             /* Generation */
@@ -54,10 +54,10 @@ class Builder
      */
     public function isIgnore(string $vandor, string $name): bool
     {
-        if (!is_null(/** @scrutinizer ignore-type */$this->getPackageVendor()) && $this->getPackageVendor() != $vandor) {
+        if (!is_null($this->getPackageVendor()) && $this->getPackageVendor() != $vandor) {
             return true;
         }
-        if (!is_null(/** @scrutinizer ignore-type */$this->getPackageName()) && $this->getPackageName() != $name) {
+        if (!is_null($this->getPackageName()) && $this->getPackageName() != $name) {
             return true;
         }
         return false;
