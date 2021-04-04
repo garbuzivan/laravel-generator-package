@@ -82,11 +82,11 @@ class Configuration
      */
     public function load(): Configuration
     {
-        $fields = config($this->configFile . '.fields');
+        $fields = config($this->configFile . '.fields', $this->getFields());
         if (is_array($fields)) {
             $this->setFields($fields);
         }
-        $generator = config($this->configFile . '.generator');
+        $generator = config($this->configFile . '.generator', $this->getGenerator());
         if (is_array($generator)) {
             $this->setGenerator($generator);
         }

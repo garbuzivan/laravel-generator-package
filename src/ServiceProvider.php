@@ -6,7 +6,6 @@ namespace GarbuzIvan\LaravelGeneratorPackage;
 
 use Exception;
 use GarbuzIvan\LaravelGeneratorPackage\Commands\MakeCommand;
-use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Field;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Form;
 
@@ -67,10 +66,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     protected function publishPath($configFile): string
     {
-        if (function_exists('config_path')) {
-            return config_path($configFile);
-        } else {
-            return base_path('config/' . $configFile);
-        }
+        return config_path($configFile);
     }
 }
