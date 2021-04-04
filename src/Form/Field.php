@@ -74,53 +74,20 @@ class Field
             throw new Exception('Field ' . $column . ':' . $config['field'] . ' not found and not available for use');
         }
         $field = app($className)->init([$column, $config['label']]);
-        if (isset($config['label'])) {
-            $field->setLabel($config['label']);
-        }
-        if (isset($config['placeholder'])) {
-            $field->setPlaceholder($config['placeholder']);
-        }
-        if (isset($config['default'])) {
-            $field->default($config['default']);
-        }
-        if (isset($config['index'])) {
-            $field->index($config['index']);
-        }
-        if (isset($config['fillable'])) {
-            $field->fillable($config['fillable']);
-        }
-        if (isset($config['hidden'])) {
-            $field->hidden($config['hidden']);
-        }
+        $field->setLabel($config['label'] ?? '');
+        $field->setPlaceholder($config['placeholder'] ?? '');
+        $field->default($config['default'] ?? null);
+        $field->index($config['index'] ?? false);
+        $field->fillable($config['fillable'] ?? true);
+        $field->hidden($config['hidden'] ?? false);
+        $field->nullable($config['filter']['nullable'] ?? true);
+        $field->nullable($config['filter']['unique'] ?? false);
+        $field->required($config['filter']['required'] ?? false);
+        $field->max($config['filter']['max'] ?? null);
+        $field->min($config['filter']['min'] ?? null);
+        $field->setMask($config['filter']['mask'] ?? null);
         if (isset($config['references']['table']) && isset($config['references']['field'])) {
             $field->references($config['references']['table'], $config['references']['field']);
-        }
-        if (isset($config['filter']['type'])) {
-            $field->setType($config['filter']['type']);
-        }
-        if (isset($config['filter']['light'])) {
-            $field->setLight($config['filter']['light']);
-        }
-        if (isset($config['filter']['light'])) {
-            $field->setLight($config['filter']['light']);
-        }
-        if (isset($config['filter']['nullable'])) {
-            $field->nullable($config['filter']['nullable']);
-        }
-        if (isset($config['filter']['unique'])) {
-            $field->nullable($config['filter']['unique']);
-        }
-        if (isset($config['filter']['required'])) {
-            $field->required($config['filter']['required']);
-        }
-        if (isset($config['filter']['max'])) {
-            $field->max($config['filter']['max']);
-        }
-        if (isset($config['filter']['min'])) {
-            $field->min($config['filter']['min']);
-        }
-        if (isset($config['filter']['mask'])) {
-            $field->setMask($config['filter']['mask']);
         }
         return $field;
     }

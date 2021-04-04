@@ -34,8 +34,6 @@ return [
                     'hidden' => false,
                     'references' => null,
                     'filter' => [
-                        'type' => "string",
-                        'light' => 255,
                         'nullable' => true,
                         'unique' => false,
                         'required' => true,
