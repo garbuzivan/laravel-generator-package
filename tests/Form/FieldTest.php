@@ -212,6 +212,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     public function testUnique()
     {
         $this->assertFalse(Field::text('title', 'test')->unique(false)->getUnique());
+        $this->assertTrue(Field::text('title', 'test')->unique(true)->getUnique());
     }
 
     /**
@@ -286,10 +287,8 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
             'hidden' => false,
             'references' => null,
             'filter' => [
-                'type' => "string",
-                'light' => 255,
                 'nullable' => true,
-                'unique' => false,
+                'unique' => true,
                 'required' => true,
                 'max' => null,
                 'min' => null,
