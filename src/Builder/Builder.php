@@ -41,7 +41,7 @@ class Builder
                 continue;
             }
             /* Generation */
-            var_dump($this->packageVendor, $this->packageName);
+            //var_dump($this->packageVendor, $this->packageName);
         }
         return true;
     }
@@ -53,10 +53,10 @@ class Builder
      */
     public function isIgnore(string $vandor, string $name): bool
     {
-        if ($this->getPackageVendor() != null && $this->getPackageVendor() != $vandor) {
+        if (!is_null($this->getPackageVendor()) && $this->getPackageVendor() != $vandor) {
             return true;
         }
-        if ($this->getPackageName() != null && $this->getPackageName() != $name) {
+        if (!is_null($this->getPackageName()) && $this->getPackageName() != $name) {
             return true;
         }
         return false;
@@ -71,6 +71,7 @@ class Builder
         if (is_null($package)) {
             return true;
         }
+        $package = mb_strtolower($package);
         $package = str_replace('\\', '/', $package);
         if (!mb_stripos($package, '/')) {
             $this->packageVendor = $package;

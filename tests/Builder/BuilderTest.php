@@ -21,13 +21,12 @@ class BuilderTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
         $this->builder = app(Builder::class);
     }
 
-
     /**
      * Test ignore generation
      */
     public function testInit()
     {
-        $this->assertTrue($this->builder->init());
+        $this->assertTrue($this->builder->init('test_vendor/test_name'));
     }
 
     /**
