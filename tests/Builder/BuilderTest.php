@@ -44,10 +44,15 @@ class BuilderTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
      */
     public function testInitFilterVendorArgument()
     {
+        $this->builder->initFilter('vendor');
+        $this->assertTrue($this->builder->getPackageVendor() == 'vendor');
+        $this->assertTrue(is_null($this->builder->getPackageName()));
         $this->builder->initFilter('vendor/');
         $this->assertTrue($this->builder->getPackageVendor() == 'vendor');
+        $this->assertTrue(is_null($this->builder->getPackageName()));
         $this->builder->initFilter('test/');
         $this->assertTrue($this->builder->getPackageVendor() == 'test');
+        $this->assertTrue(is_null($this->builder->getPackageName()));
         $this->builder->initFilter('test/ ');
         $this->assertTrue($this->builder->getPackageVendor() == 'test');
         $this->assertTrue(is_null($this->builder->getPackageName()));
