@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Commands;
 
+use GarbuzIvan\LaravelGeneratorPackage\Builder\Builder;
 use Illuminate\Console\Command;
 use Illuminate\Support\Composer;
 
@@ -14,13 +15,21 @@ class MakeCommand extends Command
      *
      * @var string
      */
-    protected $name = 'lgp:make';
+    protected $name = 'lgp:make {package?}';
+
     /**
      * The console command description.
      *
      * @var string
      */
     protected $description = 'Generator the composer package from config file laravel-generator-package';
+
+    /**
+     * The console command signature.
+     *
+     * @var string
+     */
+    protected $signature = 'lgp:make {package?}';
 
     /**
      * @var Composer
@@ -42,6 +51,9 @@ class MakeCommand extends Command
      */
     public function handle()
     {
-        return 0;
+        $arguments = $this->arguments();
+        $this->line('Start composer package generation');
+        app(Builder::class)->init($arguments['package']);
+        return 1;
     }
 }

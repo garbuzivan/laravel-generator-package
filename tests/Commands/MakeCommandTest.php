@@ -4,14 +4,22 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Tests;
 
-use GarbuzIvan\LaravelGeneratorPackage\Commands\MakeCommand;
-
 class MakeCommandTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
 {
-    public function testMake()
+    /**
+     * Running a test for generating all packets
+     */
+    public function testMakeAll()
     {
-        $command = new MakeCommand;
-        $this->assertTrue($command->handle() == 0);
+        $this->artisan('lgp:make')->assertExitCode(1);
+    }
+
+    /**
+     * Running a single batch test
+     */
+    public function testMakeOnePackage()
+    {
+        $this->artisan('lgp:make vendor/package-name')->assertExitCode(1);
     }
 }
 

@@ -1,35 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1617357741">
-  <project timestamp="1617357741">
-    <package name="GarbuzIvan\LaravelGeneratorPackage\Commands">
-      <file name="packages/garbuzivan/laravel-generator-package/src/Commands/MakeCommand.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Commands\MakeCommand" namespace="GarbuzIvan\LaravelGeneratorPackage\Commands">
-          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+<coverage generated="1617532549">
+  <project timestamp="1617532549">
+    <package name="GarbuzIvan\LaravelGeneratorPackage\Builder">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/Builder.php">
+        <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Builder" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
+          <metrics complexity="19" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="21" elements="32" coveredelements="25"/>
         </class>
-        <line num="33" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="35" type="stmt" count="1"/>
-        <line num="36" type="stmt" count="1"/>
-        <line num="43" type="method" name="handle" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="45" type="stmt" count="1"/>
-        <metrics loc="47" ncloc="31" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
+        <line num="26" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="28" type="stmt" count="7"/>
+        <line num="29" type="stmt" count="7"/>
+        <line num="35" type="method" name="init" visibility="public" complexity="4" crap="5.26" count="3"/>
+        <line num="37" type="stmt" count="3"/>
+        <line num="38" type="stmt" count="3"/>
+        <line num="39" type="stmt" count="3"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="3"/>
+        <line num="54" type="method" name="isIgnore" visibility="public" complexity="5" crap="5" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="69" type="method" name="initFilter" visibility="public" complexity="5" crap="5.20" count="7"/>
+        <line num="71" type="stmt" count="7"/>
+        <line num="72" type="stmt" count="3"/>
+        <line num="74" type="stmt" count="4"/>
+        <line num="75" type="stmt" count="4"/>
+        <line num="76" type="stmt" count="0"/>
+        <line num="77" type="stmt" count="0"/>
+        <line num="79" type="stmt" count="4"/>
+        <line num="80" type="stmt" count="4"/>
+        <line num="81" type="stmt" count="4"/>
+        <line num="82" type="stmt" count="4"/>
+        <line num="88" type="method" name="getPackageVendor" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="90" type="stmt" count="4"/>
+        <line num="96" type="method" name="getPackageName" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="98" type="stmt" count="4"/>
+        <metrics loc="100" ncloc="78" classes="1" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="21" elements="32" coveredelements="25"/>
+      </file>
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/DirGenerator.php">
+        <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\DirGenerator" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="10" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="GarbuzIvan\LaravelGeneratorPackage\Commands">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Commands/MakeCommand.php">
+        <class name="GarbuzIvan\LaravelGeneratorPackage\Commands\MakeCommand" namespace="GarbuzIvan\LaravelGeneratorPackage\Commands">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+        </class>
+        <line num="42" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="52" type="method" name="handle" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="54" type="stmt" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <metrics loc="59" ncloc="39" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
       </file>
     </package>
     <package name="GarbuzIvan\LaravelGeneratorPackage">
-      <file name="packages/garbuzivan/laravel-generator-package/src/Configuration.php">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Configuration.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Configuration" namespace="GarbuzIvan\LaravelGeneratorPackage">
           <metrics complexity="8" methods="6" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="13" elements="21" coveredelements="18"/>
         </class>
-        <line num="35" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="33"/>
-        <line num="37" type="stmt" count="33"/>
-        <line num="38" type="stmt" count="33"/>
-        <line num="43" type="method" name="load" visibility="public" complexity="3" crap="3.21" count="33"/>
-        <line num="45" type="stmt" count="33"/>
-        <line num="46" type="stmt" count="33"/>
+        <line num="35" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="40"/>
+        <line num="37" type="stmt" count="40"/>
+        <line num="38" type="stmt" count="40"/>
+        <line num="43" type="method" name="load" visibility="public" complexity="3" crap="3.21" count="40"/>
+        <line num="45" type="stmt" count="40"/>
+        <line num="46" type="stmt" count="40"/>
         <line num="47" type="stmt" count="0"/>
-        <line num="49" type="stmt" count="33"/>
-        <line num="50" type="stmt" count="33"/>
+        <line num="49" type="stmt" count="40"/>
+        <line num="50" type="stmt" count="40"/>
         <line num="51" type="stmt" count="0"/>
-        <line num="53" type="stmt" count="33"/>
+        <line num="53" type="stmt" count="40"/>
         <line num="59" type="method" name="setFields" visibility="public" complexity="1" crap="1" count="1"/>
         <line num="61" type="stmt" count="1"/>
         <line num="62" type="stmt" count="1"/>
@@ -38,43 +87,46 @@
         <line num="71" type="stmt" count="2"/>
         <line num="76" type="method" name="getFields" visibility="public" complexity="1" crap="1" count="25"/>
         <line num="78" type="stmt" count="25"/>
-        <line num="84" type="method" name="getGenerator" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="86" type="stmt" count="1"/>
+        <line num="84" type="method" name="getGenerator" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="86" type="stmt" count="4"/>
         <metrics loc="88" ncloc="65" classes="1" methods="6" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="13" elements="21" coveredelements="18"/>
       </file>
-      <file name="packages/garbuzivan/laravel-generator-package/src/ServiceProvider.php">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/ServiceProvider.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\ServiceProvider" namespace="GarbuzIvan\LaravelGeneratorPackage">
-          <metrics complexity="5" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="16" elements="21" coveredelements="19"/>
+          <metrics complexity="6" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="19" elements="24" coveredelements="22"/>
         </class>
-        <line num="19" type="method" name="boot" visibility="public" complexity="1" crap="1" count="35"/>
-        <line num="21" type="stmt" count="35"/>
-        <line num="23" type="stmt" count="35"/>
-        <line num="24" type="stmt" count="35"/>
-        <line num="25" type="stmt" count="35"/>
-        <line num="27" type="stmt" count="35"/>
-        <line num="28" type="stmt" count="35"/>
-        <line num="36" type="method" name="register" visibility="public" complexity="1" crap="1" count="35"/>
-        <line num="39" type="stmt" count="33"/>
-        <line num="40" type="stmt" count="35"/>
-        <line num="42" type="stmt" count="23"/>
-        <line num="43" type="stmt" count="35"/>
-        <line num="45" type="stmt" count="4"/>
-        <line num="46" type="stmt" count="35"/>
-        <line num="47" type="stmt" count="35"/>
-        <line num="52" type="method" name="configPath" visibility="protected" complexity="1" crap="1" count="35"/>
-        <line num="54" type="stmt" count="35"/>
-        <line num="61" type="method" name="publishPath" visibility="protected" complexity="2" crap="2.15" count="35"/>
-        <line num="63" type="stmt" count="35"/>
-        <line num="64" type="stmt" count="35"/>
-        <line num="66" type="stmt" count="0"/>
-        <metrics loc="69" ncloc="55" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="16" elements="21" coveredelements="19"/>
+        <line num="20" type="method" name="boot" visibility="public" complexity="2" crap="2" count="41"/>
+        <line num="22" type="stmt" count="41"/>
+        <line num="23" type="stmt" count="41"/>
+        <line num="24" type="stmt" count="41"/>
+        <line num="28" type="stmt" count="41"/>
+        <line num="30" type="stmt" count="41"/>
+        <line num="31" type="stmt" count="41"/>
+        <line num="32" type="stmt" count="41"/>
+        <line num="34" type="stmt" count="41"/>
+        <line num="35" type="stmt" count="41"/>
+        <line num="43" type="method" name="register" visibility="public" complexity="1" crap="1" count="41"/>
+        <line num="46" type="stmt" count="40"/>
+        <line num="47" type="stmt" count="41"/>
+        <line num="49" type="stmt" count="23"/>
+        <line num="50" type="stmt" count="41"/>
+        <line num="52" type="stmt" count="4"/>
+        <line num="53" type="stmt" count="41"/>
+        <line num="54" type="stmt" count="41"/>
+        <line num="59" type="method" name="configPath" visibility="protected" complexity="1" crap="1" count="41"/>
+        <line num="61" type="stmt" count="41"/>
+        <line num="68" type="method" name="publishPath" visibility="protected" complexity="2" crap="2.15" count="41"/>
+        <line num="70" type="stmt" count="41"/>
+        <line num="71" type="stmt" count="41"/>
+        <line num="73" type="stmt" count="0"/>
+        <metrics loc="76" ncloc="62" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="19" elements="24" coveredelements="22"/>
       </file>
     </package>
-    <file name="packages/garbuzivan/laravel-generator-package/src/Contracts/FieldInterface.php">
+    <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Contracts/FieldInterface.php">
       <metrics loc="18" ncloc="14" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <package name="GarbuzIvan\LaravelGeneratorPackage\Exceptions">
-      <file name="packages/garbuzivan/laravel-generator-package/src/Exceptions/FieldDoesNotExistsException.php">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Exceptions/FieldDoesNotExistsException.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Exceptions\FieldDoesNotExistsException" namespace="GarbuzIvan\LaravelGeneratorPackage\Exceptions">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
@@ -82,7 +134,7 @@
       </file>
     </package>
     <package name="GarbuzIvan\LaravelGeneratorPackage\Facades">
-      <file name="packages/garbuzivan/laravel-generator-package/src/Facades/Field.php">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Facades/Field.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Facades\Field" namespace="GarbuzIvan\LaravelGeneratorPackage\Facades">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
@@ -92,7 +144,7 @@
       </file>
     </package>
     <package name="GarbuzIvan\LaravelGeneratorPackage\Form">
-      <file name="packages/garbuzivan/laravel-generator-package/src/Form/Field.php">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Form/Field.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Field" namespace="GarbuzIvan\LaravelGeneratorPackage\Form">
           <metrics complexity="7" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="14" coveredelements="14"/>
         </class>
@@ -112,7 +164,7 @@
         <line num="56" type="stmt" count="1"/>
         <metrics loc="58" ncloc="42" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="14" coveredelements="14"/>
       </file>
-      <file name="packages/garbuzivan/laravel-generator-package/src/Form/Filter.php">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Form/Filter.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Filter" namespace="GarbuzIvan\LaravelGeneratorPackage\Form">
           <metrics complexity="23" methods="17" coveredmethods="17" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="26" elements="43" coveredelements="43"/>
         </class>
@@ -161,7 +213,7 @@
         <line num="185" type="stmt" count="1"/>
         <metrics loc="187" ncloc="138" classes="1" methods="17" coveredmethods="17" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="26" elements="43" coveredelements="43"/>
       </file>
-      <file name="packages/garbuzivan/laravel-generator-package/src/Form/Form.php">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Form/Form.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Form" namespace="GarbuzIvan\LaravelGeneratorPackage\Form">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
         </class>
@@ -172,7 +224,7 @@
       </file>
     </package>
     <package name="GarbuzIvan\LaravelGeneratorPackage\Form\Fields">
-      <file name="packages/garbuzivan/laravel-generator-package/src/Form/Fields/FieldAbstract.php">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Form/Fields/FieldAbstract.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Fields\FieldAbstract" namespace="GarbuzIvan\LaravelGeneratorPackage\Form\Fields">
           <metrics complexity="56" methods="39" coveredmethods="38" conditionals="0" coveredconditionals="0" statements="69" coveredstatements="67" elements="108" coveredelements="105"/>
         </class>
@@ -286,7 +338,7 @@
         <line num="423" type="stmt" count="1"/>
         <metrics loc="426" ncloc="309" classes="1" methods="39" coveredmethods="38" conditionals="0" coveredconditionals="0" statements="69" coveredstatements="67" elements="108" coveredelements="105"/>
       </file>
-      <file name="packages/garbuzivan/laravel-generator-package/src/Form/Fields/TextField.php">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Form/Fields/TextField.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField" namespace="GarbuzIvan\LaravelGeneratorPackage\Form\Fields">
           <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
         </class>
@@ -301,6 +353,6 @@
         <metrics loc="36" ncloc="29" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
       </file>
     </package>
-    <metrics files="11" loc="976" ncloc="725" classes="9" methods="75" coveredmethods="72" conditionals="0" coveredconditionals="0" statements="150" coveredstatements="145" elements="225" coveredelements="217"/>
+    <metrics files="13" loc="1105" ncloc="828" classes="10" methods="81" coveredmethods="76" conditionals="0" coveredconditionals="0" statements="182" coveredstatements="172" elements="263" coveredelements="248"/>
   </project>
 </coverage>

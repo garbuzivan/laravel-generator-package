@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace GarbuzIvan\LaravelGeneratorPackage;
 
 use Exception;
+use GarbuzIvan\LaravelGeneratorPackage\Commands\MakeCommand;
 use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Field;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Form;
@@ -18,6 +19,12 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function boot()
     {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                MakeCommand::class,
+            ]);
+        }
+
         $configPath = $this->configPath();
 
         $this->publishes([
