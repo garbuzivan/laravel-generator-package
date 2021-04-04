@@ -54,10 +54,10 @@ class Builder
      */
     public function isIgnore(string $vandor, string $name): bool
     {
-        if (!is_null($this->getPackageVendor()) && $this->getPackageVendor() != $vandor) {
+        if (!is_null(/** @scrutinizer ignore-type */$this->getPackageVendor()) && $this->getPackageVendor() != $vandor) {
             return true;
         }
-        if (!is_null($this->getPackageName()) && $this->getPackageName() != $name) {
+        if (!is_null(/** @scrutinizer ignore-type */$this->getPackageName()) && $this->getPackageName() != $name) {
             return true;
         }
         return false;

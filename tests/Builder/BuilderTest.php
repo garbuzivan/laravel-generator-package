@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace GarbuzIvan\LaravelGeneratorPackage\Builder;
 
 use GarbuzIvan\LaravelGeneratorPackage\Configuration;
+use GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase;
 
-class BuilderTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
+class BuilderTest extends TestCase
 {
     private Builder $builder;
-    private Configuration $config;
 
     /**
      * setUp
@@ -17,7 +17,6 @@ class BuilderTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     public function setUp(): void
     {
         parent::setUp();
-        $this->config = app(Configuration::class);
         $this->builder = app(Builder::class);
     }
 

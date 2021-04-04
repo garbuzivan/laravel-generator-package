@@ -69,6 +69,7 @@ class Field
     public function loadFieldFromArray(string $column, array $config): FieldInterface
     {
         $className = $this->findFieldClass($config['field']);
+        /** @noinspection IsEmptyFunctionUsageInspection */
         if (!$className) {
             throw new Exception('Field ' . $column . ':' . $config['field'] . ' not found and not available for use');
         }

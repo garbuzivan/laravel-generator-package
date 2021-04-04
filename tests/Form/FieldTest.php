@@ -6,6 +6,7 @@ namespace GarbuzIvan\LaravelGeneratorPackage\Tests\Form;
 
 use Exception;
 use GarbuzIvan\LaravelGeneratorPackage\Configuration;
+use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
 use GarbuzIvan\LaravelGeneratorPackage\Exceptions\FieldDoesNotExistsException;
 use GarbuzIvan\LaravelGeneratorPackage\Facades\Field;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField;
@@ -236,5 +237,50 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     public function testDefault()
     {
         $this->assertTrue(Field::text('title', 'test')->default('testpack')->getDefault() == 'testpack');
+    }
+
+    /**
+     * is name field is empty
+     */
+    public function testFailInit()
+    {
+        $this->assertFalse(Field::findFieldClass(' '));
+    }
+
+    /**
+     * is name field is empty
+     */
+    public function testLoadFieldFromArrayFail()
+    {
+        $this->expectException(Exception::class);
+        Field::loadFieldFromArray('test', ['field' => '___not___field___test___']);
+    }
+
+    /**
+     * is name field is empty
+     */
+    public function testLoadFieldFromArray()
+    {
+        $field = Field::loadFieldFromArray('test', [
+            'field' => 'text',
+            'label' => 'Title',
+            'placeholder' => 'Enter label',
+            'default' => null,
+            'index' => false,
+            'fillable' => true,
+            'hidden' => false,
+            'references' => null,
+            'filter' => [
+                'type' => "string",
+                'light' => 255,
+                'nullable' => true,
+                'unique' => false,
+                'required' => true,
+                'max' => null,
+                'min' => null,
+                'mask' => null,
+            ]
+        ]);
+        $this->assertTrue($field instanceof FieldInterface);
     }
 }
