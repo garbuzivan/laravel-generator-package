@@ -81,7 +81,7 @@ class Field
         $field->fillable($config['fillable'] ?? true);
         $field->hidden($config['hidden'] ?? false);
         $field->nullable($config['filter']['nullable'] ?? true);
-        $field->nullable($config['filter']['unique'] ?? false);
+        $field->unique($config['filter']['unique'] ?? false);
         $field->required($config['filter']['required'] ?? false);
         $field->max($config['filter']['max'] ?? null);
         $field->min($config['filter']['min'] ?? null);
