@@ -38,13 +38,14 @@ class Configuration
             'package' => 'test_name',
             'generator' => [
                 'tests' => true,
-                'factories' => true,
+                'seed' => true,
                 'api' => true,
-                'api-frontend' => true,
-                'laravel-admin' => true,
+                'api_frontend' => true,
+                'laravel_admin' => true,
             ],
             'fields' => [
                 'title' => [
+                    'field' => 'text',
                     'label' => 'Title',
                     'placeholder' => 'Enter label',
                     'default' => null,

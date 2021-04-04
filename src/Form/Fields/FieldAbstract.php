@@ -240,12 +240,32 @@ abstract class FieldAbstract implements FieldInterface
     }
 
     /**
+     * @param bool $nullable
+     * @return FieldInterface
+     */
+    public function nullable(bool $nullable = true): FieldInterface
+    {
+        $this->filter->nullable($nullable);
+        return $this;
+    }
+
+    /**
      * @param bool $fillable
      * @return FieldInterface
      */
     public function fillable(bool $fillable = true): FieldInterface
     {
         $this->fillable = $fillable;
+        return $this;
+    }
+
+    /**
+     * @param bool $unique
+     * @return FieldInterface
+     */
+    public function unique(bool $unique = true): FieldInterface
+    {
+        $this->filter->unique($unique);
         return $this;
     }
 
@@ -423,4 +443,19 @@ abstract class FieldAbstract implements FieldInterface
         return $this->viewGrid;
     }
 
+    /**
+     * @return bool
+     */
+    public function getNullable(): bool
+    {
+        return $this->filter->getNullable();
+    }
+
+    /**
+     * @return bool
+     */
+    public function getUnique(): bool
+    {
+        return $this->filter->getUnique();
+    }
 }

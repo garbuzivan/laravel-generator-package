@@ -29,19 +29,20 @@ class Builder
     }
 
     /**
-     * @param string|null $package
+     * @param string|null $packageFilter
      * @return bool
      */
-    public function init(?string $package = null): bool
+    public function init(?string $packageFilter = null): bool
     {
-        $this->initFilter($package);
+        $this->initFilter($packageFilter);
         $configGenerator = $this->config->getGenerator();
         foreach ($configGenerator as $package) {
-            if ($this->isIgnore($package['vendor'], $package['package'])) {
+            $package = app(Package::class)->init($package);
+            if ($this->isIgnore($package->getPackageVendor(), $package->getPackageName())) {
                 continue;
             }
             /* Generation */
-            //var_dump($this->packageVendor, $this->packageName);
+
         }
         return true;
     }

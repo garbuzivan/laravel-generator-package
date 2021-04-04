@@ -45,6 +45,7 @@ class Filter
 
     /**
      * @param bool $nullable
+     * @return Filter
      */
     public function nullable(bool $nullable = true): self
     {
@@ -54,6 +55,7 @@ class Filter
 
     /**
      * @param bool $unique
+     * @return Filter
      */
     public function unique(bool $unique = true): self
     {
