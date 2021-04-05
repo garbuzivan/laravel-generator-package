@@ -270,4 +270,13 @@ class Package
     {
         return $this->filter;
     }
+
+    /**
+     * @param string $path
+     * @return string
+     */
+    public function getPath(string $path): string
+    {
+        return base_path('packages/' . $this->getPackageVendor() . '/' . $this->getPackageName() . '/' . $path);
+    }
 }

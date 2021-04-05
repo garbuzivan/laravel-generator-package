@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Builder;
 
-use GarbuzIvan\LaravelGeneratorPackage\Configuration;
 use GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase;
 
 class BuilderTest extends TestCase
@@ -25,7 +24,8 @@ class BuilderTest extends TestCase
      */
     public function testInit()
     {
-        $this->assertTrue($this->builder->init('test_vendor/test_name'));
+        $init = $this->builder->init('test_vendor/test_name');
+        $this->assertTrue($init);
     }
 
     /**

@@ -42,7 +42,7 @@ class Builder
                 continue;
             }
             /* Generation */
-
+            app(DirGenerator::class)->make($package);
         }
         return true;
     }
