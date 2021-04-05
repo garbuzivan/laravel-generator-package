@@ -94,7 +94,7 @@ class DirGenerator
      */
     public function mkdir(string $path): bool
     {
-        if (!is_dir($path)) {
+        if (!file_exists($path)) {
             mkdir($path, 0777, true);
             return true;
         }

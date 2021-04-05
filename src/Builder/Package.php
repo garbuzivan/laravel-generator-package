@@ -8,7 +8,6 @@ use GarbuzIvan\LaravelGeneratorPackage\Facades\Field;
 
 class Package
 {
-    private array $packageArr;
     /**
      * @var string
      */
@@ -43,21 +42,20 @@ class Package
      */
     public function init(array $package): self
     {
-        $this->packageArr = $package;
-        $this->setName($this->packageArr['name'] ?? $this->name);
-        $this->setDescription($this->packageArr['description'] ?? $this->description);
-        $this->setPackageVendor(/** @scrutinizer ignore-type */ $this->packageArr['vendor'] ?? $this->packageVendor);
-        $this->setPackageName(/** @scrutinizer ignore-type */ $this->packageArr['package'] ?? $this->packageName);
+        $this->setName($package['name'] ?? $this->name);
+        $this->setDescription($package['description'] ?? $this->description);
+        $this->setPackageVendor(/** @scrutinizer ignore-type */ $package['vendor'] ?? $this->packageVendor);
+        $this->setPackageName(/** @scrutinizer ignore-type */ $package['package'] ?? $this->packageName);
 
-        $this->setGeneratorTests($this->packageArr['generator']['tests'] ?? $this->generator_tests);
-        $this->setGeneratorSeed($this->packageArr['generator']['seed'] ?? $this->generator_seed);
-        $this->setGeneratorApi($this->packageArr['generator']['api'] ?? $this->generator_api);
-        $this->setGeneratorApiFrontend($this->packageArr['generator']['api_frontend'] ?? $this->generator_api_frontend);
-        $this->setGeneratorLaravelAdmin($this->packageArr['generator']['laravel_admin'] ?? $this->generator_laravel_admin);
+        $this->setGeneratorTests($package['generator']['tests'] ?? $this->generator_tests);
+        $this->setGeneratorSeed($package['generator']['seed'] ?? $this->generator_seed);
+        $this->setGeneratorApi($package['generator']['api'] ?? $this->generator_api);
+        $this->setGeneratorApiFrontend($package['generator']['api_frontend'] ?? $this->generator_api_frontend);
+        $this->setGeneratorLaravelAdmin($package['generator']['laravel_admin'] ?? $this->generator_laravel_admin);
 
-        $this->setFields($this->packageArr['fields'] ?? null);
-        $this->setForm($this->packageArr['form'] ?? $this->form);
-        $this->setFilter($this->packageArr['filter'] ?? $this->filter);
+        $this->setFields($package['fields'] ?? null);
+        $this->setForm($package['form'] ?? $this->form);
+        $this->setFilter($package['filter'] ?? $this->filter);
 
         return $this;
     }
@@ -156,9 +154,9 @@ class Package
      * @param array|null $fields
      * @return $this
      */
-    public function setFields(?array $fields): self
+    public function setFields(?array $fields = null): self
     {
-        if (!is_array($fields)) {
+        if (is_null($fields)) {
             return $this;
         }
         foreach ($fields as $fieldKey => $fieldParam) {

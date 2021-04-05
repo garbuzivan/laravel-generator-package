@@ -39,7 +39,7 @@ class DirGeneratorTest extends TestCase
     }
 
     /**
-     * Test addone false
+     * Test make dir if isset dir
      */
     public function testMakeIssetDir()
     {
