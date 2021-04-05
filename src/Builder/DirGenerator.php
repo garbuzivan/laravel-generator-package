@@ -7,6 +7,7 @@ namespace GarbuzIvan\LaravelGeneratorPackage\Builder;
 class DirGenerator
 {
     private Package $package;
+
     /**
      * @param Package $package
      * @return bool
@@ -32,7 +33,7 @@ class DirGenerator
      */
     public function makeTests(): bool
     {
-        if(!$this->package->getGeneratorTests()){
+        if (!$this->package->getGeneratorTests()) {
             return false;
         }
         $this->mkdir($this->package->getPath('tests'));
@@ -44,7 +45,7 @@ class DirGenerator
      */
     public function makeSeeds(): bool
     {
-        if(!$this->package->getGeneratorSeed()){
+        if (!$this->package->getGeneratorSeed()) {
             return false;
         }
         $this->mkdir($this->package->getPath('seeds'));
@@ -56,7 +57,7 @@ class DirGenerator
      */
     public function makeApi(): bool
     {
-        if(!$this->package->getGeneratorApi()){
+        if (!$this->package->getGeneratorApi()) {
             return false;
         }
         $this->mkdir($this->package->getPath('src/Cases/Api'));
@@ -68,7 +69,7 @@ class DirGenerator
      */
     public function makeApiFrontend(): bool
     {
-        if(!$this->package->getGeneratorApiFrontend()){
+        if (!$this->package->getGeneratorApiFrontend()) {
             return false;
         }
         $this->mkdir($this->package->getPath('src/Cases/Api/Frontend'));
@@ -80,7 +81,7 @@ class DirGenerator
      */
     public function makeLaravelAdmin(): bool
     {
-        if(!$this->package->getGeneratorLaravelAdmin()){
+        if (!$this->package->getGeneratorLaravelAdmin()) {
             return false;
         }
         $this->mkdir($this->package->getPath('src/Admin'));
@@ -93,7 +94,7 @@ class DirGenerator
      */
     public function mkdir(string $path): bool
     {
-        if(!is_dir($path)){
+        if (!is_dir($path)) {
             mkdir($path, 0777, true);
         }
         return true;

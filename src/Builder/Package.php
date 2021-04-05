@@ -44,134 +44,146 @@ class Package
     public function init(array $package): self
     {
         $this->packageArr = $package;
-        $this->setName();
-        $this->setDescription();
-        $this->setPackageVendor();
-        $this->setPackageName();
+        $this->setName($this->packageArr['name'] ?? $this->name);
+        $this->setDescription($this->packageArr['description'] ?? $this->description);
+        $this->setPackageVendor($this->packageArr['vendor'] ?? $this->packageVendor);
+        $this->setPackageName($this->packageArr['package'] ?? $this->packageName);
 
-        $this->setGeneratorTests();
-        $this->setGeneratorSeed();
-        $this->setGeneratorApi();
-        $this->setGeneratorApiFrontend();
-        $this->setGeneratorLaravelAdmin();
+        $this->setGeneratorTests($this->packageArr['generator']['tests'] ?? $this->generator_tests);
+        $this->setGeneratorSeed($this->packageArr['generator']['seed'] ?? $this->generator_seed);
+        $this->setGeneratorApi($this->packageArr['generator']['api'] ?? $this->generator_api);
+        $this->setGeneratorApiFrontend($this->packageArr['generator']['api_frontend'] ?? $this->generator_api_frontend);
+        $this->setGeneratorLaravelAdmin($this->packageArr['generator']['laravel_admin'] ?? $this->generator_laravel_admin);
 
-        $this->setFields();
-        $this->setForm();
-        $this->setFilter();
+        $this->setFields($this->packageArr['fields'] ?? null);
+        $this->setForm($this->packageArr['form'] ?? $this->form);
+        $this->setFilter($this->packageArr['filter'] ?? $this->filter);
 
         return $this;
     }
 
     /**
+     * @param string $name
      * @return $this
      */
-    public function setName(): self
+    public function setName(string $name): self
     {
-        $this->name = $this->packageArr['name'] ?? $this->name;
+        $this->name = $name;
         return $this;
     }
 
     /**
+     * @param string $description
      * @return $this
      */
-    public function setDescription(): self
+    public function setDescription(string $description): self
     {
-        $this->description = $this->packageArr['description'] ?? $this->description;
+        $this->description = $description;
         return $this;
     }
 
     /**
+     * @param string $packageVendor
      * @return $this
      */
-    public function setPackageVendor(): self
+    public function setPackageVendor(string $packageVendor): self
     {
-        $this->packageVendor = $this->packageArr['vendor'] ?? $this->packageVendor;
+        $this->packageVendor = $packageVendor;
         return $this;
     }
 
     /**
+     * @param string $packageName
      * @return $this
      */
-    public function setPackageName(): self
+    public function setPackageName(string $packageName): self
     {
-        $this->packageName = $this->packageArr['package'] ?? $this->packageName;
+        $this->packageName = $packageName;
         return $this;
     }
 
     /**
+     * @param bool $generator_tests
      * @return $this
      */
-    public function setGeneratorTests(): self
+    public function setGeneratorTests(bool $generator_tests = true): self
     {
-        $this->generator_tests = $this->packageArr['generator']['tests'] ?? $this->generator_tests;
+        $this->generator_tests = $generator_tests;
         return $this;
     }
 
     /**
+     * @param bool $generator_seed
      * @return $this
      */
-    public function setGeneratorSeed(): self
+    public function setGeneratorSeed(bool $generator_seed = true): self
     {
-        $this->generator_seed = $this->packageArr['generator']['seed'] ?? $this->generator_seed;
+        $this->generator_seed = $generator_seed;
         return $this;
     }
 
     /**
+     * @param bool $generator_api
      * @return $this
      */
-    public function setGeneratorApi(): self
+    public function setGeneratorApi(bool $generator_api = true): self
     {
-        $this->generator_api = $this->packageArr['generator']['api'] ?? $this->generator_api;
+        $this->generator_api = $generator_api;
         return $this;
     }
 
     /**
+     * @param bool $generator_api_frontend
      * @return $this
      */
-    public function setGeneratorApiFrontend(): self
+    public function setGeneratorApiFrontend(bool $generator_api_frontend = true): self
     {
-        $this->generator_api_frontend = $this->packageArr['generator']['api_frontend'] ?? $this->generator_api_frontend;
+        $this->generator_api_frontend = $generator_api_frontend;
         return $this;
     }
 
     /**
+     * @param bool $generator_laravel_admin
      * @return $this
      */
-    public function setGeneratorLaravelAdmin(): self
+    public function setGeneratorLaravelAdmin(bool $generator_laravel_admin = true): self
     {
-        $this->generator_laravel_admin = $this->packageArr['generator']['laravel_admin'] ?? $this->generator_laravel_admin;
+        $this->generator_laravel_admin = $generator_laravel_admin;
         return $this;
     }
 
     /**
+     * @param array|null $fields
      * @return $this
      */
-    public function setFields(): self
+    public function setFields(?array $fields): self
     {
-        if (!is_array($this->packageArr['fields'])) {
+        if (!is_array($fields)) {
             return $this;
         }
-        foreach ($this->packageArr['fields'] as $fieldKey => $fieldParam) {
+        foreach ($fields as $fieldKey => $fieldParam) {
             $this->fields[$fieldKey] = Field::loadFieldFromArray($fieldKey, $fieldParam);
         }
         return $this;
     }
 
     /**
+     * @param array $form
      * @return $this
      */
-    public function setForm(): self
+    public function setForm(array $form): self
     {
-        $this->form = $this->packageArr['form'] ?? $this->form;
+        $this->form = $form;
         return $this;
     }
 
     /**
+     * @param array $filter
      * @return $this
      */
-    public function setFilter(): self
+    public function setFilter(array $filter): self
     {
-        $this->filter = $this->packageArr['filter'] ?? $this->filter;
+        $this->filter = $filter;
         return $this;
     }
 

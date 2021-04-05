@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Tests;
 
-use GarbuzIvan\LaravelGeneratorPackage\Builder\Builder;
 use GarbuzIvan\LaravelGeneratorPackage\Configuration;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField;
 
@@ -20,6 +19,7 @@ class ConfigurationTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCa
         parent::setUp();
         $this->config = app(Configuration::class);
     }
+
     /**
      * set\get Fields
      */
