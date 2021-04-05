@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1617648705">
-  <project timestamp="1617648705">
+<coverage generated="1617648949">
+  <project timestamp="1617648949">
     <package name="GarbuzIvan\LaravelGeneratorPackage\Builder">
       <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/Builder.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Builder" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
@@ -44,7 +44,7 @@
       </file>
       <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/DirGenerator.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\DirGenerator" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
-          <metrics complexity="13" methods="7" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="34" elements="43" coveredelements="40"/>
+          <metrics complexity="13" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="36" elements="43" coveredelements="43"/>
         </class>
         <line num="15" type="method" name="make" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="17" type="stmt" count="3"/>
@@ -84,12 +84,12 @@
         <line num="85" type="stmt" count="1"/>
         <line num="87" type="stmt" count="2"/>
         <line num="88" type="stmt" count="2"/>
-        <line num="95" type="method" name="mkdir" visibility="public" complexity="2" crap="2.50" count="4"/>
+        <line num="95" type="method" name="mkdir" visibility="public" complexity="2" crap="2" count="4"/>
         <line num="97" type="stmt" count="4"/>
-        <line num="98" type="stmt" count="0"/>
-        <line num="99" type="stmt" count="0"/>
+        <line num="98" type="stmt" count="1"/>
+        <line num="99" type="stmt" count="1"/>
         <line num="101" type="stmt" count="4"/>
-        <metrics loc="103" ncloc="87" classes="1" methods="7" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="34" elements="43" coveredelements="40"/>
+        <metrics loc="103" ncloc="87" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="36" elements="43" coveredelements="43"/>
       </file>
       <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/Package.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Package" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
@@ -513,6 +513,6 @@
         <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
       </file>
     </package>
-    <metrics files="14" loc="1604" ncloc="1214" classes="12" methods="119" coveredmethods="116" conditionals="0" coveredconditionals="0" statements="298" coveredstatements="293" elements="417" coveredelements="409"/>
+    <metrics files="14" loc="1604" ncloc="1214" classes="12" methods="119" coveredmethods="117" conditionals="0" coveredconditionals="0" statements="298" coveredstatements="295" elements="417" coveredelements="412"/>
   </project>
 </coverage>

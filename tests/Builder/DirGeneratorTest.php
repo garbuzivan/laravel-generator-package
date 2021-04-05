@@ -44,5 +44,6 @@ class DirGeneratorTest extends TestCase
     public function testMakeIssetDir()
     {
         $this->assertFalse($this->dirGenerator->mkdir(base_path()));
+        $this->assertTrue($this->dirGenerator->mkdir(base_path(time())));
     }
 }
