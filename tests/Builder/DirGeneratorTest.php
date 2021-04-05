@@ -37,4 +37,12 @@ class DirGeneratorTest extends TestCase
         $init = $this->dirGenerator->make($this->package);
         $this->assertTrue($init);
     }
+
+    /**
+     * Test addone false
+     */
+    public function testMakeIssetDir()
+    {
+        $this->assertFalse($this->dirGenerator->mkdir(base_path()));
+    }
 }

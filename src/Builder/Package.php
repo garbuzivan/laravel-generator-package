@@ -46,8 +46,8 @@ class Package
         $this->packageArr = $package;
         $this->setName($this->packageArr['name'] ?? $this->name);
         $this->setDescription($this->packageArr['description'] ?? $this->description);
-        $this->setPackageVendor($this->packageArr['vendor'] ?? $this->packageVendor);
-        $this->setPackageName($this->packageArr['package'] ?? $this->packageName);
+        $this->setPackageVendor(/** @scrutinizer ignore-type */ $this->packageArr['vendor'] ?? $this->packageVendor);
+        $this->setPackageName(/** @scrutinizer ignore-type */ $this->packageArr['package'] ?? $this->packageName);
 
         $this->setGeneratorTests($this->packageArr['generator']['tests'] ?? $this->generator_tests);
         $this->setGeneratorSeed($this->packageArr['generator']['seed'] ?? $this->generator_seed);

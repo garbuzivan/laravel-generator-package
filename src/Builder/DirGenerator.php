@@ -96,7 +96,8 @@ class DirGenerator
     {
         if (!is_dir($path)) {
             mkdir($path, 0777, true);
+            return true;
         }
-        return true;
+        return false;
     }
 }

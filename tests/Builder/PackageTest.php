@@ -110,4 +110,12 @@ class PackageTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     {
         $this->assertTrue(is_array($this->package->getFilter()));
     }
+
+    /**
+     * Test get getFields
+     */
+    public function testSetFieldsNull()
+    {
+        $this->assertTrue(is_array($this->package->setFields(null)->getFields()));
+    }
 }
