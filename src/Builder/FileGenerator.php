@@ -6,7 +6,6 @@ namespace GarbuzIvan\LaravelGeneratorPackage\Builder;
 
 use GarbuzIvan\LaravelGeneratorPackage\Configuration;
 use Illuminate\Support\Facades\File;
-use OpenApi\Annotations\Components;
 
 class FileGenerator
 {
@@ -72,8 +71,8 @@ class FileGenerator
             $this->package->getPackageVendor() . '/' . $this->package->getPackageName(),
             $this->package->getPackageVendor(),
             $this->package->getPackageName(),
-            $this->spacer($this->package->getPackageVendor()) . '\\' . $this->spacer($this->package->getPackageName()),
-            $this->spacer($this->package->getPackageVendor()) . '\\\\' . $this->spacer($this->package->getPackageName()),
+            $this->spacer(/** @scrutinizer ignore-type */ $this->package->getPackageVendor()) . '\\' . $this->spacer(/** @scrutinizer ignore-type */ $this->package->getPackageName()),
+            $this->spacer(/** @scrutinizer ignore-type */ $this->package->getPackageVendor()) . '\\\\' . $this->spacer(/** @scrutinizer ignore-type */ $this->package->getPackageName()),
             $this->package->getPackageVendor() . '-' . $this->package->getPackageName(),
             $this->package->getName(),
             $this->package->getDescripton(),
@@ -89,7 +88,7 @@ class FileGenerator
     {
         $name = preg_replace('~[^a-z0-9]~isuU', ' ', $name);
         $name = ucwords($name);
-        $name = str_replace(' ', null, $name);
+        $name = str_replace(' ', '', $name);
         return $name;
     }
 }
