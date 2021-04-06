@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace GarbuzIvan\LaravelGeneratorPackage\Builder;
 
 use GarbuzIvan\LaravelGeneratorPackage\Configuration;
+use Illuminate\Support\Facades\Log;
 
 class Builder
 {
@@ -31,17 +32,20 @@ class Builder
     /**
      * @param string|null $packageFilter
      * @return bool
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
      */
     public function init(?string $packageFilter = null): bool
     {
         $this->initFilter($packageFilter);
         $configGenerator = $this->config->getGenerator();
+        $countPackage = 0;
         foreach ($configGenerator as $package) {
             $package = app(Package::class)->init($package);
             if ($this->isIgnore(/** @scrutinizer ignore-type */ $package->getPackageVendor(), /** @scrutinizer ignore-type */ $package->getPackageName())) {
                 continue;
             }
             /* Generation */
+            echo ++$countPackage .': Generation: ' . $package->getPackageVendor() . '/' . $package->getPackageName() . "\n";
             app(DirGenerator::class)->make($package);
             app(FileGenerator::class)->make($package);
         }

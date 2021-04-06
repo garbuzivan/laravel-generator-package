@@ -10,4 +10,15 @@
 
 <pre>php artisan vendor:publish --force --provider="%PACKAGE_NAMESPACE%\ServiceProvider" --tag="config"</pre>
 
+## Локальная установка пакета после генерации, без публикации в GIT и PACKAGIST
 
+Добавить в секцию repositories файла composer.json путь пакета в формате:
+
+<pre>
+"repositories": [
+    {
+        "type": "path",
+        "url": "./packages/%PACKAGE_GIT%/"
+    }
+]
+</pre>

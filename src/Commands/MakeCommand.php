@@ -54,6 +54,7 @@ class MakeCommand extends Command
         $arguments = $this->arguments();
         $this->line('Start composer package generation');
         app(Builder::class)->init($arguments['package']);
+        $this->line('Stop generation');
         return 1;
     }
 }
