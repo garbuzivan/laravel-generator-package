@@ -94,7 +94,7 @@ interface FieldInterface
     public function min(?int $light = null): FieldInterface;
 
     /**
-     * @param null $value
+     * @param mixed|null $value
      * @return FieldInterface
      */
     public function default($value = null): FieldInterface;

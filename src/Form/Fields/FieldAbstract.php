@@ -200,7 +200,7 @@ abstract class FieldAbstract implements FieldInterface
     }
 
     /**
-     * @param null $value
+     * @param mixed|null $value
      * @return FieldInterface
      */
     public function default($value = null): FieldInterface
