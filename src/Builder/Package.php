@@ -22,6 +22,12 @@ class Package
     private ?string $packageName = null;
 
     /**
+     * @var string|null
+     */
+    private string $model = 'Test';
+    private string $table = 'test';
+
+    /**
      * @var bool
      */
     private bool $generator_tests = true;
@@ -47,6 +53,8 @@ class Package
         $this->setDescription($package['description'] ?? $this->description);
         $this->setPackageVendor(/** @scrutinizer ignore-type */ $package['vendor'] ?? $this->packageVendor);
         $this->setPackageName(/** @scrutinizer ignore-type */ $package['package'] ?? $this->packageName);
+        $this->setModel($package['model'] ?? ucfirst($this->getPackageVendor()) . ucfirst($this->getPackageName()));
+        $this->setTable($package['table'] ?? $this->getPackageVendor() . '_' . $this->getPackageName());
 
         $this->setGeneratorTests($package['generator']['tests'] ?? $this->generator_tests);
         $this->setGeneratorSeed($package['generator']['seed'] ?? $this->generator_seed);
@@ -98,6 +106,26 @@ class Package
     public function setPackageName(string $packageName): self
     {
         $this->packageName = mb_strtolower($packageName);
+        return $this;
+    }
+
+    /**
+     * @param string $model
+     * @return $this
+     */
+    public function setModel(string $model): self
+    {
+        $this->model = ucfirst(mb_strtolower($model));
+        return $this;
+    }
+
+    /**
+     * @param string $table
+     * @return $this
+     */
+    public function setTable(string $table): self
+    {
+        $this->table = mb_strtolower($table);
         return $this;
     }
 
@@ -216,6 +244,22 @@ class Package
     public function getPackageName(): ?string
     {
         return $this->packageName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getModel(): string
+    {
+        return $this->model;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTable(): string
+    {
+        return $this->table;
     }
 
     /**

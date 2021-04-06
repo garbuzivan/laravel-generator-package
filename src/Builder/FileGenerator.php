@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Builder;
 
+use GarbuzIvan\LaravelGeneratorPackage\Builder\Components\Migration;
 use GarbuzIvan\LaravelGeneratorPackage\Configuration;
 use Illuminate\Support\Facades\File;
 
@@ -13,11 +14,16 @@ class FileGenerator
      * @var Configuration
      */
     private Configuration $config;
+
     /**
      * @var Package
      */
     private Package $package;
 
+    /**
+     * FileGenerator constructor.
+     * @param Configuration $config
+     */
     public function __construct(Configuration $config)
     {
         $this->config = $config;
@@ -26,11 +32,13 @@ class FileGenerator
     /**
      * @param Package $package
      * @return bool
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
      */
     public function make(Package $package): bool
     {
         $this->package = $package;
         $this->templates();
+        app(Migration::class)->make($package);
         return true;
     }
 

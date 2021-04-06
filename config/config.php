@@ -16,6 +16,8 @@ return [
             'description' => 'Description package',
             'vendor' => 'garbuzivan',
             'package' => 'test',
+            'model' => 'test',
+            'table' => 'test',
             'generator' => [
                 'tests' => true,
                 'seed' => true,

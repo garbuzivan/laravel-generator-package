@@ -41,6 +41,8 @@ class Configuration
             'description' => 'Description package',
             'vendor' => 'test_vendor',
             'package' => 'test_name',
+            'model' => 'Test',
+            'table' => 'test',
             'generator' => [
                 'tests' => true,
                 'seed' => true,
