@@ -48,6 +48,7 @@ abstract class FieldAbstract implements FieldInterface
     /**
      * FieldAbstract init.
      * @param array $arguments
+     * @return FieldInterface
      * @throws Exception
      */
     public function init(array $arguments): FieldInterface
