@@ -15,6 +15,7 @@ class DirGenerator
     public function make(Package $package): bool
     {
         $this->package = $package;
+        $this->mkdir($this->package->getPath('.github/workflows'));
         $this->mkdir($this->package->getPath('config'));
         $this->mkdir($this->package->getPath('migrations'));
         $this->mkdir($this->package->getPath('src/Controllers'));

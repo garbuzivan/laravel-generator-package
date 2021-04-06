@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Builder;
 
+use GarbuzIvan\LaravelGeneratorPackage\Configuration;
 use GarbuzIvan\LaravelGeneratorPackage\Facades\Field;
 
 class Package
@@ -86,7 +87,7 @@ class Package
      */
     public function setPackageVendor(string $packageVendor): self
     {
-        $this->packageVendor = $packageVendor;
+        $this->packageVendor = mb_strtolower($packageVendor);
         return $this;
     }
 
@@ -96,7 +97,7 @@ class Package
      */
     public function setPackageName(string $packageName): self
     {
-        $this->packageName = $packageName;
+        $this->packageName = mb_strtolower($packageName);
         return $this;
     }
 
@@ -282,11 +283,12 @@ class Package
     }
 
     /**
-     * @param string $path
+     * @param string|null $path
      * @return string
      */
-    public function getPath(string $path): string
+    public function getPath(?string $path = null): ?string
     {
-        return base_path('packages/' . $this->getPackageVendor() . '/' . $this->getPackageName() . '/' . $path);
+        $basePath = app(Configuration::class)->getBasePath();
+        return $basePath . '/packages/' . $this->getPackageVendor() . '/' . $this->getPackageName() . '/' . $path;
     }
 }

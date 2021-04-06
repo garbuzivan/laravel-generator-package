@@ -43,6 +43,7 @@ class Builder
             }
             /* Generation */
             app(DirGenerator::class)->make($package);
+            app(FileGenerator::class)->make($package);
         }
         return true;
     }

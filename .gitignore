@@ -160,3 +160,6 @@ fabric.properties
 /build/
 
 # End of https://www.toptal.com/developers/gitignore/api/phpunit,macos,phpstorm,composer
+
+# Packages
+/packages/

@@ -11,6 +11,11 @@ class Configuration
     /**
      * @var string
      */
+    protected string $basePath;
+
+    /**
+     * @var string
+     */
     protected string $configFile = 'laravel-generator-package';
 
     /**
@@ -75,6 +80,7 @@ class Configuration
      */
     public function __construct()
     {
+        $this->setBasePath(base_path());
         $this->load();
     }
 
@@ -125,6 +131,12 @@ class Configuration
         return $this;
     }
 
+    public function setBasePath(string $path): self
+    {
+        $this->basePath = $path;
+        return $this;
+    }
+
     /**
      * @return array
      */
@@ -139,5 +151,13 @@ class Configuration
     public function getGenerator(): array
     {
         return $this->generator;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBasePath(): string
+    {
+        return $this->basePath;
     }
 }

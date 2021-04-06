@@ -34,7 +34,7 @@
 
 <pre>composer require garbuzivan/laravel-generator-package</pre>
 
-## Установка стандартного конфига
+## Конфигурационный файл
 
 <pre>php artisan vendor:publish --force --provider="GarbuzIvan\LaravelGeneratorPackage\ServiceProvider" --tag="config"</pre>
 

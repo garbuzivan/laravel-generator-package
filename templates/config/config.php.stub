@@ -1,5 +1,5 @@
 <?php
-// GarbuzIvan\LaravelGeneratorPackage
+// %PACKAGE_NAMESPACE%
 
 return [
 
