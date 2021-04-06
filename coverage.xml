@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1617709982">
-  <project timestamp="1617709982">
+<coverage generated="1617710367">
+  <project timestamp="1617710367">
     <package name="GarbuzIvan\LaravelGeneratorPackage\Builder">
       <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/Builder.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Builder" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
@@ -97,25 +97,26 @@
         <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\FileGenerator" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
           <metrics complexity="8" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="28" elements="33" coveredelements="33"/>
         </class>
-        <line num="22" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="21" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="23" type="stmt" count="2"/>
         <line num="24" type="stmt" count="2"/>
-        <line num="25" type="stmt" count="2"/>
-        <line num="31" type="method" name="make" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="30" type="method" name="make" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="32" type="stmt" count="2"/>
         <line num="33" type="stmt" count="2"/>
         <line num="34" type="stmt" count="2"/>
-        <line num="35" type="stmt" count="2"/>
-        <line num="43" type="method" name="templates" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="42" type="method" name="templates" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="44" type="stmt" count="2"/>
         <line num="45" type="stmt" count="2"/>
         <line num="46" type="stmt" count="2"/>
         <line num="47" type="stmt" count="2"/>
         <line num="48" type="stmt" count="2"/>
         <line num="49" type="stmt" count="2"/>
         <line num="50" type="stmt" count="2"/>
-        <line num="51" type="stmt" count="2"/>
-        <line num="53" type="stmt" count="2"/>
-        <line num="60" type="method" name="replacement" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="52" type="stmt" count="2"/>
+        <line num="59" type="method" name="replacement" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="61" type="stmt" count="2"/>
         <line num="62" type="stmt" count="2"/>
-        <line num="63" type="stmt" count="2"/>
+        <line num="71" type="stmt" count="2"/>
         <line num="72" type="stmt" count="2"/>
         <line num="73" type="stmt" count="2"/>
         <line num="74" type="stmt" count="2"/>
@@ -123,14 +124,13 @@
         <line num="76" type="stmt" count="2"/>
         <line num="77" type="stmt" count="2"/>
         <line num="78" type="stmt" count="2"/>
-        <line num="79" type="stmt" count="2"/>
-        <line num="81" type="stmt" count="2"/>
-        <line num="88" type="method" name="spacer" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="80" type="stmt" count="2"/>
+        <line num="87" type="method" name="spacer" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="89" type="stmt" count="2"/>
         <line num="90" type="stmt" count="2"/>
         <line num="91" type="stmt" count="2"/>
         <line num="92" type="stmt" count="2"/>
-        <line num="93" type="stmt" count="2"/>
-        <metrics loc="95" ncloc="78" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="28" elements="33" coveredelements="33"/>
+        <metrics loc="94" ncloc="77" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="28" elements="33" coveredelements="33"/>
       </file>
       <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/Package.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Package" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
@@ -561,6 +561,6 @@
         <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
       </file>
     </package>
-    <metrics files="15" loc="1724" ncloc="1312" classes="13" methods="126" coveredmethods="124" conditionals="0" coveredconditionals="0" statements="333" coveredstatements="330" elements="459" coveredelements="454"/>
+    <metrics files="15" loc="1723" ncloc="1311" classes="13" methods="126" coveredmethods="124" conditionals="0" coveredconditionals="0" statements="333" coveredstatements="330" elements="459" coveredelements="454"/>
   </project>
 </coverage>
