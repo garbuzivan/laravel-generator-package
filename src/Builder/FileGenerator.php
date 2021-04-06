@@ -45,7 +45,7 @@ class FileGenerator
         $files = File::allFiles($templatesDir, true);
         foreach ($files as $file) {
             $content = $this->replacement(file_get_contents($file->getRealPath()));
-            $newPathFile = str_replace([$templatesDir, '.stub'], null, $file->getRealPath());
+            $newPathFile = str_replace([$templatesDir, '.stub'], '', $file->getRealPath());
             $newPathFile = $this->package->getPath($newPathFile);
             file_put_contents($newPathFile, $content);
         }

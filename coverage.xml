@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1617710367">
-  <project timestamp="1617710367">
+<coverage generated="1617710452">
+  <project timestamp="1617710452">
     <package name="GarbuzIvan\LaravelGeneratorPackage\Builder">
       <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/Builder.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Builder" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
