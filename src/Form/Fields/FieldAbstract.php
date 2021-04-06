@@ -199,6 +199,10 @@ abstract class FieldAbstract implements FieldInterface
         return $this;
     }
 
+    /**
+     * @param null $value
+     * @return FieldInterface
+     */
     public function default($value = null): FieldInterface
     {
         $this->default = $value;
