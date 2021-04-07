@@ -199,16 +199,6 @@ interface FieldInterface
     public function getFillable(): bool;
 
     /**
-     * @return bool
-     */
-    public function getHidden(): bool;
-
-    /**
-     * @return bool
-     */
-    public function getRequired(): bool;
-
-    /**
      * @return int|null
      */
     public function getMax(): ?int;
@@ -217,6 +207,16 @@ interface FieldInterface
      * @return int|null
      */
     public function getMin(): ?int;
+
+    /**
+     * @return bool
+     */
+    public function isHidden(): bool;
+
+    /**
+     * @return bool
+     */
+    public function isRequired(): bool;
 
     /**
      * @return bool
@@ -250,10 +250,10 @@ interface FieldInterface
     /**
      * @return bool
      */
-    public function getNullable(): bool;
+    public function isNullable(): bool;
 
     /**
      * @return bool
      */
-    public function getUnique(): bool;
+    public function isUnique(): bool;
 }

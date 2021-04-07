@@ -375,7 +375,7 @@ abstract class FieldAbstract implements FieldInterface
     /**
      * @return bool
      */
-    public function getHidden(): bool
+    public function isHidden(): bool
     {
         return $this->fillable;
     }
@@ -383,7 +383,7 @@ abstract class FieldAbstract implements FieldInterface
     /**
      * @return bool
      */
-    public function getRequired(): bool
+    public function isRequired(): bool
     {
         return $this->filter->getRequired();
     }
@@ -451,7 +451,7 @@ abstract class FieldAbstract implements FieldInterface
     /**
      * @return bool
      */
-    public function getNullable(): bool
+    public function isNullable(): bool
     {
         return $this->filter->getNullable();
     }
@@ -459,7 +459,7 @@ abstract class FieldAbstract implements FieldInterface
     /**
      * @return bool
      */
-    public function getUnique(): bool
+    public function isUnique(): bool
     {
         return $this->filter->getUnique();
     }

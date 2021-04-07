@@ -182,7 +182,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     {
         $field = Field::text('title', 'test')
             ->hidden(true);
-        $this->assertTrue($field->getHidden());
+        $this->assertTrue($field->isHidden());
     }
 
     /**
@@ -203,7 +203,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
      */
     public function testNullable()
     {
-        $this->assertFalse(Field::text('title', 'test')->nullable(false)->getNullable());
+        $this->assertFalse(Field::text('title', 'test')->nullable(false)->isNullable());
     }
 
     /**
@@ -211,8 +211,8 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
      */
     public function testUnique()
     {
-        $this->assertFalse(Field::text('title', 'test')->unique(false)->getUnique());
-        $this->assertTrue(Field::text('title', 'test')->unique(true)->getUnique());
+        $this->assertFalse(Field::text('title', 'test')->unique(false)->isUnique());
+        $this->assertTrue(Field::text('title', 'test')->unique(true)->isUnique());
     }
 
     /**
@@ -220,7 +220,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
      */
     public function testRequired()
     {
-        $this->assertFalse(Field::text('title', 'test')->required(false)->getRequired());
+        $this->assertFalse(Field::text('title', 'test')->required(false)->isRequired());
     }
 
     /**

@@ -61,13 +61,16 @@ class Migration
      */
     public function generationField(FieldInterface $field): string
     {
-        $code = '$table->' . $field->getType() . '(\'' . $field->getColumn() . '\')';
-        $code .= $field->getNullable() ? '->nullable()' : '';
-        $code .= $field->getUnique() ? '->unique()' : '';
+        $code = "\n\t\t\t";
+        $code .= '$table->' . $field->getType() . '(\'' . $field->getColumn() . '\')';
+        $code .= $field->isNullable() ? '->nullable()' : '';
+        $code .= $field->isUnique() ? '->unique()' : '';
         if (!is_null($field->getReferencesTable())) {
             $code .= '->references(\'' . $field->getReferencesField() . '\')->on(\'' . $field->getReferencesTable() . '\')';
         }
-        return "\n\t\t\t" . $code . ";";
+        $code .= ';';
+        $code .= $field->isIndex() ? "\n\t\t\t" . '$table->index(\'' . $field->getColumn() . '\');' : '';
+        return $code;
     }
 
     /**

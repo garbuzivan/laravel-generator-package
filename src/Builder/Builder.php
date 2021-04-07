@@ -45,7 +45,7 @@ class Builder
                 continue;
             }
             /* Generation */
-            echo ++$countPackage .': Generation: ' . $package->getPackageVendor() . '/' . $package->getPackageName() . "\n";
+            echo ++$countPackage . ': Generation: ' . $package->getPackageVendor() . '/' . $package->getPackageName() . "\n";
             app(DirGenerator::class)->make($package);
             app(FileGenerator::class)->make($package);
         }
