@@ -107,16 +107,6 @@ abstract class FieldAbstract implements FieldInterface
     }
 
     /**
-     * @param int $light
-     * @return FieldInterface
-     */
-    public function setLight(int $light): FieldInterface
-    {
-        $this->filter->setLight($light);
-        return $this;
-    }
-
-    /**
      * @param string|null $mask
      * @return FieldInterface
      */
@@ -326,14 +316,6 @@ abstract class FieldAbstract implements FieldInterface
     public function getCast(): ?string
     {
         return $this->cast;
-    }
-
-    /**
-     * @return int
-     */
-    public function getLight(): int
-    {
-        return $this->filter->getLight();
     }
 
     /**

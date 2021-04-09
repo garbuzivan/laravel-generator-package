@@ -19,7 +19,6 @@ class FloatField extends FieldAbstract
     {
         parent::init($arguments);
         $this->setType('float');
-        $this->setLight(11);
         return $this;
     }
 }

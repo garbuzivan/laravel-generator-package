@@ -36,12 +36,6 @@ interface FieldInterface
     public function setCast(string $cast): FieldInterface;
 
     /**
-     * @param int $light
-     * @return FieldInterface
-     */
-    public function setLight(int $light): FieldInterface;
-
-    /**
      * @param string|null $mask
      * @return FieldInterface
      */
@@ -169,11 +163,6 @@ interface FieldInterface
      * @return string|null
      */
     public function getCast(): ?string;
-
-    /**
-     * @return int
-     */
-    public function getLight(): int;
 
     /**
      * @return string|null

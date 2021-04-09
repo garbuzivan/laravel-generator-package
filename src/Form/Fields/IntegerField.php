@@ -20,7 +20,6 @@ class IntegerField extends FieldAbstract
         parent::init($arguments);
         $this->setType('integer');
         $this->setCast('string');
-        $this->setLight(11);
         return $this;
     }
 }

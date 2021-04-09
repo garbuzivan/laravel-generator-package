@@ -20,7 +20,6 @@ class TextField extends FieldAbstract
         parent::init($arguments);
         $this->setType('text');
         $this->setCast('string');
-        $this->setLight(255);
         return $this;
     }
 }

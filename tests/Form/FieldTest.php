@@ -62,15 +62,6 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     }
 
     /**
-     * Test set\get light field
-     */
-    public function testLightField()
-    {
-        $field = Field::text('title', 'Title')->setLight(100);
-        $this->assertTrue($field->getLight() == 100);
-    }
-
-    /**
      * Test set\get mask field
      */
     public function testMaskField()
