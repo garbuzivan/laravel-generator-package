@@ -51,7 +51,7 @@ class Migration
             $this->package->getModel(),
         ], $this->migrate);
         $nameFileMigration = date('Y_m_d_His') . '_create_' . $this->package->getTable() . '_table.php';
-        file_put_contents($this->package->getPath('migrations/' . $nameFileMigration), $code);
+        file_put_contents($this->package->getPath('database/migrations/' . $nameFileMigration), $code);
         return true;
     }
 

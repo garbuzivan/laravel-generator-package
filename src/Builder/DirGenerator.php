@@ -17,7 +17,7 @@ class DirGenerator
         $this->package = $package;
         $this->mkdir($this->package->getPath('.github/workflows'));
         $this->mkdir($this->package->getPath('config'));
-        $this->mkdir($this->package->getPath('migrations'));
+        $this->mkdir($this->package->getPath('database/migrations'));
         $this->mkdir($this->package->getPath('src/Controllers'));
         $this->mkdir($this->package->getPath('src/Models'));
         $this->mkdir($this->package->getPath('src/Cases'));
@@ -49,7 +49,8 @@ class DirGenerator
         if (!$this->package->getGeneratorSeed()) {
             return false;
         }
-        $this->mkdir($this->package->getPath('seeds'));
+        $this->mkdir($this->package->getPath('database/Seeders'));
+        $this->mkdir($this->package->getPath('database/Factories'));
         return true;
     }
 
