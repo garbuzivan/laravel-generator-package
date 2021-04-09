@@ -25,7 +25,6 @@ class Filter
     /**
      * @var int
      */
-    protected int $light = 255;
     protected ?int $max = null;
     protected ?int $min = null;
 
@@ -70,16 +69,6 @@ class Filter
     public function setType(string $type): self
     {
         $this->type = $type;
-        return $this;
-    }
-
-    /**
-     * @param int $light
-     * @return Filter
-     */
-    public function setLight(int $light): self
-    {
-        $this->light = $light;
         return $this;
     }
 
@@ -129,14 +118,6 @@ class Filter
     public function getType(): string
     {
         return $this->type;
-    }
-
-    /**
-     * @return int
-     */
-    public function getLight(): int
-    {
-        return $this->light;
     }
 
     /**
