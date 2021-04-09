@@ -16,14 +16,10 @@ class Package
     private string $description = 'Description new package';
 
     /**
-     * @var string|null
+     * @var string
      */
-    private ?string $packageVendor = null;
-    private ?string $packageName = null;
-
-    /**
-     * @var string|null
-     */
+    private string $packageVendor = '';
+    private string $packageName = '';
     private string $model = 'Test';
     private string $table = 'test';
 
@@ -51,8 +47,8 @@ class Package
     {
         $this->setName($package['name'] ?? $this->name);
         $this->setDescription($package['description'] ?? $this->description);
-        $this->setPackageVendor(/** @scrutinizer ignore-type */ $package['vendor'] ?? $this->packageVendor);
-        $this->setPackageName(/** @scrutinizer ignore-type */ $package['package'] ?? $this->packageName);
+        $this->setPackageVendor($package['vendor'] ?? $this->packageVendor);
+        $this->setPackageName($package['package'] ?? $this->packageName);
         $this->setModel($package['model'] ?? ucfirst($this->getPackageVendor()) . ucfirst($this->getPackageName()));
         $this->setTable($package['table'] ?? $this->getPackageVendor() . '_' . $this->getPackageName());
 
@@ -353,10 +349,10 @@ class Package
     }
 
     /**
-     * @param string|null $name
+     * @param string $name
      * @return string
      */
-    public function spacer(?string $name = null): string
+    public function spacer(string $name): string
     {
         $name = preg_replace('~[^a-z0-9]~isuU', ' ', $name);
         $name = ucwords($name);

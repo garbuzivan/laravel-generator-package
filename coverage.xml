@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1617982149">
-  <project timestamp="1617982149">
+<coverage generated="1617982257">
+  <project timestamp="1617982257">
     <package name="GarbuzIvan\LaravelGeneratorPackage\Builder">
       <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/Builder.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Builder" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
@@ -90,9 +90,9 @@
         <line num="89" type="stmt" count="2"/>
         <line num="96" type="method" name="mkdir" visibility="public" complexity="2" crap="2" count="4"/>
         <line num="98" type="stmt" count="4"/>
-        <line num="99" type="stmt" count="1"/>
-        <line num="100" type="stmt" count="1"/>
-        <line num="102" type="stmt" count="4"/>
+        <line num="99" type="stmt" count="2"/>
+        <line num="100" type="stmt" count="2"/>
+        <line num="102" type="stmt" count="3"/>
         <metrics loc="104" ncloc="88" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="37" elements="44" coveredelements="44"/>
       </file>
       <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/FileGenerator.php">
