@@ -37,12 +37,14 @@ class Model
     {
         $this->package = $package;
         $fillable = '';
+        $hidden = '';
         $casts = "\n\t\t'id' => 'integer',";
         $rules = '';
         $functions = '';
         $fields = $this->package->getFields();
         foreach ($fields as $field) {
             $fillable .= "\n\t\t'" . $field->getColumn() . "',";
+            $hidden .= $field->isHidden() ? "\n\t\t'" . $field->getColumn() . "'," : '';
             $casts .= "\n\t\t'" . $field->getColumn() . "' => '" . $field->getCast() . "',";
             $rules .= $this->getRules($field);
             $functions .= $this->getFunction($field);
@@ -51,6 +53,7 @@ class Model
             '%MODEL%',
             '%TABLE%',
             '%FILLABLE%',
+            '%HIDDEN%',
             '%CASTS%',
             '%RULES%',
             '%FUNCTIONS%',
@@ -58,6 +61,7 @@ class Model
             $this->package->getModel(),
             $this->package->getTable(),
             $fillable,
+            $hidden,
             $casts,
             $rules,
             $functions,
@@ -143,6 +147,14 @@ class %MODEL% extends Model
      * @var array
      */
     protected $fillable = [ %FILLABLE%
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [ %HIDDEN%
     ];
 
     /**

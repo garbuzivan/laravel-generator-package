@@ -295,7 +295,32 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
             'index' => false,
             'fillable' => true,
             'hidden' => false,
-            'references' => null,
+            'references' => [],
+            'filter' => [
+                'nullable' => true,
+                'unique' => true,
+                'required' => true,
+                'max' => null,
+                'min' => null,
+                'mask' => null,
+            ]
+        ]);
+        $this->assertTrue($field instanceof FieldInterface);
+
+        $field = Field::loadFieldFromArray('test', [
+            'field' => 'text',
+            'label' => 'Title',
+            'placeholder' => 'Enter label',
+            'default' => null,
+            'index' => false,
+            'fillable' => true,
+            'hidden' => false,
+            'references' => [
+                'model' => 'App\Models\User',
+                'table' => 'user',
+                'field' => 'id',
+                'has' => 'hasOne',
+            ],
             'filter' => [
                 'nullable' => true,
                 'unique' => true,

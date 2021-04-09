@@ -405,7 +405,7 @@ abstract class FieldAbstract implements FieldInterface
      */
     public function isHidden(): bool
     {
-        return $this->fillable;
+        return $this->hidden;
     }
 
     /**
