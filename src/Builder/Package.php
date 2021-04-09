@@ -211,19 +211,19 @@ class Package
     }
 
     /**
-     * @return $this
+     * @return string
      */
     public function getNamespace(): string
     {
-        return $this->spacer($this->getPackageVendor()) . '\\' . $this->spacer($this->getPackageName());;
+        return $this->spacer($this->getPackageVendor()) . '\\' . $this->spacer($this->getPackageName());
     }
 
     /**
-     * @return $this
+     * @return string
      */
     public function getNamespaceSlashes(): string
     {
-        return $this->spacer($this->getPackageVendor()) . '\\\\' . $this->spacer($this->getPackageName());;
+        return $this->spacer($this->getPackageVendor()) . '\\\\' . $this->spacer($this->getPackageName());
     }
 
     /**
