@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace GarbuzIvan\LaravelGeneratorPackage\Builder;
 
 use GarbuzIvan\LaravelGeneratorPackage\Builder\Components\Migration;
+use GarbuzIvan\LaravelGeneratorPackage\Builder\Components\Model;
 use GarbuzIvan\LaravelGeneratorPackage\Configuration;
 use Illuminate\Support\Facades\File;
 
@@ -39,6 +40,7 @@ class FileGenerator
         $this->package = $package;
         $this->templates();
         app(Migration::class)->make($package);
+        app(Model::class)->make($package);
         return true;
     }
 

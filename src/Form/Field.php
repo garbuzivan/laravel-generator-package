@@ -86,8 +86,17 @@ class Field
         $field->max($config['filter']['max'] ?? null);
         $field->min($config['filter']['min'] ?? null);
         $field->setMask($config['filter']['mask'] ?? null);
-        if (isset($config['references']['table']) && isset($config['references']['field'])) {
-            $field->references($config['references']['table'], $config['references']['field']);
+        if (
+            isset($config['references']['model'])
+            && isset($config['references']['table'])
+            && isset($config['references']['field'])
+        ) {
+            $field->references(
+                $config['references']['model'],
+                $config['references']['table'],
+                $config['references']['field'],
+                $config['references']['has'] ?? 'hasMany',
+            );
         }
         return $field;
     }

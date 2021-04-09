@@ -30,6 +30,12 @@ interface FieldInterface
     public function setType(string $type): FieldInterface;
 
     /**
+     * @param string $cast
+     * @return FieldInterface
+     */
+    public function setCast(string $cast): FieldInterface;
+
+    /**
      * @param int $light
      * @return FieldInterface
      */
@@ -100,13 +106,14 @@ interface FieldInterface
     public function default($value = null): FieldInterface;
 
     /**
+     * @param string $model
      * @param string $table
      * @param string $field
-     * @param bool $hasMany
+     * @param string $hasMany
      * @return FieldInterface
      * @throws Exception
      */
-    public function references(string $table, string $field, bool $hasMany = true): FieldInterface;
+    public function references(string $model, string $table, string $field, string $hasMany = 'hasMany'): FieldInterface;
 
     /**
      * @return FieldInterface
@@ -159,6 +166,11 @@ interface FieldInterface
     public function getType(): string;
 
     /**
+     * @return string|null
+     */
+    public function getCast(): ?string;
+
+    /**
      * @return int
      */
     public function getLight(): int;
@@ -171,6 +183,11 @@ interface FieldInterface
     /**
      * @return string|null
      */
+    public function getReferencesModel(): ?string;
+
+    /**
+     * @return string|null
+     */
     public function getReferencesTable(): ?string;
 
     /**
@@ -179,9 +196,9 @@ interface FieldInterface
     public function getReferencesField(): ?string;
 
     /**
-     * @return bool
+     * @return string
      */
-    public function getReferencesMany(): bool;
+    public function getReferencesHas(): string;
 
     /**
      * @return string|null

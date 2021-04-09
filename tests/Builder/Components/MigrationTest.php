@@ -23,7 +23,7 @@ class MigrationTest extends TestCase
      */
     public function testGenerationField()
     {
-        $field = Field::text('title', 'Title')->references('table_name', 'field_name', false);
+        $field = Field::text('title', 'Title')->references('App\Models\User::class', 'table_name', 'field_name', 'hasOne');
         $codeField = app(Migration::class)->generationField($field);
         $this->assertTrue(is_string($codeField));
     }

@@ -53,6 +53,15 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     }
 
     /**
+     * Test set\get cast field
+     */
+    public function testCastField()
+    {
+        $field = Field::text('title', 'Title')->setCast('string');
+        $this->assertTrue($field->getCast() == 'string');
+    }
+
+    /**
      * Test set\get light field
      */
     public function testLightField()
@@ -84,10 +93,11 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
      */
     public function testReferences()
     {
-        $field = Field::text('title', 'Title')->references('table_name', 'field_name', false);
+        $field = Field::text('title', 'Title')->references('App\Models\User::class', 'table_name', 'field_name', 'hasOne');
+        $this->assertTrue($field->getReferencesModel() == 'App\Models\User::class');
         $this->assertTrue($field->getReferencesTable() == 'table_name');
         $this->assertTrue($field->getReferencesField() == 'field_name');
-        $this->assertTrue($field->getReferencesMany() == false);
+        $this->assertTrue($field->getReferencesHas() == 'hasOne');
         $this->assertTrue($field->referencesDisabled()->getReferencesField() == null);
     }
 
@@ -97,7 +107,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     public function testReferencesException()
     {
         $this->expectException(Exception::class);
-        $field = Field::text('title', 'Title')->references(' ', ' ');
+        $field = Field::text('title', 'Title')->references(' ', ' ', ' ');
     }
 
     /**

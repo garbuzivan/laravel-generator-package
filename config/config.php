@@ -1,11 +1,17 @@
 <?php
 // GarbuzIvan\LaravelGeneratorPackage
 
+use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\FloatField;
+use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\IntegerField;
+use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\StringField;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField;
 
 return [
     'fields' => [
         'text' => TextField::class,
+        'string' => StringField::class,
+        'integer' => IntegerField::class,
+        'float' => FloatField::class,
     ],
     'generator' => [
         /*

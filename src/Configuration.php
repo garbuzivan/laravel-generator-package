@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage;
 
+use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\FloatField;
+use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\IntegerField;
+use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\StringField;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField;
 
 class Configuration
@@ -25,6 +28,9 @@ class Configuration
      */
     protected array $fields = [
         'text' => TextField::class,
+        'string' => StringField::class,
+        'integer' => IntegerField::class,
+        'float' => FloatField::class,
     ];
 
     /**

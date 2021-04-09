@@ -17,6 +17,7 @@ abstract class FieldAbstract implements FieldInterface
      */
     protected string $column;
     protected string $label = '';
+    protected ?string $cast = null;
     protected ?string $placeholder = null;
     protected $default = null;
 
@@ -92,6 +93,16 @@ abstract class FieldAbstract implements FieldInterface
     public function setType(string $type): FieldInterface
     {
         $this->filter->setType($type);
+        return $this;
+    }
+
+    /**
+     * @param string $cast
+     * @return FieldInterface
+     */
+    public function setCast(string $cast): FieldInterface
+    {
+        $this->cast = $cast;
         return $this;
     }
 
@@ -210,18 +221,19 @@ abstract class FieldAbstract implements FieldInterface
     }
 
     /**
+     * @param string $model
      * @param string $table
      * @param string $field
-     * @param bool $hasMany
+     * @param string $has
      * @return FieldInterface
      * @throws Exception
      */
-    public function references(string $table, string $field, bool $hasMany = true): FieldInterface
+    public function references(string $model, string $table, string $field, string $has = 'hasMany'): FieldInterface
     {
         if (mb_strlen(trim($table)) == 0 || mb_strlen(trim($field)) == 0) {
             throw new Exception('References should be a string and not null');
         }
-        $this->references = ['table' => $table, 'field' => $field, 'hasmany' => $hasMany];
+        $this->references = ['model' => $model, 'table' => $table, 'field' => $field, 'has' => $has];
         return $this;
     }
 
@@ -309,6 +321,14 @@ abstract class FieldAbstract implements FieldInterface
     }
 
     /**
+     * @return string|null
+     */
+    public function getCast(): ?string
+    {
+        return $this->cast;
+    }
+
+    /**
      * @return int
      */
     public function getLight(): int
@@ -322,6 +342,14 @@ abstract class FieldAbstract implements FieldInterface
     public function getMask(): ?string
     {
         return $this->filter->getMask();
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getReferencesModel(): ?string
+    {
+        return $this->references['model'] ?? null;
     }
 
     /**
@@ -341,11 +369,11 @@ abstract class FieldAbstract implements FieldInterface
     }
 
     /**
-     * @return bool
+     * @return string
      */
-    public function getReferencesMany(): bool
+    public function getReferencesHas(): string
     {
-        return $this->references['hasmany'] ?? true;
+        return $this->references['has'];
     }
 
     /**

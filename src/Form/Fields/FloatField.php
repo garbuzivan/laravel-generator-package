@@ -7,7 +7,7 @@ namespace GarbuzIvan\LaravelGeneratorPackage\Form\Fields;
 use Exception;
 use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
 
-class TextField extends FieldAbstract
+class FloatField extends FieldAbstract
 {
     /**
      * TextField init.
@@ -18,9 +18,8 @@ class TextField extends FieldAbstract
     public function init(array $arguments): FieldInterface
     {
         parent::init($arguments);
-        $this->setType('text');
-        $this->setCast('string');
-        $this->setLight(255);
+        $this->setType('float');
+        $this->setLight(11);
         return $this;
     }
 }
