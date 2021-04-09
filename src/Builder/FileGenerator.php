@@ -86,24 +86,12 @@ class FileGenerator
             $this->package->getPackageVendor() . '/' . $this->package->getPackageName(),
             $this->package->getPackageVendor(),
             $this->package->getPackageName(),
-            $this->spacer(/** @scrutinizer ignore-type */ $this->package->getPackageVendor()) . '\\' . $this->spacer(/** @scrutinizer ignore-type */ $this->package->getPackageName()),
-            $this->spacer(/** @scrutinizer ignore-type */ $this->package->getPackageVendor()) . '\\\\' . $this->spacer(/** @scrutinizer ignore-type */ $this->package->getPackageName()),
+            $this->package->getNamespace(),
+            $this->package->getNamespaceSlashes(),
             $this->package->getPackageVendor() . '-' . $this->package->getPackageName(),
             $this->package->getName(),
             $this->package->getDescripton(),
         ], $content);
         return $content;
-    }
-
-    /**
-     * @param string $name
-     * @return string
-     */
-    public function spacer(string $name): string
-    {
-        $name = preg_replace('~[^a-z0-9]~isuU', ' ', $name);
-        $name = ucwords($name);
-        $name = str_replace(' ', '', $name);
-        return $name;
     }
 }

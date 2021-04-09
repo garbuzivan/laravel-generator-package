@@ -38,6 +38,10 @@
 
 <pre>php artisan vendor:publish --force --provider="GarbuzIvan\LaravelGeneratorPackage\ServiceProvider" --tag="config"</pre>
 
+## Добавление ServiceProvider в config/app.php секция 'providers'
+
+<pre>GarbuzIvan\LaravelGeneratorPackage\ServiceProvider::class,</pre>
+
 ## Сборка пакетов из конфига
 
 <strong>Все пакеты</strong>

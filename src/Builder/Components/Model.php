@@ -50,6 +50,7 @@ class Model
             $functions .= $this->getFunction($field);
         }
         $code = str_replace([
+            '%PACKAGE_NAMESPACE%',
             '%MODEL%',
             '%TABLE%',
             '%FILLABLE%',
@@ -58,6 +59,7 @@ class Model
             '%RULES%',
             '%FUNCTIONS%',
         ], [
+            $this->package->getNamespace(),
             $this->package->getModel(),
             $this->package->getTable(),
             $fillable,
@@ -132,7 +134,7 @@ class Model
 
 declare(strict_types=1);
 
-namespace App\Models;
+namespace %PACKAGE_NAMESPACE%\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

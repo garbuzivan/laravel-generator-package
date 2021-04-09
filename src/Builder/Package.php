@@ -215,6 +215,22 @@ class Package
     }
 
     /**
+     * @return $this
+     */
+    public function getNamespace(): string
+    {
+        return $this->spacer($this->getPackageVendor()) . '\\' . $this->spacer($this->getPackageName());;
+    }
+
+    /**
+     * @return $this
+     */
+    public function getNamespaceSlashes(): string
+    {
+        return $this->spacer($this->getPackageVendor()) . '\\\\' . $this->spacer($this->getPackageName());;
+    }
+
+    /**
      * @return string
      */
     public function getName(): string
@@ -334,5 +350,17 @@ class Package
     {
         $basePath = app(Configuration::class)->getBasePath();
         return $basePath . '/packages/' . $this->getPackageVendor() . '/' . $this->getPackageName() . '/' . $path;
+    }
+
+    /**
+     * @param string|null $name
+     * @return string
+     */
+    public function spacer(?string $name = null): string
+    {
+        $name = preg_replace('~[^a-z0-9]~isuU', ' ', $name);
+        $name = ucwords($name);
+        $name = str_replace(' ', '', $name);
+        return $name;
     }
 }

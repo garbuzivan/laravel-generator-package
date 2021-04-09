@@ -68,6 +68,10 @@ class Migration
         if (!is_null($field->getReferencesTable())) {
             $code .= '->references(\'' . $field->getReferencesField() . '\')->on(\'' . $field->getReferencesTable() . '\')';
         }
+        if (!is_null($field->getDefault()) || $field->isNullable()) {
+            $default = is_null($field->getDefault()) && $field->isNullable() ? 'null' : "'" . $field->getDefault() . "'";
+            $code .= '->default(' . $default . ')';
+        }
         $code .= ';';
         $code .= $field->isIndex() ? "\n\t\t\t" . '$table->index(\'' . $field->getColumn() . '\');' : '';
         return $code;
