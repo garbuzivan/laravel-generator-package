@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1617969838">
-  <project timestamp="1617969838">
+<coverage generated="1617971148">
+  <project timestamp="1617971148">
     <package name="GarbuzIvan\LaravelGeneratorPackage\Builder">
       <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/Builder.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Builder" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
@@ -278,9 +278,9 @@
         <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Components\Model" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder\Components">
           <metrics complexity="12" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="52" coveredstatements="51" elements="56" coveredelements="54"/>
         </class>
-        <line num="27" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
-        <line num="29" type="stmt" count="4"/>
-        <line num="30" type="stmt" count="4"/>
+        <line num="27" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="29" type="stmt" count="5"/>
+        <line num="30" type="stmt" count="5"/>
         <line num="36" type="method" name="make" visibility="public" complexity="3" crap="3" count="2"/>
         <line num="38" type="stmt" count="2"/>
         <line num="39" type="stmt" count="2"/>
@@ -308,8 +308,8 @@
         <line num="69" type="stmt" count="2"/>
         <line num="70" type="stmt" count="2"/>
         <line num="71" type="stmt" count="2"/>
-        <line num="78" type="method" name="getFunction" visibility="public" complexity="2" crap="2" count="3"/>
-        <line num="80" type="stmt" count="3"/>
+        <line num="78" type="method" name="getFunction" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="80" type="stmt" count="4"/>
         <line num="81" type="stmt" count="1"/>
         <line num="82" type="stmt" count="1"/>
         <line num="88" type="stmt" count="1"/>
@@ -319,7 +319,7 @@
         <line num="92" type="stmt" count="1"/>
         <line num="93" type="stmt" count="1"/>
         <line num="94" type="stmt" count="1"/>
-        <line num="96" type="stmt" count="2"/>
+        <line num="96" type="stmt" count="3"/>
         <line num="103" type="method" name="getRules" visibility="public" complexity="6" crap="6.02" count="3"/>
         <line num="105" type="stmt" count="3"/>
         <line num="106" type="stmt" count="3"/>
@@ -359,34 +359,34 @@
         <class name="GarbuzIvan\LaravelGeneratorPackage\Configuration" namespace="GarbuzIvan\LaravelGeneratorPackage">
           <metrics complexity="11" methods="9" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="30" coveredelements="30"/>
         </class>
-        <line num="89" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="66"/>
-        <line num="91" type="stmt" count="66"/>
-        <line num="92" type="stmt" count="66"/>
-        <line num="93" type="stmt" count="66"/>
-        <line num="98" type="method" name="load" visibility="public" complexity="3" crap="3" count="66"/>
-        <line num="100" type="stmt" count="66"/>
-        <line num="101" type="stmt" count="66"/>
-        <line num="102" type="stmt" count="66"/>
-        <line num="104" type="stmt" count="66"/>
-        <line num="105" type="stmt" count="66"/>
-        <line num="106" type="stmt" count="66"/>
-        <line num="108" type="stmt" count="66"/>
-        <line num="115" type="method" name="setGenerator" visibility="public" complexity="1" crap="1" count="66"/>
-        <line num="117" type="stmt" count="66"/>
-        <line num="118" type="stmt" count="66"/>
-        <line num="125" type="method" name="setFields" visibility="public" complexity="1" crap="1" count="66"/>
-        <line num="127" type="stmt" count="66"/>
-        <line num="128" type="stmt" count="66"/>
+        <line num="89" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="67"/>
+        <line num="91" type="stmt" count="67"/>
+        <line num="92" type="stmt" count="67"/>
+        <line num="93" type="stmt" count="67"/>
+        <line num="98" type="method" name="load" visibility="public" complexity="3" crap="3" count="67"/>
+        <line num="100" type="stmt" count="67"/>
+        <line num="101" type="stmt" count="67"/>
+        <line num="102" type="stmt" count="67"/>
+        <line num="104" type="stmt" count="67"/>
+        <line num="105" type="stmt" count="67"/>
+        <line num="106" type="stmt" count="67"/>
+        <line num="108" type="stmt" count="67"/>
+        <line num="115" type="method" name="setGenerator" visibility="public" complexity="1" crap="1" count="67"/>
+        <line num="117" type="stmt" count="67"/>
+        <line num="118" type="stmt" count="67"/>
+        <line num="125" type="method" name="setFields" visibility="public" complexity="1" crap="1" count="67"/>
+        <line num="127" type="stmt" count="67"/>
+        <line num="128" type="stmt" count="67"/>
         <line num="136" type="method" name="setField" visibility="public" complexity="1" crap="1" count="2"/>
         <line num="138" type="stmt" count="2"/>
         <line num="139" type="stmt" count="2"/>
-        <line num="142" type="method" name="setBasePath" visibility="public" complexity="1" crap="1" count="66"/>
-        <line num="144" type="stmt" count="66"/>
-        <line num="145" type="stmt" count="66"/>
-        <line num="151" type="method" name="getFields" visibility="public" complexity="1" crap="1" count="66"/>
-        <line num="153" type="stmt" count="66"/>
-        <line num="159" type="method" name="getGenerator" visibility="public" complexity="1" crap="1" count="66"/>
-        <line num="161" type="stmt" count="66"/>
+        <line num="142" type="method" name="setBasePath" visibility="public" complexity="1" crap="1" count="67"/>
+        <line num="144" type="stmt" count="67"/>
+        <line num="145" type="stmt" count="67"/>
+        <line num="151" type="method" name="getFields" visibility="public" complexity="1" crap="1" count="67"/>
+        <line num="153" type="stmt" count="67"/>
+        <line num="159" type="method" name="getGenerator" visibility="public" complexity="1" crap="1" count="67"/>
+        <line num="161" type="stmt" count="67"/>
         <line num="167" type="method" name="getBasePath" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="169" type="stmt" count="3"/>
         <metrics loc="171" ncloc="137" classes="1" methods="9" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="30" coveredelements="30"/>
@@ -395,28 +395,28 @@
         <class name="GarbuzIvan\LaravelGeneratorPackage\ServiceProvider" namespace="GarbuzIvan\LaravelGeneratorPackage">
           <metrics complexity="5" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="22" coveredelements="22"/>
         </class>
-        <line num="19" type="method" name="boot" visibility="public" complexity="2" crap="2" count="66"/>
-        <line num="21" type="stmt" count="66"/>
-        <line num="22" type="stmt" count="66"/>
-        <line num="23" type="stmt" count="66"/>
-        <line num="27" type="stmt" count="66"/>
-        <line num="29" type="stmt" count="66"/>
-        <line num="30" type="stmt" count="66"/>
-        <line num="31" type="stmt" count="66"/>
-        <line num="33" type="stmt" count="66"/>
-        <line num="34" type="stmt" count="66"/>
-        <line num="42" type="method" name="register" visibility="public" complexity="1" crap="1" count="66"/>
-        <line num="45" type="stmt" count="66"/>
-        <line num="46" type="stmt" count="66"/>
-        <line num="48" type="stmt" count="49"/>
-        <line num="49" type="stmt" count="66"/>
+        <line num="19" type="method" name="boot" visibility="public" complexity="2" crap="2" count="67"/>
+        <line num="21" type="stmt" count="67"/>
+        <line num="22" type="stmt" count="67"/>
+        <line num="23" type="stmt" count="67"/>
+        <line num="27" type="stmt" count="67"/>
+        <line num="29" type="stmt" count="67"/>
+        <line num="30" type="stmt" count="67"/>
+        <line num="31" type="stmt" count="67"/>
+        <line num="33" type="stmt" count="67"/>
+        <line num="34" type="stmt" count="67"/>
+        <line num="42" type="method" name="register" visibility="public" complexity="1" crap="1" count="67"/>
+        <line num="45" type="stmt" count="67"/>
+        <line num="46" type="stmt" count="67"/>
+        <line num="48" type="stmt" count="50"/>
+        <line num="49" type="stmt" count="67"/>
         <line num="51" type="stmt" count="4"/>
-        <line num="52" type="stmt" count="66"/>
-        <line num="53" type="stmt" count="66"/>
-        <line num="58" type="method" name="configPath" visibility="protected" complexity="1" crap="1" count="66"/>
-        <line num="60" type="stmt" count="66"/>
-        <line num="67" type="method" name="publishPath" visibility="protected" complexity="1" crap="1" count="66"/>
-        <line num="69" type="stmt" count="66"/>
+        <line num="52" type="stmt" count="67"/>
+        <line num="53" type="stmt" count="67"/>
+        <line num="58" type="method" name="configPath" visibility="protected" complexity="1" crap="1" count="67"/>
+        <line num="60" type="stmt" count="67"/>
+        <line num="67" type="method" name="publishPath" visibility="protected" complexity="1" crap="1" count="67"/>
+        <line num="69" type="stmt" count="67"/>
         <metrics loc="71" ncloc="57" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="22" coveredelements="22"/>
       </file>
     </package>
@@ -436,8 +436,8 @@
         <class name="GarbuzIvan\LaravelGeneratorPackage\Facades\Field" namespace="GarbuzIvan\LaravelGeneratorPackage\Facades">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
-        <line num="12" type="method" name="getFacadeAccessor" visibility="protected" complexity="1" crap="1" count="48"/>
-        <line num="14" type="stmt" count="48"/>
+        <line num="12" type="method" name="getFacadeAccessor" visibility="protected" complexity="1" crap="1" count="49"/>
+        <line num="14" type="stmt" count="49"/>
         <metrics loc="16" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
     </package>
@@ -446,21 +446,21 @@
         <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Field" namespace="GarbuzIvan\LaravelGeneratorPackage\Form">
           <metrics complexity="13" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="38" elements="42" coveredelements="42"/>
         </class>
-        <line num="20" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="49"/>
-        <line num="22" type="stmt" count="49"/>
-        <line num="23" type="stmt" count="49"/>
-        <line num="31" type="method" name="findFieldClass" visibility="public" complexity="5" crap="5" count="49"/>
-        <line num="33" type="stmt" count="49"/>
+        <line num="20" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="50"/>
+        <line num="22" type="stmt" count="50"/>
+        <line num="23" type="stmt" count="50"/>
+        <line num="31" type="method" name="findFieldClass" visibility="public" complexity="5" crap="5" count="50"/>
+        <line num="33" type="stmt" count="50"/>
         <line num="34" type="stmt" count="1"/>
-        <line num="36" type="stmt" count="48"/>
-        <line num="37" type="stmt" count="48"/>
-        <line num="38" type="stmt" count="46"/>
-        <line num="40" type="stmt" count="48"/>
-        <line num="41" type="stmt" count="46"/>
+        <line num="36" type="stmt" count="49"/>
+        <line num="37" type="stmt" count="49"/>
+        <line num="38" type="stmt" count="47"/>
+        <line num="40" type="stmt" count="49"/>
+        <line num="41" type="stmt" count="47"/>
         <line num="43" type="stmt" count="3"/>
-        <line num="54" type="method" name="__call" visibility="public" complexity="2" crap="2" count="30"/>
-        <line num="56" type="stmt" count="30"/>
-        <line num="58" type="stmt" count="29"/>
+        <line num="54" type="method" name="__call" visibility="public" complexity="2" crap="2" count="31"/>
+        <line num="56" type="stmt" count="31"/>
+        <line num="58" type="stmt" count="30"/>
         <line num="60" type="stmt" count="1"/>
         <line num="69" type="method" name="loadFieldFromArray" visibility="public" complexity="5" crap="5" count="17"/>
         <line num="71" type="stmt" count="17"/>
@@ -494,18 +494,18 @@
         <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Filter" namespace="GarbuzIvan\LaravelGeneratorPackage\Form">
           <metrics complexity="21" methods="15" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="38" coveredelements="38"/>
         </class>
-        <line num="40" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="49"/>
-        <line num="42" type="stmt" count="49"/>
-        <line num="43" type="stmt" count="49"/>
+        <line num="40" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="50"/>
+        <line num="42" type="stmt" count="50"/>
+        <line num="43" type="stmt" count="50"/>
         <line num="49" type="method" name="nullable" visibility="public" complexity="1" crap="1" count="18"/>
         <line num="51" type="stmt" count="18"/>
         <line num="52" type="stmt" count="18"/>
         <line num="59" type="method" name="unique" visibility="public" complexity="1" crap="1" count="18"/>
         <line num="61" type="stmt" count="18"/>
         <line num="62" type="stmt" count="18"/>
-        <line num="69" type="method" name="setType" visibility="public" complexity="1" crap="1" count="44"/>
-        <line num="71" type="stmt" count="44"/>
-        <line num="72" type="stmt" count="44"/>
+        <line num="69" type="method" name="setType" visibility="public" complexity="1" crap="1" count="45"/>
+        <line num="71" type="stmt" count="45"/>
+        <line num="72" type="stmt" count="45"/>
         <line num="79" type="method" name="setMask" visibility="public" complexity="2" crap="2" count="17"/>
         <line num="81" type="stmt" count="17"/>
         <line num="82" type="stmt" count="17"/>
@@ -549,27 +549,27 @@
         <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Fields\FieldAbstract" namespace="GarbuzIvan\LaravelGeneratorPackage\Form\Fields">
           <metrics complexity="63" methods="44" coveredmethods="43" conditionals="0" coveredconditionals="0" statements="76" coveredstatements="74" elements="120" coveredelements="117"/>
         </class>
-        <line num="55" type="method" name="init" visibility="public" complexity="6" crap="6.22" count="45"/>
-        <line num="57" type="stmt" count="45"/>
+        <line num="55" type="method" name="init" visibility="public" complexity="6" crap="6.22" count="46"/>
+        <line num="57" type="stmt" count="46"/>
         <line num="58" type="stmt" count="1"/>
-        <line num="60" type="stmt" count="44"/>
+        <line num="60" type="stmt" count="45"/>
         <line num="61" type="stmt" count="1"/>
-        <line num="63" type="stmt" count="43"/>
-        <line num="64" type="stmt" count="43"/>
-        <line num="65" type="stmt" count="43"/>
-        <line num="67" type="stmt" count="43"/>
+        <line num="63" type="stmt" count="44"/>
+        <line num="64" type="stmt" count="44"/>
+        <line num="65" type="stmt" count="44"/>
+        <line num="67" type="stmt" count="44"/>
         <line num="70" type="stmt" count="0"/>
         <line num="74" type="stmt" count="0"/>
-        <line num="76" type="stmt" count="43"/>
-        <line num="83" type="method" name="setLabel" visibility="public" complexity="1" crap="1" count="43"/>
-        <line num="85" type="stmt" count="43"/>
-        <line num="86" type="stmt" count="43"/>
-        <line num="93" type="method" name="setType" visibility="public" complexity="1" crap="1" count="43"/>
-        <line num="95" type="stmt" count="43"/>
-        <line num="96" type="stmt" count="43"/>
-        <line num="103" type="method" name="setCast" visibility="public" complexity="1" crap="1" count="41"/>
-        <line num="105" type="stmt" count="41"/>
-        <line num="106" type="stmt" count="41"/>
+        <line num="76" type="stmt" count="44"/>
+        <line num="83" type="method" name="setLabel" visibility="public" complexity="1" crap="1" count="44"/>
+        <line num="85" type="stmt" count="44"/>
+        <line num="86" type="stmt" count="44"/>
+        <line num="93" type="method" name="setType" visibility="public" complexity="1" crap="1" count="44"/>
+        <line num="95" type="stmt" count="44"/>
+        <line num="96" type="stmt" count="44"/>
+        <line num="103" type="method" name="setCast" visibility="public" complexity="1" crap="1" count="42"/>
+        <line num="105" type="stmt" count="42"/>
+        <line num="106" type="stmt" count="42"/>
         <line num="113" type="method" name="setMask" visibility="public" complexity="2" crap="2" count="17"/>
         <line num="115" type="stmt" count="17"/>
         <line num="116" type="stmt" count="17"/>
@@ -637,8 +637,8 @@
         <line num="334" type="stmt" count="2"/>
         <line num="340" type="method" name="getReferencesTable" visibility="public" complexity="2" crap="2" count="5"/>
         <line num="342" type="stmt" count="5"/>
-        <line num="348" type="method" name="getReferencesField" visibility="public" complexity="2" crap="2" count="5"/>
-        <line num="350" type="stmt" count="5"/>
+        <line num="348" type="method" name="getReferencesField" visibility="public" complexity="2" crap="2" count="6"/>
+        <line num="350" type="stmt" count="6"/>
         <line num="356" type="method" name="getReferencesHas" visibility="public" complexity="1" crap="1" count="2"/>
         <line num="358" type="stmt" count="2"/>
         <line num="364" type="method" name="getPlaceholder" visibility="public" complexity="2" crap="2" count="1"/>
@@ -707,11 +707,11 @@
         <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField" namespace="GarbuzIvan\LaravelGeneratorPackage\Form\Fields">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
         </class>
-        <line num="18" type="method" name="init" visibility="public" complexity="1" crap="1" count="41"/>
-        <line num="20" type="stmt" count="41"/>
-        <line num="21" type="stmt" count="39"/>
-        <line num="22" type="stmt" count="39"/>
-        <line num="23" type="stmt" count="39"/>
+        <line num="18" type="method" name="init" visibility="public" complexity="1" crap="1" count="42"/>
+        <line num="20" type="stmt" count="42"/>
+        <line num="21" type="stmt" count="40"/>
+        <line num="22" type="stmt" count="40"/>
+        <line num="23" type="stmt" count="40"/>
         <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
       </file>
     </package>

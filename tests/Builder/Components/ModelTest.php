@@ -29,6 +29,16 @@ class ModelTest extends TestCase
     }
 
     /**
+     * Test Generation Function Null
+     */
+    public function testGetFunctionNull()
+    {
+        $field = Field::text('title', 'Title');
+        $codeField = app(Model::class)->getFunction($field);
+        $this->assertTrue(mb_strlen($codeField) == 0);
+    }
+
+    /**
      * Test Generation Rules
      */
     public function testGetRules()
