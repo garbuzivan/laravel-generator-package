@@ -6,6 +6,7 @@ namespace GarbuzIvan\LaravelGeneratorPackage\Builder;
 
 use GarbuzIvan\LaravelGeneratorPackage\Builder\Components\Migration;
 use GarbuzIvan\LaravelGeneratorPackage\Builder\Components\Model;
+use GarbuzIvan\LaravelGeneratorPackage\Builder\Components\Seed;
 use GarbuzIvan\LaravelGeneratorPackage\Configuration;
 use Illuminate\Support\Facades\File;
 
@@ -41,6 +42,7 @@ class FileGenerator
         $this->templates();
         app(Migration::class)->make($package);
         app(Model::class)->make($package);
+        app(Seed::class)->make($package);
         return true;
     }
 
