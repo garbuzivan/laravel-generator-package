@@ -7,7 +7,6 @@ namespace GarbuzIvan\LaravelGeneratorPackage;
 use Exception;
 use GarbuzIvan\LaravelGeneratorPackage\Commands\MakeCommand;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Field;
-use GarbuzIvan\LaravelGeneratorPackage\Form\Form;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -46,9 +45,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         });
         $this->app->bind(Field::class, function() {
             return new Field(app(Configuration::class));
-        });
-        $this->app->bind(Form::class, function() {
-            return new Form(app(Configuration::class));
         });
     }
 

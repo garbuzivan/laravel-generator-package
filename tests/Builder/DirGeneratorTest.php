@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Builder;
+namespace GarbuzIvan\LaravelGeneratorPackage\Tests\Builder;
 
+use GarbuzIvan\LaravelGeneratorPackage\Builder\DirGenerator;
+use GarbuzIvan\LaravelGeneratorPackage\Builder\Package;
 use GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase;
 
 class DirGeneratorTest extends TestCase

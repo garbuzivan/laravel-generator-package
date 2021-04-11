@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Builder;
+namespace GarbuzIvan\LaravelGeneratorPackage\Tests\Builder;
 
+use GarbuzIvan\LaravelGeneratorPackage\Builder\Builder;
 use GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase;
 
 class BuilderTest extends TestCase
