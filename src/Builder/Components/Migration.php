@@ -61,10 +61,8 @@ class Migration
      */
     public function generationField(FieldInterface $field): string
     {
-        $code = "\n\t\t\t";
-        $code .= '$table->' . $field->getType() . '(\'' . $field->getColumn() . '\')';
-        $code .= $field->isNullable() ? '->nullable()' : '';
-        $code .= $field->isUnique() ? '->unique()' : '';
+        $code = "\n\t\t\t\$table->" . $field->getType() . '(\'' . $field->getColumn() . '\')';
+        $code .= ($field->isNullable() ? '->nullable()' : '') . ($field->isUnique() ? '->unique()' : '');
         if (!is_null($field->getReferencesTable())) {
             $code .= '->references(\'' . $field->getReferencesField() . '\')->on(\'' . $field->getReferencesTable() . '\')';
         }
