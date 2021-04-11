@@ -23,7 +23,7 @@
     "autoload": {
         "psr-4": {
             "%PACKAGE_NAMESPACE_SLASHES%\\": "src/",
-            "%PACKAGE_NAMESPACE_SLASHES%\\DataBase": "database/"
+            "%PACKAGE_NAMESPACE_SLASHES%\\DataBase\\": "database/"
         }
     },
     "autoload-dev": {

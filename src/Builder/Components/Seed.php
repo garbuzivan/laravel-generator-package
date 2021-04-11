@@ -90,5 +90,4 @@ class DatabaseSeeder extends Seeder
 }
 EOD;
 
-
 }
