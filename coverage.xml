@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1618137997">
-  <project timestamp="1618137997">
+<coverage generated="1618166255">
+  <project timestamp="1618166255">
     <package name="GarbuzIvan\LaravelGeneratorPackage\Builder">
       <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/Builder.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Builder" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
@@ -47,7 +47,7 @@
       </file>
       <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/DirGenerator.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\DirGenerator" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
-          <metrics complexity="13" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="38" elements="45" coveredelements="45"/>
+          <metrics complexity="13" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="37" elements="44" coveredelements="44"/>
         </class>
         <line num="15" type="method" name="make" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="17" type="stmt" count="3"/>
@@ -73,28 +73,27 @@
         <line num="50" type="stmt" count="1"/>
         <line num="52" type="stmt" count="2"/>
         <line num="53" type="stmt" count="2"/>
-        <line num="54" type="stmt" count="2"/>
-        <line num="60" type="method" name="makeApi" visibility="public" complexity="2" crap="2" count="3"/>
-        <line num="62" type="stmt" count="3"/>
-        <line num="63" type="stmt" count="1"/>
+        <line num="59" type="method" name="makeApi" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="61" type="stmt" count="3"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="2"/>
         <line num="65" type="stmt" count="2"/>
-        <line num="66" type="stmt" count="2"/>
-        <line num="72" type="method" name="makeApiFrontend" visibility="public" complexity="2" crap="2" count="3"/>
-        <line num="74" type="stmt" count="3"/>
-        <line num="75" type="stmt" count="1"/>
+        <line num="71" type="method" name="makeApiFrontend" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="73" type="stmt" count="3"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="2"/>
         <line num="77" type="stmt" count="2"/>
-        <line num="78" type="stmt" count="2"/>
-        <line num="84" type="method" name="makeLaravelAdmin" visibility="public" complexity="2" crap="2" count="3"/>
-        <line num="86" type="stmt" count="3"/>
-        <line num="87" type="stmt" count="1"/>
+        <line num="83" type="method" name="makeLaravelAdmin" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="85" type="stmt" count="3"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="88" type="stmt" count="2"/>
         <line num="89" type="stmt" count="2"/>
-        <line num="90" type="stmt" count="2"/>
-        <line num="97" type="method" name="mkdir" visibility="public" complexity="2" crap="2" count="4"/>
-        <line num="99" type="stmt" count="4"/>
+        <line num="96" type="method" name="mkdir" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="98" type="stmt" count="4"/>
+        <line num="99" type="stmt" count="1"/>
         <line num="100" type="stmt" count="1"/>
-        <line num="101" type="stmt" count="1"/>
-        <line num="103" type="stmt" count="4"/>
-        <metrics loc="105" ncloc="89" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="38" elements="45" coveredelements="45"/>
+        <line num="102" type="stmt" count="4"/>
+        <metrics loc="104" ncloc="88" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="37" elements="44" coveredelements="44"/>
       </file>
       <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/FileGenerator.php">
         <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\FileGenerator" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
@@ -739,6 +738,6 @@
         <metrics loc="65" ncloc="47" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
       </file>
     </package>
-    <metrics files="22" loc="2521" ncloc="1922" classes="20" methods="138" coveredmethods="134" conditionals="0" coveredconditionals="0" statements="453" coveredstatements="449" elements="591" coveredelements="583"/>
+    <metrics files="22" loc="2520" ncloc="1921" classes="20" methods="138" coveredmethods="134" conditionals="0" coveredconditionals="0" statements="452" coveredstatements="448" elements="590" coveredelements="582"/>
   </project>
 </coverage>

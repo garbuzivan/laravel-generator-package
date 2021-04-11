@@ -24,7 +24,8 @@
     "autoload": {
         "psr-4": {
             "GarbuzIvan\\LaravelGeneratorPackage\\": "src/",
-            "GarbuzIvan\\LaravelGeneratorPackage\\DataBase\\": "database/"
+            "GarbuzIvan\\LaravelGeneratorPackage\\DataBase\\": "database/",
+            "Database\\Factories\\GarbuzIvan\\LaravelGeneratorPackage\\Models\\": "database/Factories/"
         }
     },
     "autoload-dev": {

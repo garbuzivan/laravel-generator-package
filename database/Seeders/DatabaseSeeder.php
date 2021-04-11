@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace GarbuzIvan\LaravelGeneratorPackage\DataBase\Seeders;
 
 use GarbuzIvan\LaravelGeneratorPackage\Models\DictOption;
-use Illuminate\Database\Seeder;
 use GarbuzIvan\LaravelGeneratorPackage\Models\Dict;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -34,5 +34,11 @@ class DatabaseSeeder extends Seeder
             ],
         ];
         DictOption::insert($create);
+        $dicts = Dict::factory(10)->create();
+        foreach ($dicts as $dict) {
+            DictOption::factory(rand(2,7))->state([
+                'dict_id' => $dict->id,
+            ])->create();
+        }
     }
 }
