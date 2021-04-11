@@ -42,6 +42,14 @@
 
 <pre>GarbuzIvan\LaravelGeneratorPackage\ServiceProvider::class,</pre>
 
+## Добавление миграций для словарей
+
+<pre>php artisan migrate</pre>
+
+## Добавление стандартных словарей
+
+<pre>php artisan db:seed --class="GarbuzIvan\LaravelGeneratorPackage\DataBase\Seeders\DatabaseSeeder"</pre>
+
 ## Сборка пакетов из конфига
 
 <strong>Все пакеты</strong>
