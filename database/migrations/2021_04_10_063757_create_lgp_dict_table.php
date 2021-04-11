@@ -15,13 +15,13 @@ class CreateLgpDictTable extends Migration
      */
     public function up()
     {
-        Schema::create('lgp_dict', function (Blueprint $table) {
+        Schema::create('lgp_dict', function(Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('type')->default('select');
             $table->timestamps();
         });
-        Schema::create('lgp_dict_option', function (Blueprint $table) {
+        Schema::create('lgp_dict_option', function(Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->text('json')->nullable();
