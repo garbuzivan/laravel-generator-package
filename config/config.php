@@ -41,6 +41,7 @@ return [
                     'fillable' => true,
                     'hidden' => false,
                     'references' => null,
+                    'param' => null,
                     'filter' => [
                         'nullable' => true,
                         'unique' => false,

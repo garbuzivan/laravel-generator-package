@@ -66,6 +66,7 @@ class Configuration
                     'fillable' => true,
                     'hidden' => false,
                     'references' => null,
+                    'param' => null,
                     'filter' => [
                         'type' => "string",
                         'light' => 255,

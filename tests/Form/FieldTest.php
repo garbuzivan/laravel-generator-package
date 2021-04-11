@@ -111,69 +111,23 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
     }
 
     /**
-     * Test set\get saving field
-     */
-    public function testSaving()
-    {
-        $form = app(Form::class);
-        $field = Field::text('title', 'test')
-            ->setSaving(function(Form $form) {
-                return true;
-            });
-        $function = $field->saving();
-        $this->assertTrue($function($form));
-    }
-
-    /**
-     * Test set\get saved field
-     */
-    public function testSaved()
-    {
-        $form = app(Form::class);
-        $field = Field::text('title', 'test')
-            ->setSaved(function(Form $form) {
-                return true;
-            });
-        $function = $field->saved();
-        $this->assertTrue($function($form));
-    }
-
-    /**
-     * Test set\get view field
-     */
-    public function testView()
-    {
-        $form = app(Form::class);
-        $field = Field::text('title', 'test')
-            ->setView(function(string $column, Form $form) {
-                return true;
-            });
-        $function = $field->view();
-        $this->assertTrue($function('title', $form));
-    }
-
-    /**
-     * Test set\get viewGrid field
-     */
-    public function testViewGrid()
-    {
-        $form = app(Form::class);
-        $field = Field::text('title', 'test')
-            ->setViewGrid(function(string $column, Form $form) {
-                return true;
-            });
-        $function = $field->viewGrid();
-        $this->assertTrue($function('title', $form));
-    }
-
-    /**
      * Test set\get fillable field
      */
     public function testFillable()
     {
         $field = Field::text('title', 'test')
             ->fillable(false);
-        $this->assertFalse($field->getFillable());
+        $this->assertFalse($field->isFillable());
+    }
+
+    /**
+     * Test set\get param field
+     */
+    public function testParam()
+    {
+        $param = ['select' => ['dict_db_id' => 777]];
+        $fieldParam = Field::text('title', 'test')->setParam($param)->getParam();
+        $this->assertTrue($fieldParam['select']['dict_db_id'] == 777);
     }
 
     /**

@@ -48,40 +48,6 @@ interface FieldInterface
     public function setPlaceholder(?string $placeholder = null): FieldInterface;
 
     /**
-     * Method called before saving data
-     * @param Closure $closure
-     * @return FieldInterface
-     */
-    public function setSaving(Closure $closure): FieldInterface;
-
-    /**
-     * Method called after saving data
-     * @param Closure $closure
-     * @return FieldInterface
-     */
-    public function setSaved(Closure $closure): FieldInterface;
-
-    /**
-     * The method called to convert data from the database for display
-     * @param Closure $closure
-     * @return FieldInterface
-     */
-    public function setView(Closure $closure): FieldInterface;
-
-    /**
-     * The method called to convert data from the database for display in grid
-     * @param Closure $closure
-     * @return FieldInterface
-     */
-    public function setViewGrid(Closure $closure): FieldInterface;
-
-    /**
-     * @param bool $required
-     * @return $this
-     */
-    public function required(bool $required = true): FieldInterface;
-
-    /**
      * @param int|null $light
      * @return $this
      */
@@ -100,6 +66,12 @@ interface FieldInterface
     public function default($value = null): FieldInterface;
 
     /**
+     * @param array|null $param
+     * @return FieldInterface
+     */
+    public function setParam(array $param = null): FieldInterface;
+
+    /**
      * @param string $model
      * @param string $table
      * @param string $field
@@ -113,6 +85,12 @@ interface FieldInterface
      * @return FieldInterface
      */
     public function referencesDisabled(): FieldInterface;
+
+    /**
+     * @param bool $required
+     * @return $this
+     */
+    public function required(bool $required = true): FieldInterface;
 
     /**
      * @param bool $index
@@ -200,11 +178,6 @@ interface FieldInterface
     public function getDefault();
 
     /**
-     * @return bool
-     */
-    public function getFillable(): bool;
-
-    /**
      * @return int|null
      */
     public function getMax(): ?int;
@@ -213,6 +186,16 @@ interface FieldInterface
      * @return int|null
      */
     public function getMin(): ?int;
+
+    /**
+     * @return array|null
+     */
+    public function getParam(): ?array;
+
+    /**
+     * @return bool
+     */
+    public function isFillable(): bool;
 
     /**
      * @return bool
@@ -228,30 +211,6 @@ interface FieldInterface
      * @return bool
      */
     public function isIndex(): bool;
-
-    /**
-     * Method called before saving data
-     * @return Closure
-     */
-    public function saving(): Closure;
-
-    /**
-     * Method called after saving data
-     * @return Closure
-     */
-    public function saved(): Closure;
-
-    /**
-     * The method called to convert data from the database for display
-     * @return Closure
-     */
-    public function view(): Closure;
-
-    /**
-     * The method called to convert data from the database for display in grid
-     * @return Closure
-     */
-    public function viewGrid(): Closure;
 
     /**
      * @return bool

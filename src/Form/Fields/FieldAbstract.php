@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace GarbuzIvan\LaravelGeneratorPackage\Form\Fields;
 
-use Closure;
 use Exception;
 use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
 use GarbuzIvan\LaravelGeneratorPackage\Form\Filter;
-use GarbuzIvan\LaravelGeneratorPackage\Form\Form;
 
 abstract class FieldAbstract implements FieldInterface
 {
@@ -37,14 +35,7 @@ abstract class FieldAbstract implements FieldInterface
      * @var array|null
      */
     protected ?array $references = null;
-
-    /**
-     * @var Closure
-     */
-    protected Closure $saving;
-    protected Closure $saved;
-    protected Closure $view;
-    protected Closure $viewGrid;
+    protected ?array $param = null;
 
     /**
      * FieldAbstract init.
@@ -65,14 +56,6 @@ abstract class FieldAbstract implements FieldInterface
             $this->setLabel($arguments[1]);
         }
         $this->filter = app(Filter::class);
-        // default save Closure
-        $this->saved = $this->saving = function(Form $data) {
-            return $data;
-        };
-        // default view Closure
-        $this->view = $this->viewGrid = function(string $column, Form $data) {
-            return $data->$column;
-        };
         return $this;
     }
 
@@ -127,60 +110,6 @@ abstract class FieldAbstract implements FieldInterface
     }
 
     /**
-     * Method called before saving data
-     * @param Closure $closure
-     * @return FieldInterface
-     */
-    public function setSaving(Closure $closure): FieldInterface
-    {
-        $this->saving = $closure;
-        return $this;
-    }
-
-    /**
-     * Method called after saving data
-     * @param Closure $closure
-     * @return FieldInterface
-     */
-    public function setSaved(Closure $closure): FieldInterface
-    {
-        $this->saved = $closure;
-        return $this;
-    }
-
-    /**
-     * The method called to convert data from the database for display
-     * @param Closure $closure
-     * @return FieldInterface
-     */
-    public function setView(Closure $closure): FieldInterface
-    {
-        $this->view = $closure;
-        return $this;
-    }
-
-    /**
-     * The method called to convert data from the database for display in grid
-     * @param Closure $closure
-     * @return FieldInterface
-     */
-    public function setViewGrid(Closure $closure): FieldInterface
-    {
-        $this->viewGrid = $closure;
-        return $this;
-    }
-
-    /**
-     * @param bool $required
-     * @return $this
-     */
-    public function required(bool $required = true): FieldInterface
-    {
-        $this->filter->required($required);
-        return $this;
-    }
-
-    /**
      * @param int|null $light
      * @return $this
      */
@@ -211,6 +140,16 @@ abstract class FieldAbstract implements FieldInterface
     }
 
     /**
+     * @param array|null $param
+     * @return FieldInterface
+     */
+    public function setParam(array $param = null): FieldInterface
+    {
+        $this->param = $param;
+        return $this;
+    }
+
+    /**
      * @param string $model
      * @param string $table
      * @param string $field
@@ -233,6 +172,16 @@ abstract class FieldAbstract implements FieldInterface
     public function referencesDisabled(): FieldInterface
     {
         $this->references = null;
+        return $this;
+    }
+
+    /**
+     * @param bool $required
+     * @return $this
+     */
+    public function required(bool $required = true): FieldInterface
+    {
+        $this->filter->required($required);
         return $this;
     }
 
@@ -377,25 +326,9 @@ abstract class FieldAbstract implements FieldInterface
     /**
      * @return bool
      */
-    public function getFillable(): bool
+    public function isFillable(): bool
     {
         return $this->fillable;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isHidden(): bool
-    {
-        return $this->hidden;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isRequired(): bool
-    {
-        return $this->filter->getRequired();
     }
 
     /**
@@ -415,47 +348,35 @@ abstract class FieldAbstract implements FieldInterface
     }
 
     /**
+     * @return array|null
+     */
+    public function getParam(): ?array
+    {
+        return $this->param;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isHidden(): bool
+    {
+        return $this->hidden;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isRequired(): bool
+    {
+        return $this->filter->getRequired();
+    }
+
+    /**
      * @return bool
      */
     public function isIndex(): bool
     {
         return $this->index;
-    }
-
-    /**
-     * Method called before saving data
-     * @return Closure
-     */
-    public function saving(): Closure
-    {
-        return $this->saving;
-    }
-
-    /**
-     * Method called after saving data
-     * @return Closure
-     */
-    public function saved(): Closure
-    {
-        return $this->saved;
-    }
-
-    /**
-     * The method called to convert data from the database for display
-     * @return Closure
-     */
-    public function view(): Closure
-    {
-        return $this->view;
-    }
-
-    /**
-     * The method called to convert data from the database for display in grid
-     * @return Closure
-     */
-    public function viewGrid(): Closure
-    {
-        return $this->viewGrid;
     }
 
     /**

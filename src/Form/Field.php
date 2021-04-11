@@ -85,6 +85,7 @@ class Field
         $field->required($config['filter']['required'] ?? false);
         $field->max($config['filter']['max'] ?? null);
         $field->min($config['filter']['min'] ?? null);
+        $field->setParam($config['param'] ?? null);
         $field->setMask($config['filter']['mask'] ?? null);
         if (
             isset($config['references']['model'])
