@@ -1,12 +1,12 @@
 {
-    "name": "garbuzivan/laravel-generator-package",
+    "name": "Zebrainsteam/laravel-generator-package",
     "description": "Generator the composer package for Laravel",
     "type": "library",
     "license": "GPL-3.0-only",
     "authors": [
         {
             "name": "Ivan Garbuz",
-            "email": "garbuzivan90@ya.ru"
+            "email": "Zebrainsteam90@ya.ru"
         }
     ],
     "require-dev": {
@@ -23,14 +23,14 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "GarbuzIvan\\LaravelGeneratorPackage\\": "src/",
-            "GarbuzIvan\\LaravelGeneratorPackage\\DataBase\\": "database/",
-            "Database\\Factories\\GarbuzIvan\\LaravelGeneratorPackage\\Models\\": "database/Factories/"
+            "Zebrainsteam\\LaravelGeneratorPackage\\": "src/",
+            "Zebrainsteam\\LaravelGeneratorPackage\\DataBase\\": "database/",
+            "Database\\Factories\\Zebrainsteam\\LaravelGeneratorPackage\\Models\\": "database/Factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "GarbuzIvan\\LaravelGeneratorPackage\\Tests\\": "tests/"
+            "Zebrainsteam\\LaravelGeneratorPackage\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -39,7 +39,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "GarbuzIvan\\LaravelGeneratorPackage\\ServiceProvider"
+                "Zebrainsteam\\LaravelGeneratorPackage\\ServiceProvider"
             ]
         }
     }

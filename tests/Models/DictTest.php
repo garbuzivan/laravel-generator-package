@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Tests\Models;
+namespace Zebrainsteam\LaravelGeneratorPackage\Tests\Models;
 
-use GarbuzIvan\LaravelGeneratorPackage\Models\Dict;
+use Zebrainsteam\LaravelGeneratorPackage\Models\Dict;
 use Mockery;
 
-class DictTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
+class DictTest extends \Zebrainsteam\LaravelGeneratorPackage\Tests\TestCase
 {
     /**
      * setUp

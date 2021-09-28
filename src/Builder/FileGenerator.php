@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Builder;
+namespace Zebrainsteam\LaravelGeneratorPackage\Builder;
 
-use GarbuzIvan\LaravelGeneratorPackage\Builder\Components\Migration;
-use GarbuzIvan\LaravelGeneratorPackage\Builder\Components\Model;
-use GarbuzIvan\LaravelGeneratorPackage\Builder\Components\Seed;
-use GarbuzIvan\LaravelGeneratorPackage\Configuration;
+use Zebrainsteam\LaravelGeneratorPackage\Builder\Components\Migration;
+use Zebrainsteam\LaravelGeneratorPackage\Builder\Components\Model;
+use Zebrainsteam\LaravelGeneratorPackage\Builder\Components\Seed;
+use Zebrainsteam\LaravelGeneratorPackage\Configuration;
 use Illuminate\Support\Facades\File;
 
 class FileGenerator

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Tests;
+namespace Zebrainsteam\LaravelGeneratorPackage\Tests;
 
-class LaravelGeneratorPackageTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
+class LaravelGeneratorPackageTest extends \Zebrainsteam\LaravelGeneratorPackage\Tests\TestCase
 {
     public function testExample()
     {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Tests\Builder;
+namespace Zebrainsteam\LaravelGeneratorPackage\Tests\Builder;
 
-use GarbuzIvan\LaravelGeneratorPackage\Builder\Builder;
-use GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase;
+use Zebrainsteam\LaravelGeneratorPackage\Builder\Builder;
+use Zebrainsteam\LaravelGeneratorPackage\Tests\TestCase;
 
 class BuilderTest extends TestCase
 {

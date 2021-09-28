@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <coverage generated="1618166255">
   <project timestamp="1618166255">
-    <package name="GarbuzIvan\LaravelGeneratorPackage\Builder">
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/Builder.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Builder" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
+    <package name="Zebrainsteam\LaravelGeneratorPackage\Builder">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Builder/Builder.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Builder\Builder" namespace="Zebrainsteam\LaravelGeneratorPackage\Builder">
           <metrics complexity="19" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="31" elements="37" coveredelements="37"/>
         </class>
         <line num="27" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
@@ -45,8 +45,8 @@
         <line num="105" type="stmt" count="6"/>
         <metrics loc="107" ncloc="84" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="31" elements="37" coveredelements="37"/>
       </file>
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/DirGenerator.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\DirGenerator" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Builder/DirGenerator.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Builder\DirGenerator" namespace="Zebrainsteam\LaravelGeneratorPackage\Builder">
           <metrics complexity="13" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="37" elements="44" coveredelements="44"/>
         </class>
         <line num="15" type="method" name="make" visibility="public" complexity="1" crap="1" count="3"/>
@@ -95,8 +95,8 @@
         <line num="102" type="stmt" count="4"/>
         <metrics loc="104" ncloc="88" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="37" coveredstatements="37" elements="44" coveredelements="44"/>
       </file>
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/FileGenerator.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\FileGenerator" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Builder/FileGenerator.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Builder\FileGenerator" namespace="Zebrainsteam\LaravelGeneratorPackage\Builder">
           <metrics complexity="8" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="30" elements="35" coveredelements="33"/>
         </class>
         <line num="29" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
@@ -136,8 +136,8 @@
         <line num="97" type="stmt" count="3"/>
         <metrics loc="99" ncloc="81" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="30" elements="35" coveredelements="33"/>
       </file>
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/Package.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Package" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Builder/Package.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Builder\Package" namespace="Zebrainsteam\LaravelGeneratorPackage\Builder">
           <metrics complexity="40" methods="33" coveredmethods="33" conditionals="0" coveredconditionals="0" statements="68" coveredstatements="68" elements="101" coveredelements="101"/>
         </class>
         <line num="46" type="method" name="init" visibility="public" complexity="1" crap="1" count="16"/>
@@ -244,9 +244,9 @@
         <metrics loc="362" ncloc="271" classes="1" methods="33" coveredmethods="33" conditionals="0" coveredconditionals="0" statements="68" coveredstatements="68" elements="101" coveredelements="101"/>
       </file>
     </package>
-    <package name="GarbuzIvan\LaravelGeneratorPackage\Builder\Components">
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/Components/Migration.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Components\Migration" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder\Components">
+    <package name="Zebrainsteam\LaravelGeneratorPackage\Builder\Components">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Builder/Components/Migration.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Builder\Components\Migration" namespace="Zebrainsteam\LaravelGeneratorPackage\Builder\Components">
           <metrics complexity="12" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="26" elements="29" coveredelements="29"/>
         </class>
         <line num="27" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
@@ -280,8 +280,8 @@
         <line num="75" type="stmt" count="4"/>
         <metrics loc="119" ncloc="102" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="26" elements="29" coveredelements="29"/>
       </file>
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/Components/Model.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Components\Model" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder\Components">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Builder/Components/Model.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Builder\Components\Model" namespace="Zebrainsteam\LaravelGeneratorPackage\Builder\Components">
           <metrics complexity="12" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="52" elements="57" coveredelements="55"/>
         </class>
         <line num="27" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="6"/>
@@ -343,8 +343,8 @@
         <line num="124" type="stmt" count="0"/>
         <metrics loc="193" ncloc="173" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="52" elements="57" coveredelements="55"/>
       </file>
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Builder/Components/Seed.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Builder\Components\Seed" namespace="GarbuzIvan\LaravelGeneratorPackage\Builder\Components">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Builder/Components/Seed.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Builder\Components\Seed" namespace="Zebrainsteam\LaravelGeneratorPackage\Builder\Components">
           <metrics complexity="4" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="19" coveredelements="19"/>
         </class>
         <line num="26" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
@@ -369,9 +369,9 @@
         <metrics loc="93" ncloc="79" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="19" coveredelements="19"/>
       </file>
     </package>
-    <package name="GarbuzIvan\LaravelGeneratorPackage\Commands">
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Commands/MakeCommand.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Commands\MakeCommand" namespace="GarbuzIvan\LaravelGeneratorPackage\Commands">
+    <package name="Zebrainsteam\LaravelGeneratorPackage\Commands">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Commands/MakeCommand.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Commands\MakeCommand" namespace="Zebrainsteam\LaravelGeneratorPackage\Commands">
           <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
         </class>
         <line num="42" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
@@ -386,9 +386,9 @@
         <metrics loc="60" ncloc="40" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
       </file>
     </package>
-    <package name="GarbuzIvan\LaravelGeneratorPackage">
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Configuration.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Configuration" namespace="GarbuzIvan\LaravelGeneratorPackage">
+    <package name="Zebrainsteam\LaravelGeneratorPackage">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Configuration.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Configuration" namespace="Zebrainsteam\LaravelGeneratorPackage">
           <metrics complexity="11" methods="9" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="30" coveredelements="30"/>
         </class>
         <line num="90" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="67"/>
@@ -423,8 +423,8 @@
         <line num="170" type="stmt" count="4"/>
         <metrics loc="172" ncloc="138" classes="1" methods="9" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="30" coveredelements="30"/>
       </file>
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/ServiceProvider.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\ServiceProvider" namespace="GarbuzIvan\LaravelGeneratorPackage">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/ServiceProvider.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\ServiceProvider" namespace="Zebrainsteam\LaravelGeneratorPackage">
           <metrics complexity="5" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="20" coveredelements="20"/>
         </class>
         <line num="18" type="method" name="boot" visibility="public" complexity="2" crap="2" count="67"/>
@@ -450,20 +450,20 @@
         <metrics loc="67" ncloc="53" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="16" elements="20" coveredelements="20"/>
       </file>
     </package>
-    <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Contracts/FieldInterface.php">
+    <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Contracts/FieldInterface.php">
       <metrics loc="224" ncloc="125" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <package name="GarbuzIvan\LaravelGeneratorPackage\Exceptions">
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Exceptions/FieldDoesNotExistsException.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Exceptions\FieldDoesNotExistsException" namespace="GarbuzIvan\LaravelGeneratorPackage\Exceptions">
+    <package name="Zebrainsteam\LaravelGeneratorPackage\Exceptions">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Exceptions/FieldDoesNotExistsException.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Exceptions\FieldDoesNotExistsException" namespace="Zebrainsteam\LaravelGeneratorPackage\Exceptions">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
         <metrics loc="10" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
     </package>
-    <package name="GarbuzIvan\LaravelGeneratorPackage\Facades">
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Facades/Field.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Facades\Field" namespace="GarbuzIvan\LaravelGeneratorPackage\Facades">
+    <package name="Zebrainsteam\LaravelGeneratorPackage\Facades">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Facades/Field.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Facades\Field" namespace="Zebrainsteam\LaravelGeneratorPackage\Facades">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
         <line num="12" type="method" name="getFacadeAccessor" visibility="protected" complexity="1" crap="1" count="47"/>
@@ -471,9 +471,9 @@
         <metrics loc="16" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
     </package>
-    <package name="GarbuzIvan\LaravelGeneratorPackage\Form">
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Form/Field.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Field" namespace="GarbuzIvan\LaravelGeneratorPackage\Form">
+    <package name="Zebrainsteam\LaravelGeneratorPackage\Form">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Form/Field.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Form\Field" namespace="Zebrainsteam\LaravelGeneratorPackage\Form">
           <metrics complexity="13" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="39" coveredstatements="39" elements="43" coveredelements="43"/>
         </class>
         <line num="20" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="48"/>
@@ -521,8 +521,8 @@
         <line num="102" type="stmt" count="17"/>
         <metrics loc="104" ncloc="82" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="39" coveredstatements="39" elements="43" coveredelements="43"/>
       </file>
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Form/Filter.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Filter" namespace="GarbuzIvan\LaravelGeneratorPackage\Form">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Form/Filter.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Form\Filter" namespace="Zebrainsteam\LaravelGeneratorPackage\Form">
           <metrics complexity="21" methods="15" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="38" coveredelements="38"/>
         </class>
         <line num="40" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="48"/>
@@ -566,9 +566,9 @@
         <metrics loc="170" ncloc="124" classes="1" methods="15" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="23" elements="38" coveredelements="38"/>
       </file>
     </package>
-    <package name="GarbuzIvan\LaravelGeneratorPackage\Form\Fields">
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Form/Fields/FieldAbstract.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Fields\FieldAbstract" namespace="GarbuzIvan\LaravelGeneratorPackage\Form\Fields">
+    <package name="Zebrainsteam\LaravelGeneratorPackage\Form\Fields">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Form/Fields/FieldAbstract.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Form\Fields\FieldAbstract" namespace="Zebrainsteam\LaravelGeneratorPackage\Form\Fields">
           <metrics complexity="58" methods="38" coveredmethods="38" conditionals="0" coveredconditionals="0" statements="65" coveredstatements="65" elements="103" coveredelements="103"/>
         </class>
         <line num="46" type="method" name="init" visibility="public" complexity="6" crap="6" count="44"/>
@@ -676,8 +676,8 @@
         <line num="395" type="stmt" count="5"/>
         <metrics loc="397" ncloc="290" classes="1" methods="38" coveredmethods="38" conditionals="0" coveredconditionals="0" statements="65" coveredstatements="65" elements="103" coveredelements="103"/>
       </file>
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Form/Fields/FloatField.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Fields\FloatField" namespace="GarbuzIvan\LaravelGeneratorPackage\Form\Fields">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Form/Fields/FloatField.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Form\Fields\FloatField" namespace="Zebrainsteam\LaravelGeneratorPackage\Form\Fields">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
         </class>
         <line num="18" type="method" name="init" visibility="public" complexity="1" crap="1" count="2"/>
@@ -686,8 +686,8 @@
         <line num="22" type="stmt" count="2"/>
         <metrics loc="24" ncloc="19" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
       </file>
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Form/Fields/IntegerField.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Fields\IntegerField" namespace="GarbuzIvan\LaravelGeneratorPackage\Form\Fields">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Form/Fields/IntegerField.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Form\Fields\IntegerField" namespace="Zebrainsteam\LaravelGeneratorPackage\Form\Fields">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
         </class>
         <line num="18" type="method" name="init" visibility="public" complexity="1" crap="1" count="1"/>
@@ -697,8 +697,8 @@
         <line num="23" type="stmt" count="1"/>
         <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
       </file>
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Form/Fields/StringField.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Fields\StringField" namespace="GarbuzIvan\LaravelGeneratorPackage\Form\Fields">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Form/Fields/StringField.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Form\Fields\StringField" namespace="Zebrainsteam\LaravelGeneratorPackage\Form\Fields">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
         </class>
         <line num="18" type="method" name="init" visibility="public" complexity="1" crap="1" count="1"/>
@@ -708,8 +708,8 @@
         <line num="23" type="stmt" count="1"/>
         <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
       </file>
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Form/Fields/TextField.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField" namespace="GarbuzIvan\LaravelGeneratorPackage\Form\Fields">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Form/Fields/TextField.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Form\Fields\TextField" namespace="Zebrainsteam\LaravelGeneratorPackage\Form\Fields">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
         </class>
         <line num="18" type="method" name="init" visibility="public" complexity="1" crap="1" count="40"/>
@@ -720,17 +720,17 @@
         <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
       </file>
     </package>
-    <package name="GarbuzIvan\LaravelGeneratorPackage\Models">
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Models/Dict.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Models\Dict" namespace="GarbuzIvan\LaravelGeneratorPackage\Models">
+    <package name="Zebrainsteam\LaravelGeneratorPackage\Models">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Models/Dict.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Models\Dict" namespace="Zebrainsteam\LaravelGeneratorPackage\Models">
           <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
         </class>
         <line num="55" type="method" name="options" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="57" type="stmt" count="0"/>
         <metrics loc="59" ncloc="41" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
       </file>
-      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/garbuzivan/laravel-generator-package/src/Models/DictOption.php">
-        <class name="GarbuzIvan\LaravelGeneratorPackage\Models\DictOption" namespace="GarbuzIvan\LaravelGeneratorPackage\Models">
+      <file name="/Users/ivangarbuz/My/automrkt/backend/packages/Zebrainsteam/laravel-generator-package/src/Models/DictOption.php">
+        <class name="Zebrainsteam\LaravelGeneratorPackage\Models\DictOption" namespace="Zebrainsteam\LaravelGeneratorPackage\Models">
           <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
         </class>
         <line num="61" type="method" name="dict" visibility="public" complexity="1" crap="2" count="0"/>

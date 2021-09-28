@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage;
+namespace Zebrainsteam\LaravelGeneratorPackage;
 
 use Exception;
-use GarbuzIvan\LaravelGeneratorPackage\Commands\MakeCommand;
-use GarbuzIvan\LaravelGeneratorPackage\Form\Field;
+use Zebrainsteam\LaravelGeneratorPackage\Commands\MakeCommand;
+use Zebrainsteam\LaravelGeneratorPackage\Form\Field;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Facades;
+namespace Zebrainsteam\LaravelGeneratorPackage\Facades;
 
 class Field extends \Illuminate\Support\Facades\Facade
 {
@@ -11,6 +11,6 @@ class Field extends \Illuminate\Support\Facades\Facade
      */
     protected static function getFacadeAccessor(): string
     {
-        return \GarbuzIvan\LaravelGeneratorPackage\Form\Field::class;
+        return \Zebrainsteam\LaravelGeneratorPackage\Form\Field::class;
     }
 }

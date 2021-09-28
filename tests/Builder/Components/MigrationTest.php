@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Builder;
+namespace Zebrainsteam\LaravelGeneratorPackage\Builder;
 
-use GarbuzIvan\LaravelGeneratorPackage\Builder\Components\Migration;
-use GarbuzIvan\LaravelGeneratorPackage\Facades\Field;
-use GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase;
+use Zebrainsteam\LaravelGeneratorPackage\Builder\Components\Migration;
+use Zebrainsteam\LaravelGeneratorPackage\Facades\Field;
+use Zebrainsteam\LaravelGeneratorPackage\Tests\TestCase;
 
 class MigrationTest extends TestCase
 {

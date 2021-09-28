@@ -1,7 +1,7 @@
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/garbuzivan/laravel-generator-package/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/garbuzivan/laravel-generator-package/?branch=main)
-[![Code Coverage](https://scrutinizer-ci.com/g/garbuzivan/laravel-generator-package/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/garbuzivan/laravel-generator-package/?branch=main)
-[![Build Status](https://scrutinizer-ci.com/g/garbuzivan/laravel-generator-package/badges/build.png?b=main)](https://scrutinizer-ci.com/g/garbuzivan/laravel-generator-package/build-status/main)
-[![Code Intelligence Status](https://scrutinizer-ci.com/g/garbuzivan/laravel-generator-package/badges/code-intelligence.svg?b=main)](https://scrutinizer-ci.com/code-intelligence)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Zebrainsteam/laravel-generator-package/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/Zebrainsteam/laravel-generator-package/?branch=main)
+[![Code Coverage](https://scrutinizer-ci.com/g/Zebrainsteam/laravel-generator-package/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/Zebrainsteam/laravel-generator-package/?branch=main)
+[![Build Status](https://scrutinizer-ci.com/g/Zebrainsteam/laravel-generator-package/badges/build.png?b=main)](https://scrutinizer-ci.com/g/Zebrainsteam/laravel-generator-package/build-status/main)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/Zebrainsteam/laravel-generator-package/badges/code-intelligence.svg?b=main)](https://scrutinizer-ci.com/code-intelligence)
 
 # Laravel generator package - Генератор пакетов для Laravel
 
@@ -25,22 +25,22 @@
 
 ### План работы
 <ol>
-<li>Устанавливаем пакет garbuzivan/laravel-generator-package</li>
+<li>Устанавливаем пакет Zebrainsteam/laravel-generator-package</li>
 <li>Настраиваем конфигурационный файл пакета, указав структуру и данные планируемых пакетов.</li>
 <li>Запускаем генератор и на выходе получаем сгенерированные пакеты в отдельных категориях готовые для публикации и последующего использования.</li>
 </ol>
 
 ## Install - Установка
 
-<pre>composer require garbuzivan/laravel-generator-package</pre>
+<pre>composer require Zebrainsteam/laravel-generator-package</pre>
 
 ## Конфигурационный файл
 
-<pre>php artisan vendor:publish --force --provider="GarbuzIvan\LaravelGeneratorPackage\ServiceProvider" --tag="config"</pre>
+<pre>php artisan vendor:publish --force --provider="Zebrainsteam\LaravelGeneratorPackage\ServiceProvider" --tag="config"</pre>
 
 ## Добавление ServiceProvider в config/app.php секция 'providers'
 
-<pre>GarbuzIvan\LaravelGeneratorPackage\ServiceProvider::class,</pre>
+<pre>Zebrainsteam\LaravelGeneratorPackage\ServiceProvider::class,</pre>
 
 ## Добавление миграций для словарей
 
@@ -48,7 +48,7 @@
 
 ## Добавление стандартных словарей
 
-<pre>php artisan db:seed --class="GarbuzIvan\LaravelGeneratorPackage\DataBase\Seeders\DatabaseSeeder"</pre>
+<pre>php artisan db:seed --class="Zebrainsteam\LaravelGeneratorPackage\DataBase\Seeders\DatabaseSeeder"</pre>
 
 ## Сборка пакетов из конфига
 
@@ -93,7 +93,7 @@
         [
             'name' => 'Name package',
             'description' => 'Description package',
-            'vendor' => 'garbuzivan',
+            'vendor' => 'Zebrainsteam',
             'package' => 'test',
             'model' => 'test',
             'table' => 'test',

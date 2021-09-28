@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Form;
+namespace Zebrainsteam\LaravelGeneratorPackage\Form;
 
-use GarbuzIvan\LaravelGeneratorPackage\Configuration;
+use Zebrainsteam\LaravelGeneratorPackage\Configuration;
 
 class Filter
 {

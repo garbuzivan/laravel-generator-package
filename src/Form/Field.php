@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Form;
+namespace Zebrainsteam\LaravelGeneratorPackage\Form;
 
 use Exception;
-use GarbuzIvan\LaravelGeneratorPackage\Configuration;
-use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
-use GarbuzIvan\LaravelGeneratorPackage\Exceptions\FieldDoesNotExistsException;
+use Zebrainsteam\LaravelGeneratorPackage\Configuration;
+use Zebrainsteam\LaravelGeneratorPackage\Contracts\FieldInterface;
+use Zebrainsteam\LaravelGeneratorPackage\Exceptions\FieldDoesNotExistsException;
 
 class Field
 {

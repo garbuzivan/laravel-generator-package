@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Exceptions;
+namespace Zebrainsteam\LaravelGeneratorPackage\Exceptions;
 
 class FieldDoesNotExistsException extends \Exception
 {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Tests\Form\Fields;
+namespace Zebrainsteam\LaravelGeneratorPackage\Tests\Form\Fields;
 
-use GarbuzIvan\LaravelGeneratorPackage\Facades\Field;
+use Zebrainsteam\LaravelGeneratorPackage\Facades\Field;
 
-class StringFieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
+class StringFieldTest extends \Zebrainsteam\LaravelGeneratorPackage\Tests\TestCase
 {
     /**
      * Test create field

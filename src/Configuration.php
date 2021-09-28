@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage;
+namespace Zebrainsteam\LaravelGeneratorPackage;
 
-use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\FloatField;
-use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\IntegerField;
-use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\StringField;
-use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField;
+use Zebrainsteam\LaravelGeneratorPackage\Form\Fields\FloatField;
+use Zebrainsteam\LaravelGeneratorPackage\Form\Fields\IntegerField;
+use Zebrainsteam\LaravelGeneratorPackage\Form\Fields\StringField;
+use Zebrainsteam\LaravelGeneratorPackage\Form\Fields\TextField;
 
 class Configuration
 {

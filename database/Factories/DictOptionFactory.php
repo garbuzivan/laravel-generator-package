@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Database\Factories\GarbuzIvan\LaravelGeneratorPackage\Models;
+namespace Database\Factories\Zebrainsteam\LaravelGeneratorPackage\Models;
 
-use GarbuzIvan\LaravelGeneratorPackage\Models\Dict;
-use GarbuzIvan\LaravelGeneratorPackage\Models\DictOption;
+use Zebrainsteam\LaravelGeneratorPackage\Models\Dict;
+use Zebrainsteam\LaravelGeneratorPackage\Models\DictOption;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class DictOptionFactory extends Factory

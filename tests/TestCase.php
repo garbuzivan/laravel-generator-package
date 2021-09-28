@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Tests;
+namespace Zebrainsteam\LaravelGeneratorPackage\Tests;
 
-use GarbuzIvan\LaravelGeneratorPackage\Configuration;
-use GarbuzIvan\LaravelGeneratorPackage\ServiceProvider;
+use Zebrainsteam\LaravelGeneratorPackage\Configuration;
+use Zebrainsteam\LaravelGeneratorPackage\ServiceProvider;
 use Illuminate\Foundation\Application;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase

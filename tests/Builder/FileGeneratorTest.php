@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Tests\Builder;
+namespace Zebrainsteam\LaravelGeneratorPackage\Tests\Builder;
 
-use GarbuzIvan\LaravelGeneratorPackage\Builder\FileGenerator;
-use GarbuzIvan\LaravelGeneratorPackage\Builder\Package;
-use GarbuzIvan\LaravelGeneratorPackage\Configuration;
-use GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase;
+use Zebrainsteam\LaravelGeneratorPackage\Builder\FileGenerator;
+use Zebrainsteam\LaravelGeneratorPackage\Builder\Package;
+use Zebrainsteam\LaravelGeneratorPackage\Configuration;
+use Zebrainsteam\LaravelGeneratorPackage\Tests\TestCase;
 
 class FileGeneratorTest extends TestCase
 {

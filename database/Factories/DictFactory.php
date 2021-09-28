@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Database\Factories\GarbuzIvan\LaravelGeneratorPackage\Models;
+namespace Database\Factories\Zebrainsteam\LaravelGeneratorPackage\Models;
 
-use GarbuzIvan\LaravelGeneratorPackage\Models\Dict;
+use Zebrainsteam\LaravelGeneratorPackage\Models\Dict;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class DictFactory extends Factory

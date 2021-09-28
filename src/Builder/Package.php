@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Builder;
+namespace Zebrainsteam\LaravelGeneratorPackage\Builder;
 
-use GarbuzIvan\LaravelGeneratorPackage\Configuration;
-use GarbuzIvan\LaravelGeneratorPackage\Facades\Field;
+use Zebrainsteam\LaravelGeneratorPackage\Configuration;
+use Zebrainsteam\LaravelGeneratorPackage\Facades\Field;
 
 class Package
 {

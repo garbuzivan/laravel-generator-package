@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Form\Fields;
+namespace Zebrainsteam\LaravelGeneratorPackage\Form\Fields;
 
 use Exception;
-use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
+use Zebrainsteam\LaravelGeneratorPackage\Contracts\FieldInterface;
 
 class StringField extends FieldAbstract
 {

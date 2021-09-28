@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Tests;
+namespace Zebrainsteam\LaravelGeneratorPackage\Tests;
 
-class MakeCommandTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
+class MakeCommandTest extends \Zebrainsteam\LaravelGeneratorPackage\Tests\TestCase
 {
     /**
      * Running a test for generating all packets

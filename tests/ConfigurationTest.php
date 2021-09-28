@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Tests;
+namespace Zebrainsteam\LaravelGeneratorPackage\Tests;
 
-use GarbuzIvan\LaravelGeneratorPackage\Configuration;
-use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField;
+use Zebrainsteam\LaravelGeneratorPackage\Configuration;
+use Zebrainsteam\LaravelGeneratorPackage\Form\Fields\TextField;
 
-class ConfigurationTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
+class ConfigurationTest extends \Zebrainsteam\LaravelGeneratorPackage\Tests\TestCase
 {
     private Configuration $config;
 

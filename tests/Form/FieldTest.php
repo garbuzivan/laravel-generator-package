@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Tests\Form;
+namespace Zebrainsteam\LaravelGeneratorPackage\Tests\Form;
 
 use Exception;
-use GarbuzIvan\LaravelGeneratorPackage\Configuration;
-use GarbuzIvan\LaravelGeneratorPackage\Contracts\FieldInterface;
-use GarbuzIvan\LaravelGeneratorPackage\Exceptions\FieldDoesNotExistsException;
-use GarbuzIvan\LaravelGeneratorPackage\Facades\Field;
-use GarbuzIvan\LaravelGeneratorPackage\Form\Fields\TextField;
-use GarbuzIvan\LaravelGeneratorPackage\Form\Form;
+use Zebrainsteam\LaravelGeneratorPackage\Configuration;
+use Zebrainsteam\LaravelGeneratorPackage\Contracts\FieldInterface;
+use Zebrainsteam\LaravelGeneratorPackage\Exceptions\FieldDoesNotExistsException;
+use Zebrainsteam\LaravelGeneratorPackage\Facades\Field;
+use Zebrainsteam\LaravelGeneratorPackage\Form\Fields\TextField;
+use Zebrainsteam\LaravelGeneratorPackage\Form\Form;
 use Illuminate\Support\Str;
 
-class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
+class FieldTest extends \Zebrainsteam\LaravelGeneratorPackage\Tests\TestCase
 {
     /**
      * Test create field
@@ -145,7 +145,7 @@ class FieldTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
      */
     public function testFindFieldClass()
     {
-        $field = app(\GarbuzIvan\LaravelGeneratorPackage\Form\Field::class);
+        $field = app(\Zebrainsteam\LaravelGeneratorPackage\Form\Field::class);
         $config = app(Configuration::class);
         $config->setField('test', TextField::class);
         $fieldName = array_key_first($config->getFields());

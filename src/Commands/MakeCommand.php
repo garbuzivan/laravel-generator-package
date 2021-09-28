@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Commands;
+namespace Zebrainsteam\LaravelGeneratorPackage\Commands;
 
-use GarbuzIvan\LaravelGeneratorPackage\Builder\Builder;
+use Zebrainsteam\LaravelGeneratorPackage\Builder\Builder;
 use Illuminate\Console\Command;
 use Illuminate\Support\Composer;
 

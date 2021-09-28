@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Builder\Components;
+namespace Zebrainsteam\LaravelGeneratorPackage\Builder\Components;
 
-use GarbuzIvan\LaravelGeneratorPackage\Builder\Package;
-use GarbuzIvan\LaravelGeneratorPackage\Configuration;
+use Zebrainsteam\LaravelGeneratorPackage\Builder\Package;
+use Zebrainsteam\LaravelGeneratorPackage\Configuration;
 
 class Seed
 {

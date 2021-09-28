@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Tests\Form;
+namespace Zebrainsteam\LaravelGeneratorPackage\Tests\Form;
 
-use GarbuzIvan\LaravelGeneratorPackage\Configuration;
-use GarbuzIvan\LaravelGeneratorPackage\Form\Filter;
+use Zebrainsteam\LaravelGeneratorPackage\Configuration;
+use Zebrainsteam\LaravelGeneratorPackage\Form\Filter;
 
-class FilterTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
+class FilterTest extends \Zebrainsteam\LaravelGeneratorPackage\Tests\TestCase
 {
     protected Filter $filter;
     protected Configuration $config;

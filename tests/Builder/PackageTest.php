@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Tests\Builder;
+namespace Zebrainsteam\LaravelGeneratorPackage\Tests\Builder;
 
-use GarbuzIvan\LaravelGeneratorPackage\Builder\Package;
-use GarbuzIvan\LaravelGeneratorPackage\Configuration;
+use Zebrainsteam\LaravelGeneratorPackage\Builder\Package;
+use Zebrainsteam\LaravelGeneratorPackage\Configuration;
 
-class PackageTest extends \GarbuzIvan\LaravelGeneratorPackage\Tests\TestCase
+class PackageTest extends \Zebrainsteam\LaravelGeneratorPackage\Tests\TestCase
 {
 
     private Package $package;

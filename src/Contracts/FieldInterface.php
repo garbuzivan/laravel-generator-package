@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\Contracts;
+namespace Zebrainsteam\LaravelGeneratorPackage\Contracts;
 
 use Closure;
 use Exception;

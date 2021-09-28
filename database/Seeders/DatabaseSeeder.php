@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace GarbuzIvan\LaravelGeneratorPackage\DataBase\Seeders;
+namespace Zebrainsteam\LaravelGeneratorPackage\DataBase\Seeders;
 
-use GarbuzIvan\LaravelGeneratorPackage\Models\DictOption;
-use GarbuzIvan\LaravelGeneratorPackage\Models\Dict;
+use Zebrainsteam\LaravelGeneratorPackage\Models\DictOption;
+use Zebrainsteam\LaravelGeneratorPackage\Models\Dict;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
